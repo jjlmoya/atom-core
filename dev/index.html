@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>SocialInk</title>
+</head>
+<body>
+
+
+<header class="container-fluid _template" style="display:none" data-template="header/header"></header>
+<div id="page">
+    <div id="splash_screen" class="app"></div>
+    <div id="home" style="display:none" data-template="pages/home"></div>
+    <div id="settings" style="display:none" data-template="pages/settings"></div>
+
+</div>
+<footer id="footer" class="container-fluid _template" style="display:none" data-template="footer/footer"></footer>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/thirdparty.min.js"></script>
+<script type="text/javascript" src="js/index.min.js"></script>
+</body>
+</html>
