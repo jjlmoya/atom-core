@@ -1,0 +1,36 @@
+.checkbox {
+  position: absolute;
+  visibility: hidden;
+  margin-top: 0;
+  margin-left: -22px;
+  &:disabled {
+    opacity: 0.65;
+    color: $u-disabled-color;
+    cursor: not-allowed;
+  }
+  &:checked:after{
+    font-size: 18px;
+    content: "v";
+    color:$u-positive-color;
+  }
+  &:after {
+    visibility: visible;
+    display: inline-block;
+    color: $u-negative-color;
+    font-size: 20px;
+    content: "x";
+  }
+  &--modern {
+    &:disabled {
+      color: $u-disabled-color;
+    }
+    &:checked:after{
+      color:orange;
+      content: "X";
+    }
+    &:after {
+      color:blue;
+      content: "X";
+    }
+  }
+}

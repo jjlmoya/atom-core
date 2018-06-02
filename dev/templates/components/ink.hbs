@@ -1,0 +1,25 @@
+<div class="row ink">
+    <div class="ml-imagebox">
+        {{#each socialMedia}}
+            <label for="imagebox-{{this.name}}"
+                   class="image-label image-label--{{this.name}}
+                       {{#unless this.isEnabled }}image-label--disabled{{/unless}}
+                       {{#if this.isChecked }}image-label--checked{{/if}}"
+                   data-social="">
+                 <input id="imagebox-{{this.name}}" type="checkbox" class="checkbox"/>
+            </label>
+        {{/each}}
+    </div>
+    <div class="inkContainer">
+        <h2 class="ink-title">TITULO DEL INK</h2>
+        <span class="ink-description">Waanna in the roosia is very paguerful in the beginning in da bigiining the bining in te bigginin of the biggining in the resua for the lulz</span>
+        <span class="ink-link">plantasyflores.online/tomate/</span>
+        <span class="ink-hashtags">#hashtags #paco #ramirez #zhanna#esto #lootro #aquello</span>
+        <div class="ink-button-layer">
+            <input type="checkbox" name="ink-save" class="checkbox checkbox--modern"/>
+            <label for="ink-save">Guardar</label>
+            <button class="button button--secondary button--secondary--glow ink-date">Fecha</button>
+            <button class="button button--primary button--primary--glow ink-submit">Marcar</button>
+        </div>
+    </div>
+</div>

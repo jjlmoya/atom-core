@@ -1,6 +1,12 @@
-@import "thirdParty";
-@import "variables";
-@import "pages";
-@import "components";
-@import "basic";
+
+/** ATOM DESIGN **/
+@import "utils/index";
+
+@import "atoms/index";
+@import "molecules/index";
+@import "organisms/index";
+@import "layout/index";
+@import "pages/index";
+
+
 

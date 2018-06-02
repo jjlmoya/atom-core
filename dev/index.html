@@ -11,18 +11,19 @@
     <title>SocialInk</title>
 </head>
 <body>
-
-
-<header class="container-fluid _template" style="display:none" data-template="header/header"></header>
-<div id="page">
-    <div id="splash_screen" class="app"></div>
-    <div id="home" style="display:none" data-template="pages/home"></div>
-    <div id="settings" style="display:none" data-template="pages/settings"></div>
-
+<header class="l-single-column _template" id="header" style="display:none" data-template="header/header"></header>
+<div id="page" data-page="splash">
+    <div class="p-splash" id="splash_screen"></div>
+    <div class="p-home" id="home" style="display:none" data-template="pages/home"></div>
+    <div class="p-settings" id="settings" style="display:none" data-template="pages/settings"></div>
 </div>
-<footer id="footer" class="container-fluid _template" style="display:none" data-template="footer/footer"></footer>
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="js/thirdparty.min.js"></script>
+<footer id="footer" class="_template l-single-column" style="display:none" data-template="footer/footer"></footer>
+<!--<script type="text/javascript" src="cordova.js"></script>-->
+<!-- DEBUG -->
+<script>
+    window.debug = true;
+</script>
 <script type="text/javascript" src="js/index.min.js"></script>
+<script type="text/javascript" src="js/components.min.js"></script>
 </body>
 </html>

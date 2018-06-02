@@ -1,0 +1,27 @@
+.h5 {
+  font-size: 10px;
+  margin:0;
+  &--left {
+    text-align: left;
+  }
+  &--right {
+    text-align: right;
+  }
+  &--center {
+    text-align: center;
+  }
+  &--strong {
+    font-weight: bold;
+  }
+  &--light {
+    font-weight: lighter;
+  }
+}
+
+.h1--primary{
+  color: $primary-text-color
+}
+
+.h2--secondary {
+  color:$secondary-text-color;
+}

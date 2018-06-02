@@ -5,5 +5,9 @@
   "home": {
     "title": "Tus Huellas Sociales",
     "subtitle": "Programadas: "
+  },
+  "settings": {
+    "title": "Configuración",
+    "subtitle": "Programadas: "
   }
 }
