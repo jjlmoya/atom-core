@@ -1,5 +1,9 @@
-<div class="og-router-menu">
-    <div class="router-button" data-page="home">🏠</div>
-    <div class="router-button" data-page="">📅</div>
-    <div class="router-button" data-page="settings">⚙</div>
-</div>
+<section>
+    <nav class="og-nav-tabs-fusion">
+        <ul class="ul">
+            {{#each NavPages}}
+            <li class="tabs {{#equals this.page ../currentPage }}is-active{{/equals}}" data-page="{{this.page}}"><a class="a">{{this.display}}</a></li>
+            {{/each}}
+        </ul>
+    </nav>
+</section>

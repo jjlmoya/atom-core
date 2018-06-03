@@ -8,18 +8,6 @@
     color: $u-disabled-color;
     cursor: not-allowed;
   }
-  &:checked:after{
-    font-size: 18px;
-    content: "v";
-    color:$u-positive-color;
-  }
-  &:after {
-    visibility: visible;
-    display: inline-block;
-    color: $u-negative-color;
-    font-size: 20px;
-    content: "x";
-  }
   &--modern {
     &:disabled {
       color: $u-disabled-color;

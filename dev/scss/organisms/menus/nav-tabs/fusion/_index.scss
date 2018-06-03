@@ -1,0 +1,32 @@
+.og-nav-tabs-fusion {
+  text-align: center;
+  margin-bottom: 10px;
+
+  .ul {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .tabs {
+    flex: 1;
+    background-color: rgba($primary-light-color, 1);
+    .a {
+
+      display: inline-block;
+      padding: 5px 0 10px;
+      color: $primary-text-color;
+      line-height: 1;
+      -webkit-transition: color 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+      transition: color 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+    }
+    &.is-active {
+      .a {
+        color: $primary-color;
+
+      }
+      background-color: rgba(white, 1);
+      color: $primary-color;
+    }
+  }
+}

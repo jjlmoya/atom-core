@@ -1,22 +1,27 @@
 var $ = $ || require('jquery'),
-    RouterMenu = require('../components/routerMenu');
+    RouterMenu = require('../components/routerMenu'),
+    Footer = require('../components/footer'),
+    Header = require('../components/header'),
+    _ = require('lodash');
 module.exports = {
     pageSettings: {
         locator: 'settings',
+        genericComponents: [Footer, Header],
         model: {
-            /*DEFAULT VALUES*/
-            currentPage: 'splash'
+            currentPage: 'settings'
         }
     },
-    init: function (onSuccess) {
-        var instance = this;
-        onSuccess(this.pageSettings.locator, this.pageSettings.model);
-        $('body').on('templateLoaded', function () {
-            RouterMenu.init(instance.pageSettings.locator);
+    init: function (onSuccess, genericModel) {
+        onSuccess(this.pageSettings.locator, _.merge(this.pageSettings.model, genericModel));
+        _.forEach(this.pageSettings.genericComponents, function (components) {
+            components.show();
         });
+
     },
     hide: function (onSuccess) {
         onSuccess(this.pageSettings.locator);
-        $('body').off('templateLoaded');
+        _.forEach(this.pageSettings.genericComponents, function (components) {
+            components.hide();
+        });
     }
 };

@@ -13,12 +13,17 @@ var app = {
     onDeviceReady: function () {
         this.init();
     },
+    addHelpers: function () {
+        require('./helpers/equals');
+    },
     init: function () {
         i18n.getCMS();
         $(document).ready(function () {
             Render.renderTemplatesByElement($('body'));
             Router.renderPage('home');
+            Router.addListeners();
         });
+        this.addHelpers();
     },
 };
 

@@ -1,14 +1,15 @@
 .ml-imagebox {
-  border: 1px solid $primary-color;
-  &:first-child {
-    margin-top: 10px;
-  }
-
+  height: 45px;
   .image-label {
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
+    background-size: cover;
+    width: 45px;
+    height: 45px;
+
     &--facebook {
       background-image: url($image-social-twitter);
+
     }
     &--twitter {
       background-image: url($image-social-twitter);

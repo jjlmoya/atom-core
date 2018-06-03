@@ -1,16 +1,9 @@
-
 //TODO: Rework to Atomic Design
 
-
-.ink {
+.og-block-social-ink {
   border: 1px solid $primary-color;
   margin: 5px;
   height: 100%;
 
-  .inkContainer {
-    border: 1px solid $primary-color;
-    display: inline-block;
-    width: calc(100% - 45px);
-    padding: 5px;
-  }
+
 }

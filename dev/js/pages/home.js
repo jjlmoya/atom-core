@@ -24,8 +24,8 @@ module.exports = {
         },
     },
 
-    init: function (onSuccess) {
-        onSuccess(this.pageSettings.locator, this.pageSettings.model);
+    init: function (onSuccess, genericModel) {
+        onSuccess(this.pageSettings.locator, _.merge(this.pageSettings.model, genericModel));
         _.forEach(this.pageSettings.genericComponents, function (components) {
             components.show();
         });
