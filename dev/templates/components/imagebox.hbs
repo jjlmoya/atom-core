@@ -1,0 +1,9 @@
+{{#each socialMedia}}
+    <label for="imagebox-{{this.name}}-{{../Posts.[0].id}}"
+           class="image-label image-label--{{this.name}}
+               {{#unless this.isEnabled }}image-label--disabled{{/unless}}
+               {{#if this.isChecked }}image-label--checked{{/if}}"
+           data-social="">
+        <input id="imagebox-{{this.name}}-{{../Posts.[0].id}}" type="checkbox" class="checkbox"/>
+    </label>
+{{/each}}

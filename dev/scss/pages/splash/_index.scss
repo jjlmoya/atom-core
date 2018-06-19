@@ -3,7 +3,7 @@
 }
 
 /** START SPLASH SCREEN **/
-.app {
+.p-splash {
   background:url($brand-splash-logo) no-repeat center top;
   position:absolute;
   left:50%;
@@ -16,7 +16,7 @@
 }
 
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-  .app {
+  .p-splash {
     background-position:center center;
   }
 }

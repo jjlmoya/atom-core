@@ -1,0 +1,17 @@
+<section class="og-article-minimalist">
+    {{#each articles}}
+        <article class="entry-content ml-block-shadow ml-block-shadow--primary">
+            <div class="image" style="background-image: url({{this.image}})"/>
+            <div class="content">
+                <h1>{{this.title}}</h1>
+                <p> {{{this.description}}}</p>
+                {{#each this.entries}}
+                    <div>
+                        <h2>{{{this.question}}}</h2>
+                        <p>{{{this.answer}}}</p>
+                    </div>
+                {{/each}}
+            </div>
+        </article>
+    {{/each}}
+</section>

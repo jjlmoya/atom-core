@@ -9,7 +9,6 @@
         },
         onChange = function (event) {
             var element = event.target.parentNode;
-            console.log(element);
             element.classList.toggle('is-active');
         },
         init = function () {
@@ -18,8 +17,7 @@
                 addLinkLabelToCheckbox(labels[i])
             }
         };
-    document.addEventListener("components::refresh", function() {
+    document.addEventListener("components::imagebox", function () {
         init();
     });
-
 })();

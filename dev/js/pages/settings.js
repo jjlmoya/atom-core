@@ -1,18 +1,18 @@
 var $ = $ || require('jquery'),
-    RouterMenu = require('../components/routerMenu'),
     Footer = require('../components/footer'),
     Header = require('../components/header'),
+    Menu = require('../components/menu'),
     _ = require('lodash');
 module.exports = {
     pageSettings: {
         locator: 'settings',
-        genericComponents: [Footer, Header],
+        genericComponents: [Footer, Header, Menu],
         model: {
             currentPage: 'settings'
         }
     },
-    init: function (onSuccess, genericModel) {
-        onSuccess(this.pageSettings.locator, _.merge(this.pageSettings.model, genericModel));
+    init: function (onSuccess) {
+        onSuccess(this.pageSettings.locator, _.merge(this.pageSettings.model));
         _.forEach(this.pageSettings.genericComponents, function (components) {
             components.show();
         });

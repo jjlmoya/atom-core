@@ -1,35 +1,33 @@
 var $ = $ || require('jquery'),
-    RouterMenu = require('../components/routerMenu'),
     Footer = require('../components/footer'),
     Header = require('../components/header'),
+    Menu = require('../components/menu'),
+    PostService = require('../services/post'),
+    EntryService = require('../services/entry'),
     _ = require('lodash');
 
 
 module.exports = {
     pageSettings: {
-        genericComponents: [Footer, Header],
+        genericComponents: [Footer, Header, Menu],
         locator: 'home',
         model: {
             /*DEFAULT VALUES*/
             currentPage: 'home',
-            scheduledPosts: 20,
-            socialMedia: [
-                {
-                    name: 'twitter',
-                    isEnabled: false
-                }, {
-                    name: 'facebook',
-                    isEnabled: true
-                }]
+            Posts: [],
+            articles: [EntryService.getMockPost(), EntryService.getMockPost(), EntryService.getMockPost()]
         },
     },
-
-    init: function (onSuccess, genericModel) {
-        onSuccess(this.pageSettings.locator, _.merge(this.pageSettings.model, genericModel));
-        _.forEach(this.pageSettings.genericComponents, function (components) {
-            components.show();
-        });
-
+    init: function (onSuccess) {
+        var instance = this;
+        PostService.getPosts()
+            .always(function (data) {
+                instance.pageSettings.model.Posts = data || [];
+                onSuccess(instance.pageSettings.locator, instance.pageSettings.model);
+                _.forEach(instance.pageSettings.genericComponents, function (components) {
+                    components.show();
+                });
+            });
     },
     hide: function (onSuccess) {
         onSuccess(this.pageSettings.locator);

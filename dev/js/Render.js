@@ -1,7 +1,37 @@
 var Handlebars = require('handlebars'),
     $ = require('jquery'),
-    i18n = require('./i18n');
-
+    i18n = require('./i18n'),
+    _ = require('lodash'),
+    genericModel = {
+        socialMedia: [
+            {
+                name: 'twitter',
+                isEnabled: false
+            }, {
+                name: 'facebook',
+                isEnabled: true
+            }, {
+                name: 'instagram',
+                isEnabled: true
+            }, {
+                name: 'pinterest',
+                isEnabled: true
+            }, {
+                name: 'google',
+                isEnabled: true
+            }],
+        NavPages: [
+            {
+                page: 'home',
+                display: 'Inicio'
+            }, {
+                page: 'settings',
+                display: 'Configuración'
+            }, {
+                page: 'test',
+                display: 'Test'
+            }]
+    };
 module.exports = {
     model: {
         path: '/',
@@ -10,9 +40,14 @@ module.exports = {
     locators: {
         templates: '._template'
     },
-    onCompleteRender: function () {
-        var event = new Event('components::refresh');  // (*)
-        document.dispatchEvent(event);
+    onCompleteRender: function (component, $e, model) {
+        if (component) {
+            var event = new Event('components::' + component);  // (*)
+            document.dispatchEvent(event);
+        }
+        if ($e.find(this.locators.templates).length > 0) {
+            this.renderTemplatesByElement($e, model);
+        }
     },
     getTemplateAjax: function (templateName, callback) {
         var source, template;
@@ -28,17 +63,20 @@ module.exports = {
     },
     renderHandlebarsTemplate: function (template, $targetDiv, withData, callback) {
         this.getTemplateAjax(template, function (template) {
-            $targetDiv.html(template(withData)).removeClass('_template');
+            $targetDiv.html(template(_.merge(withData, genericModel))).removeClass('_template');
             i18n.replaceElemetKeys($targetDiv);
             if (callback) {
-                callback($targetDiv, this.model);
+                callback($targetDiv, withData);
             }
         });
     },
     renderTemplatesByElement: function ($element, model) {
         var that = this;
         $.each($element.find(this.locators.templates), function () {
-            that.renderHandlebarsTemplate($(this).data('template'), $(this), model, that.onCompleteRender);
+            var $e = $(this);
+            that.renderHandlebarsTemplate($(this).data('template'), $(this), model, function (e, model) {
+                that.onCompleteRender($e.data('component'), e, model);
+            });
         });
     },
     renderElement: function ($element, model) {
@@ -46,6 +84,14 @@ module.exports = {
         this.renderHandlebarsTemplate($element.data('template'), $element, model, function ($newElement) {
             instance.renderTemplatesByElement($newElement, model);
         });
+    },
+    renderTemplateInElement: function (template, target, model, callback) {
+        var that = this,
+            $target = $(target);
+        this.renderHandlebarsTemplate(template, $target, model, function () {
+            that.onCompleteRender($target.data('component'), $target, model);
+            if (callback) {
+            }
+        });
     }
 };
-

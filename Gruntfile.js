@@ -1,23 +1,9 @@
 module.exports = function (grunt) {
     var basePath = 'dev/',
-        distDir = 'www/',
-        cssBuildPath = 'css/index.scss',
         jsPath = basePath + 'js/',
-        componentsPath = jsPath +'components/',
-        thirdParty = basePath + 'thirdParty/*.js',
         scssPath = basePath + 'scss/index.scss',
         jsComponents = "dev/scss/**/*.js",
-        tasks = ['jshint', 'clean', 'copy', 'sass', 'browserify', 'uglify', 'htmlmin'],
-        jsList = [
-            jsPath + 'i18n.js',
-            jsPath + 'Render.js',
-            jsPath + 'Listeners.js',
-            componentsPath + 'routerMenu.js',
-            jsPath + 'LocalStorage.js',
-            jsPath + 'Post.js',
-            jsPath + 'Router.js',
-            jsPath + 'index.js',
-        ];
+        tasks = ['jshint', 'clean', 'copy', 'sass', 'browserify', 'uglify', 'htmlmin'];
     grunt.initConfig({
         jshint: {
             files: [jsPath],
@@ -54,7 +40,7 @@ module.exports = function (grunt) {
             },
             build: {
                 files: {
-                    'www/js/components.min.js': jsComponents,
+                    'www/js/components.min.js': jsComponents
                 }
             }
         },
@@ -64,7 +50,8 @@ module.exports = function (grunt) {
                     {expand: false, src: 'dev/index.html', dest: 'www/index.html', filter: 'isFile'},
                     {expand: true, dest: 'www', cwd: 'dev', src: 'templates/**'},
                     {expand: true, dest: 'www', cwd: 'dev', src: 'translations/**'},
-                    {expand: true, dest: 'www', cwd: 'dev', src: 'img/**'}
+                    {expand: true, dest: 'www', cwd: 'dev', src: 'img/**'},
+                    {expand: true, dest: 'www', cwd: 'dev', src: 'data/**'}
 
                 ],
             },
@@ -101,7 +88,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-browserify');
-
 
 
     grunt.registerTask('default', tasks);

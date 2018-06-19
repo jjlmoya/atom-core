@@ -1,9 +1,29 @@
-//TODO: Rework to Atomic Design
-
 .og-block-social-ink {
-  border: 1px solid $primary-color;
-  margin: 5px;
-  height: 100%;
-
+  position: relative;
+  text-align: left;
+  height: 215px;
+  .col {
+    overflow:hidden;
+  }
+  .image {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .content {
+    padding: 10px;
+    font-size: 0.8rem;
+    .ml-hashtags {
+      color: $primary-brand-color;
+    }
+  }
+  .ml-buttons-group {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .counter {
+    text-align: right;
+  }
 
 }

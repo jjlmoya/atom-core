@@ -1,0 +1,22 @@
+.og-progress-bar {
+  position: fixed;
+  width: 100%;
+  &--bottom {
+    bottom: 0;
+  }
+  &--top {
+    top: 0;
+  }
+
+  .og-progress-bar-label {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 14px;
+
+  }
+  .progress {
+    background-color: $primary-light-color;
+    height: 5px;
+  }
+}

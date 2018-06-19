@@ -1,0 +1,11 @@
+.l-oversized-column {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  overflow-scrolling: touch;
+  overflow: scroll;
+  bottom: 0;
+  .l-oversized-element {
+    flex: 1;
+  }
+}

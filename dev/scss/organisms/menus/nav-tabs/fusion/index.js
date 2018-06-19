@@ -39,7 +39,7 @@
                 addActionToTabs(labels[i])
             }
         };
-    document.addEventListener("components::refresh", function () {
+    document.addEventListener("components::menu-fusion", function () {
         init();
     });
 })();

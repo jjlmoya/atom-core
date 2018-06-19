@@ -1,0 +1,14 @@
+.l-2columns-left {
+  display:flex;
+  height: 100%;
+  .col {
+    flex: 2;
+  }
+  .content {
+    flex: 4;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    min-width: 75%;
+  }
+}

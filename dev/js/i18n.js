@@ -5,7 +5,6 @@ module.exports = {
         var splittedKey = key.split('.');
         return this.cms[splittedKey[0]][splittedKey[1]];
     },
-
     getCMS: function () {
         var that = this;
         var lang = 'es_ES';
@@ -13,7 +12,7 @@ module.exports = {
             .done(function (data) {
                 that.cms = data;
                 that.replaceKeys();
-            }).fail(function (data) {
+            }).fail(function () {
             console.log('cms download failed');
         });
     },
