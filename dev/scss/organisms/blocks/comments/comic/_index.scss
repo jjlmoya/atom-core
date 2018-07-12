@@ -1,0 +1,88 @@
+.og-comic-content {
+  text-align: left;
+
+  .comments-title {
+    display: none;
+  }
+
+  .comment-list {
+
+    .comment {
+      padding: 25px;
+      .comment-metadata {
+
+        /*DATE*/
+        a {
+          display: none;
+        }
+        .vcard {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          /*AVATAR*/
+          img {
+            margin: 0 auto;
+            border-radius: 50%;
+          }
+          /*AUTOR*/
+          b {
+            letter-spacing: 1px;
+            text-align: center;
+          }
+        }
+      }
+
+      .reply, .edit-link  {
+        display:none;
+      }
+    }
+
+    .bypostauthor {
+      @extend .ml-block-shadow;
+      @extend .ml-block-shadow--rounded;
+    }
+
+    .even {
+
+    }
+    .odd {
+
+    }
+
+    .comment-content {
+      padding: 15px;
+
+    }
+
+  }
+  .comment-respond {
+    text-align: center;
+    padding: 25px;
+  }
+
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    .comment-form-comment {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .logged-in-as {
+    display: none;
+  }
+  #submit {
+    @extend .button;
+    @extend .button--primary;
+  }
+
+  textarea{
+    margin: 10px;
+    @extend .ml-block-shadow;
+    @extend .ml-block-shadow--rounded;
+  }
+
+}

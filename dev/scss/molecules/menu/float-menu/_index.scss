@@ -1,0 +1,69 @@
+.ml-float-menu {
+  .menu {
+    display: none;
+  }
+  .menu-superior-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: $primary-color-text;
+    transition: .6s all;
+    transform: translateY(-100%);
+    position: fixed;
+    .menu {
+      display: flex;
+    }
+  }
+  &.is-active {
+    .menu-superior-container {
+      background-color: rgba($primary-color-dark, 0.95);
+      transform: translateY(0);
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    a {
+      font-size: 20px;
+      line-height: 38px;
+      color: $primary-color-text;
+
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      height: 25%;
+      a {
+        font-size: 16px;
+        line-height: 30px;
+        border-bottom: 1px solid $secondary-color-light;
+      }
+    }
+
+  }
+
+  .ml-float-menu-button {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    span::after {
+      height: 40px;
+      width: 40px;
+      background-color: $primary-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      content: "|||";
+      transform: rotate(-90deg);
+      color: $primary-color-text;
+    }
+  }
+}

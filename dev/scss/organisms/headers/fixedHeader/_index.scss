@@ -1,0 +1,18 @@
+$og-fixed-header-height: 30px;
+
+.og-fixed-header {
+  z-index: 1000;
+  position: fixed;
+  line-height: $og-fixed-header-height;
+  background-color: rgba(white, 0.8);
+  top: 0;
+  width: 100%;
+  height: $og-fixed-header-height;
+  .site-description {
+    display: none;
+  }
+}
+
+#content {
+  margin-top: $og-fixed-header-height;
+}

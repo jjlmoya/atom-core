@@ -24,8 +24,6 @@ module.exports = {
         $page.show();
         if ($page.data('template')) {
             Render.renderElement($page, model);
-        } else {
-            $(document).trigger('loadComponents::refresh');
         }
         $('#page').data('page', page);
     },

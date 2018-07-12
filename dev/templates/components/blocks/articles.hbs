@@ -3,11 +3,13 @@
         <article class="entry-content ml-block-shadow ml-block-shadow--primary">
             <div class="image" style="background-image: url({{this.image}})"/>
             <div class="content">
-                <h1>{{this.title}}</h1>
+                <header class="entry-header ml-heading-minimalist">
+                    <h1 class="entry-title">{{this.title}}</h1>
+                </header>
                 <p> {{{this.description}}}</p>
                 {{#each this.entries}}
                     <div>
-                        <h2>{{{this.question}}}</h2>
+                        <h2 class="ml-heading-minimalist">{{{this.question}}}</h2>
                         <p>{{{this.answer}}}</p>
                     </div>
                 {{/each}}

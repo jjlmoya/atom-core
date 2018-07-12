@@ -2,8 +2,14 @@
   background-color: $primary-color;
   height: 50px;
   line-height: 50px;
-  .h1 {
+  .h1, a {
     font-size: 25px;
-    color:$primary-text-color;
+    color:$primary-color-text;
+  }
+  &--secondary {
+    background-color: $primary-color-text;
+    .h1, a {
+      color:$primary-color;
+    }
   }
 }

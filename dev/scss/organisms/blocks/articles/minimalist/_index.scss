@@ -1,37 +1,85 @@
 .og-article-minimalist {
+  line-height: 1.75;
+  font-family: "Libre Baskerville", Libre, Georgia, Times, serif;
   text-align: left;
-  .image {
+
+  img {
+    width: 100%;
+    object-fit: cover;
     height: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
-  .content {
-    padding: 5px;
-    h1 {
-      padding: 10px 0;
-      font-weight: bolder;
-      font-size: 1.6rem;
+  h1 {
+    font-weight: bolder;
+    font-size: 1.6rem;
+    width: 100%;
+    border-bottom: 1px solid $primary-color;
+    text-align: center;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    &::after {
+      margin-left: 20%;
+      content: "";
+      position: absolute;
+      left: 0;
+      padding-top: 30px;
+      height: 1px;
+      width: 10%;
+      border-bottom: 1px solid $secondary-color-light;
     }
+    @media only screen and (max-width: $media-size-m) {
+      &::after {
+        margin-left: 0;
+        width: 30%;
+      }
+    }
+  }
+  figcaption, a {
     h2 {
-      padding: 8px 0;
-      font-weight: 600;
-      font-size: 1.2rem;
+      &::after {
+        border: none;
+      }
     }
-    h3, h4, h5 {
-      padding: 6px 0;
-      font-weight: 300;
-      font-size: 1.1rem;
-    }
-    p {
+  }
+  h3, h4, h5 {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    padding: 25px 0 10px 0;
+  }
+  p {
 
-    }
+  }
+  a {
+    border-bottom: 1px solid $primary-color;
+  }
+  strong {
+    color: $primary-color;
+  }
+
+  figure {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 100%;
+
     a {
-      border-bottom: 1px solid $primary-color;
+      border: none;
     }
-    strong {
-      color: $primary-color;
+    figcaption {
+      text-align: center;
+      font-style: italic;
+      color: $secondary-color;
+      letter-spacing: 1px;
     }
   }
 
+  .entry-content, header {
+    padding: 15px;
+    text-align: justify;
+  }
+  iframe {
+    width: 100%;
+  }
 }

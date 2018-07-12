@@ -12,9 +12,10 @@ module.exports = {
             .done(function (data) {
                 that.cms = data;
                 that.replaceKeys();
-            }).fail(function () {
-            console.log('cms download failed');
-        });
+            })
+            .fail(function () {
+                console.log('cms download failed');
+            });
     },
     replaceKeys: function () {
         $('[data-key]').each($.proxy(function (e) {

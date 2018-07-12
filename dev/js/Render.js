@@ -90,8 +90,6 @@ module.exports = {
             $target = $(target);
         this.renderHandlebarsTemplate(template, $target, model, function () {
             that.onCompleteRender($target.data('component'), $target, model);
-            if (callback) {
-            }
         });
     }
 };

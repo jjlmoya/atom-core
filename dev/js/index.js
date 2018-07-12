@@ -9,7 +9,7 @@ var $ = require('jquery'),
     Post = require('./model/Post');
 var app = {
     locators: {},
-    home: 'home',
+    firstPage: 'settings',
     initialize: function () {
         if (window.debug) {
             this.init();
@@ -23,7 +23,7 @@ var app = {
         require('./helpers/equals');
     },
     goHome: function () {
-        var e = document.querySelector('[data-page="' + this.home + '"]');
+        var e = document.querySelector('[data-page="' + this.firstPage + '"]');
         if (e) {
             e.click();
         }

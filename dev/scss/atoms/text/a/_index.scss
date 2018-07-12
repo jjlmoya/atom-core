@@ -1,7 +1,7 @@
 .a {
-  color: $primary-light-color;
+  color: $primary-color-light;
   text-decoration: none;
   &:hover, &:visited {
-    color: $primary-dark-color;
+    color: $primary-color-dark;
   }
 }

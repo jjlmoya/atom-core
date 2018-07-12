@@ -1,7 +1,3 @@
-$primary-color: #ab47bc;
-$primary-light-color: #df78ef;
-$primary-dark-color: #790e8b;
+@import "branding/lollipop";
 
-$secondary-color: #c51162;
-$secondary-light-color: #fd558f;
-$secondary-dark-color: #8e0038;
+$primary-brand-color: $primary-color;

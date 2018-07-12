@@ -1,0 +1,35 @@
+.l-3-column {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+  .l-3-column-main {
+    width: 60%;
+    order: 2;
+  }
+
+  .l-3-column-aside {
+    width: 100%;
+  }
+
+  .l-3-column-left {
+    order: 1;
+  }
+  .l-3-column-right {
+    order: 3;
+  }
+
+  @media only screen and (max-width: $media-size-m) {
+    flex-direction: column;
+    .l-3-column-main {
+      width: 100%;
+      order: 1;
+    }
+    .l-3-column-left {
+      order: 2;
+    }
+    .l-3-column-right {
+      order: 3;
+    }
+  }
+}
