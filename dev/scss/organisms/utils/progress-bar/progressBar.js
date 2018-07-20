@@ -4,7 +4,7 @@
             event: 'progress-bar'
         },
         setProgress = function (percent) {
-             var progress = document.querySelectorAll('.' + locators.progressBar + ' .progress');
+            var progress = document.querySelectorAll('.' + locators.progressBar + ' .progress');
             if (progress.length > 0) {
                 progress[0].style.width = percent + "%";
             }
@@ -25,22 +25,21 @@
                 setProgress(getCurrentPercent(document.body));
             });
             var progress = document.getElementsByClassName(locators.progressBar);
-            if (progress.length > 0 ) {
+            if (progress.length > 0) {
                 progress[0].addEventListener('click', function (e) {
                     var doc = document.documentElement;
-                    window.scroll(0, (doc.scrollHeight - doc.clientHeight) * (e.screenX/window.innerWidth));
+                    window.scroll(0, (doc.scrollHeight - doc.clientHeight) * (e.screenX / window.innerWidth));
                 })
             }
-
         },
         renderElement = function (width) {
             var elements = document.getElementsByClassName(locators.progressBar);
-            if (elements.length > 0) {
-                elements[0].innerHTML += '<div class="point" style="left:'+ width +'%">⬇</div>';
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].innerHTML += '<div class="point" style="left:' + width + '%">⬇</div>';
             }
         },
         drawElements = function (tag) {
-            var elements = document.getElementsByTagName(tag);
+            var elements = document.querySelectorAll(tag);
             for (var i = 0; i < elements.length; i++) {
                 renderElement(getPercent(elements[i]));
             }

@@ -28,10 +28,10 @@ var Handlebars = require('handlebars'),
                 page: 'settings',
                 display: 'Configuración'
             }, {
-                page: 'test',
-                display: 'Test'
+                page: 'modal',
+                display: 'Modal'
             }],
-        mockArray: [0,1,2,3,4,5,6]
+        mockArray: [0, 1, 2, 3, 4, 5, 6]
     };
 module.exports = {
     model: {
@@ -45,6 +45,7 @@ module.exports = {
         if (component) {
             var event = new Event('components::' + component);  // (*)
             document.dispatchEvent(event);
+            console.log('components::' + component);
         }
         if ($e.find(this.locators.templates).length > 0) {
             this.renderTemplatesByElement($e, model);

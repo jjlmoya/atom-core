@@ -6,6 +6,7 @@ var Render = require('./Render'),
         home: require('./pages/home'),
         splash: require('./pages/splash'),
         settings: require('./pages/settings'),
+        modal: require('./pages/modal')
     };
 module.exports = {
     locators: {
