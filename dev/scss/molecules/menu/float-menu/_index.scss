@@ -2,15 +2,15 @@
   .menu {
     display: none;
   }
-  .menu-superior-container {
+  .ml-float-menu-wrapper {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     color: $primary-color-text;
     transition: .6s all;
+    bottom: 0;
     transform: translateY(-100%);
     position: fixed;
     .menu {
@@ -18,7 +18,7 @@
     }
   }
   &.is-active {
-    .menu-superior-container {
+    .ml-float-menu-wrapper {
       background-color: rgba($primary-color-dark, 0.95);
       transform: translateY(0);
     }
@@ -27,8 +27,13 @@
   ul {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 100%;
+    h3 {
+      font-size: 1.9rem;
+      margin-bottom: 20px;
+      border-bottom: 1px solid $secondary-color-light;
+    }
     a {
       font-size: 20px;
       line-height: 38px;
@@ -54,16 +59,13 @@
     right: 0;
     bottom: 0;
     z-index: 1000;
-    span::after {
+
+    span, svg{
       height: 40px;
       width: 40px;
-      background-color: $primary-color;
       display: flex;
       justify-content: center;
       align-items: center;
-      content: "|||";
-      transform: rotate(-90deg);
-      color: $primary-color-text;
     }
   }
 }

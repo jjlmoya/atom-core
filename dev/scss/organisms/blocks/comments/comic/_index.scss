@@ -1,6 +1,10 @@
 .og-comic-content {
   text-align: left;
 
+  ul, ol {
+    list-style: none;
+  }
+
   .comments-title {
     display: none;
   }

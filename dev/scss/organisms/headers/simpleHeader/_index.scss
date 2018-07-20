@@ -2,14 +2,20 @@
   background-color: $primary-color;
   height: 50px;
   line-height: 50px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
   .h1, a {
     font-size: 25px;
-    color:$primary-color-text;
+    color: $primary-color-text;
   }
   &--secondary {
     background-color: $primary-color-text;
     .h1, a {
-      color:$primary-color;
+      color: $primary-color;
     }
+  }
+  .og-simple-header-nav {
+    margin-left: auto;
   }
 }

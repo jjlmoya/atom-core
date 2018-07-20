@@ -1,11 +1,11 @@
 $primary-color: #4CAF50;
-$primary-color-dark: #388E3C;
-$primary-color-light: #C8E6C9;
+$primary-color-dark: darken($primary-color, 10%);
+$primary-color-light: lighten($primary-color, 10%);
 $primary-color-text: #FFFFFF;
 
-$secondary-color: #4CAF50;
-$secondary-color-dark: #388E3C;
-$secondary-color-light: #C8E6C9;
+$secondary-color: #03ab74;
+$secondary-color-dark: darken($secondary-color, 10%);
+$secondary-color-light: lighten($secondary-color, 10%);
 $secondary-color-text: #FFFFFF;
 
 $divider-color: #BDBDBD;

@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Inicio",
+    "url": "/",
+    "icon": "",
+    "menu": []
+  },
+  {
+    "name": "Tipos de Plantas",
+    "url": "",
+    "icon": "",
+    "menu": [
+      {
+        "name": "Comestibles",
+        "url": "./plantas-comestibles",
+        "icon": "",
+        "menu": []
+      },
+      {
+        "name": "Aromáticas",
+        "url": "./plantas-aromaticas",
+        "icon": "",
+        "menu": []
+      },
+      {
+        "name": "Interior",
+        "url": "./plantas-de-interior",
+        "icon": "",
+        "menu": []
+      },
+      {
+        "name": "Exterior",
+        "url": "./plantas-de-exterior",
+        "icon": "",
+        "menu": []
+      },
+      {
+        "name": "Medicinales",
+        "url": "./plantas-medicinales",
+        "icon": "",
+        "menu": []
+      }
+    ]
+  },
+  {
+    "name": "Contacto",
+    "url": "./contacto",
+    "icon": "",
+    "menu": []
+  }
+]
+
+
+<li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7">
+  <a href="http://www.pyf:9999">
+    Inicio
+  </a>
+</li>
+<li id="menu-item-125"class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-125">
+  <a href="http://www.pyf:9999">Tipos de Planta</a>
+  <ul class="sub-menu">
+    <li id="menu-item-499" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-499">
+      <a href="http://pyf.online:8888/plantas-comestibles/">Plantas Comestibles</a>
+    </li>
+    <li id="menu-item-497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-497"><a
+href="http://pyf.online:8888/plantas-de-interior/">Plantas de Interior</a></li>
+<li id="menu-item-496"
+class="menu-item menu-item-type-post_type menu-item-object-page menu-item-496"><a
+href="http://pyf.online:8888/plantas-de-exterior/">Plantas de Exterior</a></li>
+<li id="menu-item-498"
+class="menu-item menu-item-type-post_type menu-item-object-page menu-item-498"><a
+href="http://pyf.online:8888/plantas-aromaticas/">Plantas Aromáticas</a></li>
+<li id="menu-item-495"
+class="menu-item menu-item-type-post_type menu-item-object-page menu-item-495"><a
+href="http://pyf.online:8888/plantas-medicinales/">Plantas Medicinales</a></li>
+</ul>
+</li>
+<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30">
+<a href="http://pyf.online:8888/contacto/">Contacto</a></li>
+</ul>

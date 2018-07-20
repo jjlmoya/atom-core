@@ -30,7 +30,8 @@ var Handlebars = require('handlebars'),
             }, {
                 page: 'test',
                 display: 'Test'
-            }]
+            }],
+        mockArray: [0,1,2,3,4,5,6]
     };
 module.exports = {
     model: {

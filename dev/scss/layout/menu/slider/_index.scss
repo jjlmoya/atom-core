@@ -31,10 +31,12 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        background-color: $primary-color;
         text-align:center;
-        padding: 20px;
+        background-color: rgba($secondary-color-light, 0.85);
+        padding: 0 !important;
         color: $primary-color-text;
+        line-height: 25px;
+        text-shadow: 1px 0 1px #388E3C;
       }
     }
   }

@@ -4,13 +4,16 @@
             element: '.tabs',
             activeClass: 'is-active'
         },
+        settings = {
+            events: 'menu-fusion'
+        },
         addActionToTabs = function (label) {
             label.addEventListener('click', onClick, false);
         },
         removeSiblingStatus = function (parent) {
-            var childrens = parent.children;
-            for (var i = 0; i < childrens.length; i++) {
-                childrens[i].classList.remove(locators.activeClass);
+            var children = parent.children;
+            for (var i = 0; i < children.length; i++) {
+                children[i].classList.remove(locators.activeClass);
             }
         },
         triggerEvent = function (element) {
@@ -39,7 +42,7 @@
                 addActionToTabs(labels[i])
             }
         };
-    document.addEventListener("components::menu-fusion", function () {
+    document.addEventListener("components::" + settings.events, function () {
         init();
     });
 })();

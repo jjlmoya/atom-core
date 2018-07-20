@@ -21,7 +21,7 @@
                 target = document.getElementsByClassName(locators.container)[0];
             for (var i = 0; i < elements.length; i++) {
                 var text = elements[i].innerText,
-                    id = locators.elements + '-' +i;
+                    id = locators.elements + '-' + i;
                 elements[i].id = id;
                 if (text) {
                     target.appendChild(renderElement(text, id));

@@ -11,20 +11,28 @@
     text-shadow: 1px 0 1px white;
   }
   .bctt-ctt-text a {
-    border: none;
+    border: none !important;
     color: black;
     font-size: 1.6rem;
   }
+
   .bctt-ctt-text:before {
     content: "\201C";
     font-size: 1.6rem;
     color: black;
   }
+
+  @media only screen and (max-width: $media-size-m) {
+    .bctt-ctt-text a {
+      font-size: 1.1rem;
+    }
+  }
+
   .bctt-ctt-btn {
     color: white;
     @extend .button;
     @extend .button--secondary;
-    width: 150px;
+    width: 175px;
     margin: 5px auto 0 auto;
   }
 }
