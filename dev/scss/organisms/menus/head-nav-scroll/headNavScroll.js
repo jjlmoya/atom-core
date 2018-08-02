@@ -1,7 +1,7 @@
 (function () {
     "use strict";
     var locators = {
-            container: 'og-head-nav',
+            container: 'og-fixed-summary-price',
             elements: 'og-head-nav-element',
             event: 'head-nav-scroll'
         },
@@ -16,14 +16,14 @@
             return document.getElementsByTagName(tag);
         },
         init = function (e) {
-            var nodeTarget = e.settings ? e.settings : 'h2',
+            var nodeTarget = e ? e.settings : 'h2',
                 elements = getElements(nodeTarget),
                 target = document.getElementsByClassName(locators.container)[0];
             for (var i = 0; i < elements.length; i++) {
                 var text = elements[i].innerText,
                     id = locators.elements + '-' + i;
                 elements[i].id = id;
-                if (text) {
+                if (text && target) {
                     target.appendChild(renderElement(text, id));
                 }
             }
@@ -31,4 +31,5 @@
     document.addEventListener('components::' + locators.event, function (e) {
         init(e);
     });
+    init();
 })();

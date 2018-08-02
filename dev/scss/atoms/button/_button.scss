@@ -9,13 +9,21 @@
   position: relative;
 
   &--s {
-    padding: 0px 5px;
+    padding: 0 5px;
   }
   &--l {
     padding: 10px 15px;
   }
   &--xl {
     padding: 20px 30px;
+  }
+  &--tight {
+    padding: 10px 50px;
+  }
+  &--strong {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
   }
   &--primary {
     background-color: $primary-color-dark;

@@ -23,14 +23,14 @@ module.exports = function (grunt) {
                 options: {                       // Target options
                     style: 'expanded'
                 },
-                files: {'www/css/index.css': scssPath}            // Dictionary of files// 'destination': 'source'
+                files: {'www/public/css/index.css': scssPath}            // Dictionary of files// 'destination': 'source'
 
             }
         },
         browserify: {
             dist: {
                 files: {
-                    'www/js/index.min.js': jsPath + 'index.js'
+                    'www/public/js/index.min.js': jsPath + 'index.js'
                 },
             }
         },
@@ -40,7 +40,7 @@ module.exports = function (grunt) {
             },
             build: {
                 files: {
-                    'www/js/components.min.js': jsComponents
+                    'www/public/js/components.min.js': jsComponents
                 }
             }
         },
@@ -48,11 +48,11 @@ module.exports = function (grunt) {
             main: {
                 files: [
                     {expand: false, src: 'dev/index.html', dest: 'www/index.html', filter: 'isFile'},
-                    {expand: true, dest: 'www', cwd: 'dev', src: 'templates/**'},
+                    {expand: false, src: 'dev/apps.js', dest: 'www/apps.js', filter: 'isFile'},
+                    {expand: true, dest: 'www', cwd: 'dev', src: 'public/**'},
+                    {expand: true, dest: 'www', cwd: 'dev', src: 'server/**'},
                     {expand: true, dest: 'www', cwd: 'dev', src: 'translations/**'},
-                    {expand: true, dest: 'www', cwd: 'dev', src: 'img/**'},
-                    {expand: true, dest: 'www', cwd: 'dev', src: 'data/**'}
-
+                    {expand: true, dest: 'www', cwd: 'dev', src: 'views/**'},
                 ],
             },
         },

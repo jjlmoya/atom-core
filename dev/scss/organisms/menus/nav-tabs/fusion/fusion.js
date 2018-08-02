@@ -45,4 +45,5 @@
     document.addEventListener("components::" + settings.events, function () {
         init();
     });
+    init();
 })();

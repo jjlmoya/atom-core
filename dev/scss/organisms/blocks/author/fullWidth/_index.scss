@@ -25,5 +25,16 @@
       height: 50px;
       margin: 5px;
     }
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
   }
+
+}
+
+.amp-wp-article .og-author-full-width {
+  display: none !important;
 }

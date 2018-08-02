@@ -68,4 +68,7 @@
       align-items: center;
     }
   }
+  @media only screen and (min-width: $media-size-m) {
+    display: none;
+  }
 }

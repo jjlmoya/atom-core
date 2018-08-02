@@ -20,4 +20,5 @@
     document.addEventListener("components::imagebox", function () {
         init();
     });
+    init();
 })();

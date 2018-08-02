@@ -11,14 +11,13 @@
   }
   h1 {
     font-weight: bolder;
-    font-size: 1.6rem;
     width: 100%;
     border-bottom: 1px solid $primary-color;
     text-align: center;
   }
   h2 {
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     &::after {
       margin-left: 20%;
       content: "";
@@ -36,6 +35,25 @@
       }
     }
   }
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  h5 {
+    font-size: 0.9rem;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    padding: 10px 0 15px 0;
+  }
   figcaption, a {
     h2 {
       &::after {
@@ -43,13 +61,7 @@
       }
     }
   }
-  h3, h4, h5 {
-    font-weight: 600;
-    font-size: 0.9rem;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    padding: 10px 0 15px 0;
-  }
+
   p {
     margin-bottom: 30px;
   }

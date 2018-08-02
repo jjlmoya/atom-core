@@ -4,7 +4,24 @@
             container: 'ml-float-menu',
             button: 'ml-float-menu-button',
             list: 'ml-float-menu ul',
-            event: 'ml-float-menu menu'
+            event: 'floatMenu'
+        },
+        sendTracking = function (settings) {
+            if (ga) {
+                ga('send', 'event', settings);
+            }
+        },
+        analytics = {
+            button: function () {
+                sendTracking({
+                    eventCategory: 'Menu Float Button',
+                    eventAction: 'click',
+                    eventLabel: 'button'
+                })
+            },
+            element: function (element) {
+                sendTracking({eventCategory: 'Menu Float Button', eventAction: 'click', eventLabel: element.href});
+            }
         },
         icons = {
             shop: '<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">' +
@@ -24,10 +41,8 @@
             '<path class="st0" d="M37,29H25c-0.6,0-1,0.4-1,1v12c0,0.6,0.4,1,1,1h12c0.6,0,1-0.4,1-1V30C38,29.4,37.6,29,37,29z"/>' +
             '<path class="st0" d="M37,57H25c-0.6,0-1,0.4-1,1v12c0,0.6,0.4,1,1,1h12c0.6,0,1-0.4,1-1V58C38,57.4,37.6,57,37,57z"/>' +
             '<path class="st0" d="M37,85H25c-0.6,0-1,0.4-1,1v12c0,0.6,0.4,1,1,1h12c0.6,0,1-0.4,1-1V86C38,85.4,37.6,85,37,85z"/></g>' +
-            '</svg>',
+            '</svg>'
         },
-
-
         getMenu = function (menuList) {
             var oReq = new XMLHttpRequest();
             oReq.onload = function (data) {
@@ -56,12 +71,25 @@
         },
 
         getIcon = function (container) {
-           return icons[container.dataset.icon]
+            return icons[container.dataset.icon]
         },
         notEmpty = function (container) {
             return container.querySelectorAll('li').length > 0;
         },
-        init = function () {
+        addElementListener = function (list) {
+            list.addEventListener('click', function (e) {
+                if (e.tagName === 'a') {
+                    analytics.element(e);
+                }
+            });
+        },
+        addListListener = function () {
+            var elements = document.querySelectorAll(locators.list);
+            for (var i = 0; i < elements.length; i++) {
+                addElementListener(elements[i]);
+            }
+        },
+        createButton = function () {
             var container = document.getElementsByClassName(locators.container);
             if (container.length > 0) {
                 var newElement = document.createElement('div');
@@ -76,11 +104,15 @@
                         addButtonListener(button, container[i], locators.container + '-' + i);
                     }
                 }
-
             }
+        },
+        init = function () {
+           createButton();
+            addListListener();
         };
-    document.addEventListener("components::floatMenu", function (e) {
+    document.addEventListener("components::" + locators.event, function (e) {
         init();
     });
-
-})();
+    init();
+})
+();

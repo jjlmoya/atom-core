@@ -37,5 +37,5 @@
     document.addEventListener('components::' + locators.event, function (e) {
         init();
     });
-
+    init();
 })();
