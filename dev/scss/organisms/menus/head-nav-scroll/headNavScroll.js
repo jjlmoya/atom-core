@@ -1,7 +1,7 @@
 (function () {
     "use strict";
     var locators = {
-            container: 'og-fixed-summary-price',
+            container: 'og-head-nav',
             elements: 'og-head-nav-element',
             event: 'head-nav-scroll'
         },
