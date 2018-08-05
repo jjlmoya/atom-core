@@ -11,8 +11,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 db.connect(Config.db().protocol + Config.db().url, function(err) {
     if (err) {
-        console.log('Unable to connect to Mongo.')
-        process.exit(1)
+        console.log('Unable to connect to Mongo.');
+        process.exit(1);
     } else {
         app.listen(port, function () {
             console.log('Example app listening on port ' + port);
@@ -22,5 +22,4 @@ db.connect(Config.db().protocol + Config.db().url, function(err) {
 
 require('./server/engine')(app);
 require('./server/router')(app);
-require('./server/controller/product')(app);
 

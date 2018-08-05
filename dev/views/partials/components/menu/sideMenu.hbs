@@ -1,0 +1,14 @@
+<div class="og-side-menu">
+    <h2 class="heading">C. Panel</h2>
+    {{#each navAdmin}}
+        <ul>
+            <h3>{{this.name}}</h3>
+            {{#each this.tabs}}
+                <li class="og-side-menu-element{{#equals ../../activePageSlug this.path}} is-active{{/equals}}">
+                    <a href="{{this.path}}">{{this.name}}</a>
+                </li>
+            {{/each}}
+        </ul>
+    {{/each}}
+</div>
+

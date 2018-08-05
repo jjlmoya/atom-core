@@ -15,4 +15,8 @@
     background-color: $secondary-color;
     color: $primary-color-text;
   }
+  &--content-writable {
+    background-color: $mono-color-0;
+    color: $mono-color-9;
+  }
 }

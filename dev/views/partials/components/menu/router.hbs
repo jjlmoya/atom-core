@@ -1,8 +1,8 @@
 <section>
     <nav class="og-nav-tabs-fusion">
         <ul class="ul">
-            {{#each NavPages}}
-                <li class="tabs {{#equals this.page ../currentPage }}is-active{{/equals}}" data-page="{{this.page}}"><a class="a">{{this.display}}</a></li>
+            {{#each navPages}}
+                <li class="tabs"><a href="{{this.slug}}" class="a">{{this.name}}</a></li>
             {{/each}}
         </ul>
     </nav>

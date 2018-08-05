@@ -1,9 +1,9 @@
-module.exports = function (app) {
-    var db = require('./db');
-
-    require('./controller/home')(app, db);
+module.exports = (app) => {
+    require('./controller/home')(app);
     require('./controller/modal')(app);
+    require('./controller/admin')(app);
 
 
-
+    require('./controller/product')(app);
+    require('./controller/navigation')(app);
 };

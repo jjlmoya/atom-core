@@ -1,3 +1,6 @@
+const literals = require('./literals/panel');
+
+
 exports.db = function () {
     return {
         dbName: 'mocking',
@@ -6,7 +9,7 @@ exports.db = function () {
     }
 };
 
-exports.server = function () {
+exports.server = function () {
     return {
         port: 3125
     }
@@ -14,7 +17,27 @@ exports.server = function () {
 
 exports.router = function () {
     return {
-        //veiw - path
-        "home": '/'
+        home: {
+            path: '/',
+            view: 'home'
+        },
+        modal: {
+            path: '/modal',
+            view: 'modal'
+        },
+        admin: {
+            path: '/admin',
+            view: 'admin/admin.hbs',
+            navigation: {
+                display: literals.titles.navigation,
+                path: 'navegacion',
+                view: 'admin/navigation.hbs',
+            },
+            watch: {
+                display: literals.titles.watch,
+                path: 'relojes',
+                view: 'admin/watch.hbs',
+            }
+        },
     }
-}
+};

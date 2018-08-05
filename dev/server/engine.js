@@ -9,8 +9,16 @@ module.exports = function (app) {
         extname: '.hbs',
         layoutsDir: pathView + 'layouts',
         partialsDir: pathView + 'partials',
-        viewsDir: pathView
+        viewsDir: pathView,
+        helpers: {
+            equals: function (arg1, arg2, options) {
+                console.log('arg1 %o',arg1);
+                console.log('arg2 %o',arg2);
+                return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+            }
+        }
     }));
+
 
     app.set('view engine', 'hbs');
     app.set('views', path.join(__dirname, '../views'));

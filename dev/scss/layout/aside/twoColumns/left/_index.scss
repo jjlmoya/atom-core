@@ -11,4 +11,9 @@
     justify-content: space-between;
     min-width: 75%;
   }
+  &--tight {
+    .col {
+      max-width: 150px;
+    }
+  }
 }

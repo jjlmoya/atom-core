@@ -1,5 +1,5 @@
 .og-simple-header {
-  background-color: $primary-color;
+  @extend .bg--primary;
   height: 50px;
   line-height: 50px;
   display: flex;
@@ -7,15 +7,18 @@
   margin: 0 auto;
   .h1, a {
     font-size: 25px;
-    color: $primary-color-text;
+
   }
   &--secondary {
-    background-color: $primary-color-text;
     .h1, a {
       color: $primary-color;
     }
   }
   .og-simple-header-nav {
     margin-left: auto;
+  }
+  &--monocolor {
+    background-color: $mono-color-9;
+    color: $mono-color-0;
   }
 }

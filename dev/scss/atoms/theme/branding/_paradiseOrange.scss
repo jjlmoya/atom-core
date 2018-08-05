@@ -1,20 +1,14 @@
-$primary-color: #1F6521;
+$primary-color: #f5a631;
 $primary-color-dark: darken($primary-color, 10%);
 $primary-color-light: lighten($primary-color, 10%);
-$primary-color-text: #FFFFFF;
+$primary-color-text: #d9fbff;
 
-$secondary-color: #A4A71E;
+$secondary-color: #81ffff;
 $secondary-color-dark: darken($secondary-color, 10%);
 $secondary-color-light: lighten($secondary-color, 10%);
-$secondary-color-text: #FFFFFF;
+$secondary-color-text: #462603;
 
 $divider-color: #BDBDBD;
 $accent-color: #CDDC39;
-
-
-
-
-
-
-
+$inner-shadow-color: $primary-color;
 

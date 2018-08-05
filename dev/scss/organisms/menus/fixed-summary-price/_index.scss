@@ -18,6 +18,10 @@
       .small {
         font-size: 10px;
       }
+      p {
+        margin: 0;
+        line-height: 1;
+      }
 
     }
     .og-fixed-summary-price-button {
@@ -57,8 +61,25 @@
   }
 
   .og-fixed-summary-price-unfold {
-    transform: translateY(-100%);
+    bottom: 45px;
+    position: fixed;
+    transform: translateY(100%);
+    transition: 1s transform;
+    width: 100%;
+    height: 100%;
   }
+  &.is-active {
+    .og-fixed-summary-price-unfold {
+      padding-top: 45px;
+      overflow-y: auto;
+      transition: 1s transform;
+      transform: translateY(0);
+    }
+  }
+
+}
+
+.content-to-copy{
 
 }
 

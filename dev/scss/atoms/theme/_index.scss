@@ -1,8 +1,7 @@
-@import "colors/brand";
-@import "colors/neutral";
-@import "colors/utility";
-@import "colors/text";
-@import "images/brand";
-@import "images/util";
+@import "branding/paradiseOrange";
+@import "colors/index";
+@import "images/index";
 @import "decoration/text";
 @import "backgrounds/index";
+
+$primary-brand-color: $primary-color;
