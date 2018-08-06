@@ -12,8 +12,6 @@ module.exports = function (app) {
         viewsDir: pathView,
         helpers: {
             equals: function (arg1, arg2, options) {
-                console.log('arg1 %o',arg1);
-                console.log('arg2 %o',arg2);
                 return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
             }
         }

@@ -1,5 +1,23 @@
-<form action="/navElements" method="POST">
-    <input class="i-text" type="text" placeholder="slug" name="slug">
-    <input class="i-text" type="text" placeholder="name" name="name">
-    <button class="button button--primary button--primary--glow" type="submit">Submit</button>
+<form class="{{formClass}}" action="/navElements" method="POST">
+    <fieldset>
+        <legend>New Navs</legend>
+        {{> atoms/input/text
+                placeholder="slug"
+                validation="uri"
+                label="Slug"
+                name="slug"
+                required="true"
+        }}
+
+        {{> atoms/input/text
+                placeholder="Insert your name"
+                validation="string"
+                label="Name"
+                name="name"
+                required="true"
+        }}
+    </fieldset>
+    {{> atoms/input/submit
+            modifier=""
+            text="Save"}}
 </form>

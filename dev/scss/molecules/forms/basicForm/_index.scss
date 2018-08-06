@@ -1,0 +1,44 @@
+.ml-basic-form {
+  fieldset {
+    max-width: 80%;
+    min-width: 60%;
+    border-radius: 2px;
+    border-top: 2px solid $primary-color;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+    margin: 20px;
+  }
+  legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-right: 10px;
+  }
+
+  .input-wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin: 5px;
+    input {
+      width: 200px;
+      border-radius: 3px;
+      text-align: left;
+      height: 100%;
+      border: none;
+      padding: 0 10px;
+      &:focus {
+        outline: none;
+      }
+    }
+    label{
+      @extend .bg--primary;
+      border-radius: 0 4px 4px 0;
+      height: 100%;
+      margin-left: -10px;
+      padding: 0 15px;
+      line-height: 50px;
+    }
+  }
+
+}

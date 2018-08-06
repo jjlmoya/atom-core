@@ -1,0 +1,8 @@
+.l-column-distribution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--centered {
+    justify-content: center;
+  }
+}

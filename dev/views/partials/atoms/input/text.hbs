@@ -1,8 +1,12 @@
-<label for="{{name}}">{{name}}</label>
-<input
-        name="{{name}}"
-        type="text"
-        class="input-text {{modifier}}"
-        placeholder="{{placeholder}}"
-        data-validation="{{validation}}"
-/>
+<div class="input-wrapper">
+
+    <input
+            name="{{name}}"
+            type="text"
+            class="input-text {{modifier}}"
+            placeholder="{{placeholder}}"
+            data-validation="{{validation}}"
+            {{#equals required "true"}}required="required"{{/equals}}
+    />
+    <label for="{{name}}">{{name}}{{#equals required "true"}}*{{/equals}}</label>
+</div>

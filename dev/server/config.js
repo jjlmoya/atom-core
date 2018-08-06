@@ -31,11 +31,13 @@ exports.router = function () {
             navigation: {
                 display: literals.titles.navigation,
                 path: 'navegacion',
+                services: [require('./services/navPages').service.get],
                 view: 'admin/navigation.hbs',
             },
             watch: {
                 display: literals.titles.watch,
                 path: 'relojes',
+                services: [],
                 view: 'admin/watch.hbs',
             }
         },

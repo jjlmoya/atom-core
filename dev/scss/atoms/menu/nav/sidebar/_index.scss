@@ -13,6 +13,7 @@
   ul {
     text-transform: capitalize;
     font-size: 0.9rem;
+    margin-bottom: 10px;
 
     h3{
       @extend .bg--secondary;
@@ -29,6 +30,9 @@
       a {
         color: white;
 
+      }
+      &.is-active{
+        font-weight: bold;
       }
     }
   }
