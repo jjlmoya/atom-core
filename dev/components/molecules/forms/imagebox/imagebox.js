@@ -14,7 +14,7 @@
         init = function () {
             var labels = document.querySelectorAll(locators.parent + ' ' + locators.label);
             for (var i = 0; i < labels.length; i++) {
-                addLinkLabelToCheckbox(labels[i])
+                addLinkLabelToCheckbox(labels[i]);
             }
         };
     document.addEventListener("components::imagebox", function () {

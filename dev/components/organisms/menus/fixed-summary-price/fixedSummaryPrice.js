@@ -9,13 +9,17 @@
             contentToCopy: 'content-to-copy',
             event: 'fixedSummaryPrice'
         },
+
+        addListenerToElement = function (element, event, action) {
+            element.addEventListener(event, function (e) {
+                action(element.target);
+            });
+        },
         bindEventToElement = function (locator, event, action) {
             var elements = document.getElementsByClassName(locator);
             if (elements.length > 0) {
                 for (var i = 0; i < elements.length; i++) {
-                    elements[i].addEventListener(event, function (e) {
-                        action(e.target);
-                    });
+                    addListenerToElement(elements[i], event, action);
                 }
             }
         },
@@ -33,8 +37,8 @@
                 actionToElement(document.getElementsByClassName(locators.hiddenContent), function (target) {
                     target.innerHTML += content.innerHTML;
                     content.innerHTML = '';
-                })
-            })
+                });
+            });
         },
         unfoldContent = function () {
             actionToElement(document.getElementsByClassName(locators.container), function (e) {

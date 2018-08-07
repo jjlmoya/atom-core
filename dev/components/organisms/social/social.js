@@ -47,18 +47,18 @@
                         title: data.title,
                         summary: data.text,
                         source: data.link
-                    }
+                    };
                 },
                 whatsapp: function (data) {
                     return {
                         text: data.link
-                    }
+                    };
                 },
                 google: function (data) {
                     return {
                         text: data.text,
                         url: data.link
-                    }
+                    };
                 }
             },
             action: {

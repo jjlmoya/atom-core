@@ -17,7 +17,7 @@
                     eventCategory: 'Menu Float Button',
                     eventAction: 'click',
                     eventLabel: 'button'
-                })
+                });
             },
             element: function (element) {
                 sendTracking({eventCategory: 'Menu Float Button', eventAction: 'click', eventLabel: element.href});
@@ -61,7 +61,7 @@
             clearListeners(button).addEventListener('click', function () {
                 document.body.classList.remove('overflow-blocked');
                 toggleViewMenu(container);
-            })
+            });
         },
         toggleViewMenu = function (menu) {
             menu.classList.toggle('is-active');
@@ -71,7 +71,7 @@
         },
 
         getIcon = function (container) {
-            return icons[container.dataset.icon]
+            return icons[container.dataset.icon];
         },
         notEmpty = function (container) {
             return container.querySelectorAll('li').length > 0;

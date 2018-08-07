@@ -21,25 +21,24 @@
                     eventCategory: model.category,
                     eventAction: 'click',
                     eventLabel: 'close'
-                })
+                });
             },
             link: function () {
                 sendTracking({eventCategory: model.category, eventAction: 'click', eventLabel: 'link'});
             },
-
+        },
+        closeAction =  function (e) {
+            analytics.close();
+            e.target.parentNode.parentNode.classList.remove('is-active');
         },
         bindCloseButton = function () {
             var closeButtons = document.getElementsByClassName(locators.close);
             for (var i = 0; i < closeButtons.length; i++) {
-                var button = closeButtons[i];
-                button.addEventListener('click', function (e) {
-                    analytics.close();
-                    e.target.parentNode.parentNode.classList.remove('is-active');
-                });
+                closeButtons[i].addEventListener('click', closeAction);
             }
         },
         doSomething = function () {
-            analytics.link()
+            analytics.link();
             //TODO: REDEFINE BEHAVIOR
         },
         bindAction = function () {

@@ -25,13 +25,13 @@
         },
         bindCloseEvent = function (element) {
             element.addEventListener('click', function () {
-                toggleContainer()
-            })
+                toggleContainer();
+            });
         },
         init = function () {
             addListeners();
             setTimeout(function () {
-                toggleContainer(true)
+                toggleContainer(true);
             }, 3000);
         };
     document.addEventListener('components::' + locators.event, function (e) {

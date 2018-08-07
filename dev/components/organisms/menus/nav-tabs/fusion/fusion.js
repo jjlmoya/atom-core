@@ -39,7 +39,7 @@
         init = function () {
             var labels = document.querySelectorAll(locators.parent + ' ' + locators.element);
             for (var i = 0; i < labels.length; i++) {
-                addActionToTabs(labels[i])
+                addActionToTabs(labels[i]);
             }
         };
     document.addEventListener("components::" + settings.events, function () {

@@ -29,7 +29,7 @@
                 progress[0].addEventListener('click', function (e) {
                     var doc = document.documentElement;
                     window.scroll(0, (doc.scrollHeight - doc.clientHeight) * (e.screenX / window.innerWidth));
-                })
+                });
             }
         },
         renderElement = function (width) {

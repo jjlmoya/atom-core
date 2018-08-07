@@ -34,11 +34,11 @@
         },
         saveData = function (data) {
             var dataToAdd = loadData();
-            dataToAdd.push(data)
+            dataToAdd.push(data);
             localStorage.setItem(settings.localStorageKey, JSON.stringify(dataToAdd));
         },
         loadData = function () {
-            var old = localStorage.getItem(settings.localStorageKey) || '[]'
+            var old = localStorage.getItem(settings.localStorageKey) || '[]';
             return JSON.parse(old);
         },
 
@@ -63,15 +63,14 @@
                 title: getTitle(),
                 link: window.location.href
 
-            }
+            };
 
         },
         addButtonListener = function () {
             var elements = document.getElementsByClassName(locators.button);
             if (elements.length > 0) {
                 elements[0].addEventListener('click', function () {
-                    console.log('cliki');
-                    toggleMenu()
+                    toggleMenu();
                 });
             }
         },
@@ -86,12 +85,13 @@
             renderLocalStorage();
 
         },
+        closeAction =  function (e) {
+            deleteFavById(e.target.dataset.id);
+        },
         addDeleteListener = function () {
             var closeButtons = document.getElementsByClassName(locators.close);
             for (var i = 0; i < closeButtons.length; i++) {
-                closeButtons[i].addEventListener('click', function (e) {
-                    deleteFavById(e.target.dataset.id)
-                });
+                closeButtons[i].addEventListener('click', closeAction);
             }
         },
         renderLocalStorage = function () {
@@ -107,7 +107,7 @@
             var headerMenu = document.getElementsByClassName(locators.nav),
                 button = document.getElementsByClassName(locators.button);
             if (headerMenu.length > 0 && button.length > 0) {
-                headerMenu[0].appendChild(button[0])
+                headerMenu[0].appendChild(button[0]);
             }
 
         },
