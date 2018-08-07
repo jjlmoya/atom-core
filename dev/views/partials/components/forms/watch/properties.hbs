@@ -1,0 +1,32 @@
+<!--
+
+properties: {
+        batteryTime: {type: Number},
+        weight: {type: Number},
+        madeIn: {type: String},
+        warranty: {type: Number}
+    },
+
+
+-->
+
+<fieldset>
+    <legend>Propiedades</legend>
+    {{> atoms/input/text
+            placeholder="Título para la Página"
+            validation="string"
+            label="Título"
+            name="title"
+            required="true"
+    }}
+
+    {{> atoms/input/text
+            placeholder="Descripción para la página"
+            validation="string"
+            label="Descripción"
+            name="description"
+            required="true"
+    }}
+
+
+</fieldset>

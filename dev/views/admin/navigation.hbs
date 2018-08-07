@@ -1,6 +1,16 @@
-<ul class="ul">
-    {{#each navPages}}
-        <li class="tabs">{{this.slug}} - {{this.name}}</li>
-    {{/each}}
-</ul>
-{{> components/forms/navigation formClass="l-column-distribution l-column-distribution--centered ml-basic-form"}}
+
+
+
+
+
+{{#if navPages }}
+    <ul class="ul">
+        {{#each navPages}}
+            <li class="tabs">{{this.slug}} - {{this.name}}<a href="{{../this.activePageSlug}}/{{this.id}}">Edit</a></li>
+        {{/each}}
+    </ul>
+{{/if}}
+
+
+{{> components/forms/navigation
+        formClass="l-column-distribution l-column-distribution--centered ml-basic-form"}}

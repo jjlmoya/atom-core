@@ -1,0 +1,28 @@
+<!--
+wristband: {
+        material: [String], //piel, silicona
+        closure: {type: String, required: true}, //boton, hebilla
+        color: [String],
+        size: [Number]
+    },
+
+-->
+
+<fieldset>
+    <legend>Pulsera</legend>
+    {{> atoms/input/text
+            placeholder="Título para la Página"
+            validation="string"
+            label="Título"
+            name="title"
+            required="true"
+    }}
+
+    {{> atoms/input/text
+            placeholder="Descripción para la página"
+            validation="string"
+            label="Descripción"
+            name="description"
+            required="true"
+    }}
+</fieldset>

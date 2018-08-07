@@ -1,0 +1,30 @@
+<!--
+
+glass: {
+        material: [],
+        curvature: {type: Boolean},
+        antiReflective: {type: Boolean}
+    },
+
+-->
+
+<fieldset>
+    <legend>Cristal</legend>
+    {{> atoms/input/text
+            placeholder="Título para la Página"
+            validation="string"
+            label="Título"
+            name="title"
+            required="true"
+    }}
+
+    {{> atoms/input/text
+            placeholder="Descripción para la página"
+            validation="string"
+            label="Descripción"
+            name="description"
+            required="true"
+    }}
+
+
+</fieldset>

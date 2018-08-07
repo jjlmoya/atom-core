@@ -1,0 +1,7 @@
+<ul class="ul">
+    {{#each watchList}}
+        <li class="tabs">{{this.price}} - {{this.id}}- {{this.gender}}</li>
+    {{/each}}
+</ul>
+{{> components/forms/watch/main
+        formClass="l-column-distribution l-column-distribution--centered ml-basic-form"}}

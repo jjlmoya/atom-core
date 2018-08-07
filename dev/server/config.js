@@ -1,4 +1,5 @@
 const literals = require('./literals/panel');
+const NavBarService = require('./services/navbar.service');
 
 
 exports.db = function () {
@@ -31,13 +32,16 @@ exports.router = function () {
             navigation: {
                 display: literals.titles.navigation,
                 path: 'navegacion',
-                services: [require('./services/navPages').service.get],
+                services: {
+                    read: [NavBarService.read],
+                    readByID: NavBarService.readById
+                } ,
                 view: 'admin/navigation.hbs',
             },
             watch: {
                 display: literals.titles.watch,
                 path: 'relojes',
-                services: [],
+                services: [require('./services/watch.service').read],
                 view: 'admin/watch.hbs',
             }
         },

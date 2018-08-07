@@ -1,9 +1,10 @@
 module.exports = (app) => {
-    require('./controller/home')(app);
-    require('./controller/modal')(app);
-    require('./controller/admin')(app);
+    require('./controller/home.controller')(app);
+    require('./controller/modal.controller')(app);
+    require('./controller/admin.controller')(app);
 
 
-    require('./controller/product')(app);
-    require('./controller/navigation')(app);
+    require('./controller/navigation.controller')(app);
+    require('./controller/watch.controller')(app);
+
 };

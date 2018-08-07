@@ -1,0 +1,29 @@
+<!--
+
+mechanism: {
+        type: {type: String, required: true}, //Mecánico, Automático, Quark, AutoQuark
+        caliber: {type: String, required: true}, //nombre especifico
+    },
+
+-->
+
+<fieldset>
+    <legend>Mecanismo</legend>
+    {{> atoms/input/text
+            placeholder="Título para la Página"
+            validation="string"
+            label="Título"
+            name="title"
+            required="true"
+    }}
+
+    {{> atoms/input/text
+            placeholder="Descripción para la página"
+            validation="string"
+            label="Descripción"
+            name="description"
+            required="true"
+    }}
+
+
+</fieldset>

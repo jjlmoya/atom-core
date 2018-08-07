@@ -1,0 +1,40 @@
+<!--
+
+case: {
+        material: [],
+        coating: [],
+        coatingColor: [],
+        rotateBezel: {type: Boolean},
+        crown: {
+            type: {type: String},
+            size: {type: Number}
+        },
+        back: {
+            isTransparent: {type: Boolean},
+            type: {type: String}
+        }
+    }
+
+-->
+
+
+<fieldset>
+    <legend>Carcasa</legend>
+    {{> atoms/input/text
+            placeholder="Título para la Página"
+            validation="string"
+            label="Título"
+            name="title"
+            required="true"
+    }}
+
+    {{> atoms/input/text
+            placeholder="Descripción para la página"
+            validation="string"
+            label="Descripción"
+            name="description"
+            required="true"
+    }}
+
+
+</fieldset>

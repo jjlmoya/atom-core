@@ -1,23 +1,33 @@
-<form class="{{formClass}}" action="/navElements" method="POST">
+<form class="{{formClass}}" action="{{endpoint}}" method="POST">
     <fieldset>
-        <legend>New Navs</legend>
+        <legend>
+            {{#if isUpdate}}
+                Edit Nav Entry
+            {{else}}
+                Add New Entry
+            {{/if}}
+        </legend>
         {{> atoms/input/text
-                placeholder="slug"
+                placeholder="Insert your slug"
                 validation="uri"
                 label="Slug"
                 name="slug"
                 required="true"
+                value=editElement.slug
         }}
-
         {{> atoms/input/text
                 placeholder="Insert your name"
                 validation="string"
                 label="Name"
                 name="name"
+                value=editElement.name
                 required="true"
         }}
     </fieldset>
-    {{> atoms/input/submit
-            modifier=""
-            text="Save"}}
+    {{#if isUpdate}}
+        {{> atoms/input/submit
+                modifier=""  text="Edit"}}
+    {{else}}
+        {{> atoms/input/submit modifier=""  text="Save"}}
+    {{/if}}
 </form>

@@ -1,5 +1,4 @@
-var MongoClient = require('mongodb').MongoClient;
-var Config = require('./config');
+const mongoose = require('mongoose');
 
 var state = {
     db: null
@@ -7,9 +6,9 @@ var state = {
 
 exports.connect = function (url, done) {
     if (state.db) return done();
-    MongoClient.connect(url,{ useNewUrlParser: true }, function (err, db) {
+    mongoose.connect(url,  function (err, db) {
         if (err) return done(err);
-        state.db = db.db(Config.db().dbName);
+        state.db = mongoose.connection;
         done();
     })
 };

@@ -1,12 +1,11 @@
 module.exports = function (grunt) {
     var basePath = 'dev/',
-        jsPath = basePath + 'js/',
-        scssPath = basePath + 'scss/index.scss',
-        jsComponents = "dev/scss/**/*.js",
-        tasks = ['jshint', 'clean', 'copy', 'sass', 'browserify', 'uglify', 'htmlmin'];
+        scssPath = basePath + 'components/index.scss',
+        jsComponents = "dev/components/**/*.js",
+        tasks = ['jshint', 'clean', 'copy', 'sass', 'uglify'];
     grunt.initConfig({
         jshint: {
-            files: [jsPath],
+            files: [jsComponents],
             options: {
                 globals: {
                     jQuery: true,
@@ -27,13 +26,6 @@ module.exports = function (grunt) {
 
             }
         },
-        browserify: {
-            dist: {
-                files: {
-                    'www/public/js/index.min.js': jsPath + 'index.js'
-                },
-            }
-        },
         uglify: {
             options: {
                 sourceMap: true
@@ -47,11 +39,9 @@ module.exports = function (grunt) {
         copy: {
             main: {
                 files: [
-                    {expand: false, src: 'dev/index.html', dest: 'www/index.html', filter: 'isFile'},
                     {expand: false, src: 'dev/apps.js', dest: 'www/apps.js', filter: 'isFile'},
                     {expand: true, dest: 'www', cwd: 'dev', src: 'public/**'},
                     {expand: true, dest: 'www', cwd: 'dev', src: 'server/**'},
-                    {expand: true, dest: 'www', cwd: 'dev', src: 'translations/**'},
                     {expand: true, dest: 'www', cwd: 'dev', src: 'views/**'},
                 ],
             },
@@ -65,17 +55,6 @@ module.exports = function (grunt) {
                     spawn: false,
                 },
             },
-        },
-        htmlmin: {                                     // Task
-            dist: {                                      // Target
-                options: {                                 // Target options
-                    removeComments: true,
-                    collapseWhitespace: true
-                },
-                files: {                                   // Dictionary of files
-                    'www/index.html': 'www/index.html',     // 'destination': 'source'
-                }
-            },
         }
     });
 
@@ -87,7 +66,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-browserify');
 
 
     grunt.registerTask('default', tasks);
