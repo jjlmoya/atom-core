@@ -1,5 +1,8 @@
 const literals = require('./literals/panel');
 const NavBarService = require('./services/navbar.service');
+const WatchService = require('./services/business/watch.service');
+const ColorsService = require('./services/business/color.services');
+const MaterialsService = require('./services/business/material.services');
 
 
 exports.db = function () {
@@ -26,6 +29,10 @@ exports.router = function () {
             path: '/modal',
             view: 'modal'
         },
+        bannerLand: {
+            path: '/bannerland',
+            view: 'bannerLand'
+        },
         admin: {
             path: '/admin',
             view: 'admin/admin.hbs',
@@ -35,15 +42,17 @@ exports.router = function () {
                 services: {
                     read: [NavBarService.read],
                     readByID: NavBarService.readById
-                } ,
+                },
                 view: 'admin/navigation.hbs',
             },
             watch: {
                 display: literals.titles.watch,
                 path: 'relojes',
-                services: [require('./services/watch.service').read],
+                services: {
+                    read: [WatchService.read, ColorsService.read, MaterialsService.read]
+                },
                 view: 'admin/watch.hbs',
             }
-        },
+        }
     }
 };

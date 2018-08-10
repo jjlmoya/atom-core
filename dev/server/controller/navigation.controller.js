@@ -9,9 +9,17 @@ module.exports = function (app) {
     });
 
     app.post(parentPath + '/:id/update', function (req, res) {
-        var id = req.params.id;
         navPages.update(req).then(() => {
-            res.redirect(parentPath + id);
+            res.redirect(parentPath);
         })
     });
+
+    app.post(parentPath + '/:id/delete', function (req, res) {
+        navPages.delete(req).then(() => {
+            res.redirect(parentPath);
+        })
+    });
+
+
+
 };

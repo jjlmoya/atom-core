@@ -27,7 +27,6 @@
         },
         toggleMenu = function () {
             var menu = document.getElementsByClassName(locators.menu);
-            console.log(menu);
             if (menu.length > 0) {
                 menu[0].classList.toggle('is-active');
             }

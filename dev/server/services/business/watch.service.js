@@ -1,18 +1,28 @@
-const NavBar = require('../model/navbar.model');
+var Watch = require('../../model/watch.model');
+exports.create = function (req, next) {
+    let watch = createWatch(req.body);
+    watch.save(function (err) {
+        if (err) {
+            console.log('Fail saving to BD');
+        }
+        next();
+    })
+};
 
 exports.read = function () {
     return new Promise(function (resolve, reject) {
-            NavBar.find((err, result) => {
+            Watch.find((err, result) => {
                 if (err) reject(err);
-                resolve({navPages: result});
+                resolve({watchList: result});
             });
         }
     );
 };
 
+
 exports.readById = function (id) {
     return new Promise(function (resolve, reject) {
-            NavBar.findById(id, (err, result) => {
+            Watch.findById(id, (err, result) => {
                 if (err) reject(err);
                 resolve({editElement: result});
             });
@@ -22,34 +32,19 @@ exports.readById = function (id) {
 
 exports.update = function (req) {
     return new Promise(function (resolve, reject) {
-            NavBar.findByIdAndUpdate(req.params.id, {$set: req.body}, function (err) {
+            Watch.findByIdAndUpdate(req.params.id, {$set: req.body}, function (err) {
                 if (err) return reject();
                 resolve();
             });
         }
     );
 
-};
-
-exports.create = function (req, next) {
-    let navbar = new NavBar(
-        {
-            name: req.body.name,
-            slug: req.body.slug
-        }
-    );
-    navbar.save(function (err) {
-        if (err) {
-            next();
-        }
-        next();
-    })
 };
 
 
 exports.delete = function (req) {
     return new Promise(function (resolve, reject) {
-            NavBar.findByIdAndRemove(req.params.id, function (err) {
+            Watch.findByIdAndRemove(req.params.id, function (err) {
                 if (err) return reject();
                 resolve();
             });
@@ -57,3 +52,12 @@ exports.delete = function (req) {
     );
 };
 
+
+let createWatch = function (body) {
+    return new Watch(
+        {
+            gender: body.gender,
+            price: body.price
+        }
+    )
+};

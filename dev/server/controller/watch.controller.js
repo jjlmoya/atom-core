@@ -1,4 +1,4 @@
-let watchService = require('../services/watch.service');
+let watchService = require('../services/business/watch.service');
 let Config = require('../config');
 let AdminRouter = Config.router().admin;
 

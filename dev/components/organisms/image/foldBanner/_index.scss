@@ -1,0 +1,160 @@
+$banner-background-color: rgba($primary-color-dark, 1);
+$banner-background-element: rgba(white, 0.80);
+
+.og-banner-fold {
+  z-index: 10;
+  color: #333;
+  border-radius: 5px;
+  position: fixed;
+  right: -5px;
+  top: 110px;
+  width: 345px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $banner-background-color;
+  transform: translateX(100%);
+  transition: 1s transform;
+  &.is-active {
+    transform: translateX(0);
+    transition: 1s transform;
+    .og-banner-fold-badge {
+      transition: all 2s;
+      border-radius: 50%;
+    }
+    .og-banner-fold-badge-icon-close{
+      display:block;
+    }
+    .og-banner-fold-badge-icon-star{
+      display: none;
+    }
+  }
+  .og-banner-fold-badge-icon-close {
+    display: none;
+  }
+  .og-banner-fold-badge-icon-star {
+    svg {
+      animation: beat .25s infinite alternate;
+    }
+  }
+
+  .og-banner-fold-badge-icon {
+    width: 50%;
+    height: 100%;
+    svg {
+      fill: $secondary-color;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-element {
+    &:first-child {
+      margin-bottom: 10px;
+    }
+    height: 120px;
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    background-color: $banner-background-element;
+    margin: 0 auto;
+    border-radius: 5px 0 0 5px;
+    padding: 15px;
+    &-heading {
+      text-align: center;
+      text-transform: uppercase;
+      padding: 0 5px;
+      font-size: 17px;
+      font-weight: bold;
+
+    }
+    &-button {
+      text-transform: uppercase;
+      color: white !important;
+      cursor: pointer;
+      border-radius: 4px;
+      background: #EF426F;
+      padding: 10px 20px;
+      width: 91%;
+    }
+    &-highlight {
+      align-self: center;
+      flex-grow: 1;
+      width: 30%;
+      text-align: left;
+      font-size: 20px;
+      padding-right: 28px;
+    }
+    span {
+      font-size: 12px;
+      font-weight: initial
+    }
+    strong {
+      font-size: 32px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      padding: 5px;
+    }
+    hr {
+      margin: 0 15px;
+      margin-top: 5px;
+      height: 65px;
+      align-self: flex-end;
+      border-color: #333;
+    }
+    &-columns {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+      &-vertical {
+        display:flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-self: flex-end;
+      }
+    }
+  }
+
+  &-badge {
+    cursor: pointer;
+    position: absolute;
+    top: -35px;
+    left: -45px;
+    align-self: center;
+    width: 45px;
+    height: 45px;
+    background-color: $banner-background-color;
+    display: flex;
+    justify-content: center;
+    transition: all 2s;
+    border-radius: 50% 0 0 50%;
+    text-transform: uppercase;
+    &-icon {
+      align-self: center;
+    }
+  }
+}
+
+
+@media only screen and (max-width: $media-size-sm) {
+  .og-banner-fold {
+    width: 278px;
+    .og-banner-fold-element-heading {
+      text-align: left;
+    }
+    .og-banner-fold-element-highlight {
+      width: 0%;
+      padding-right: 0;
+    }
+    .og-banner-fold-element-button {
+      width: 66%;
+      font-size: 14px;
+    }
+  }
+}
+
+
+@keyframes beat{
+  to { transform: scale(1.4); }
+}

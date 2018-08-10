@@ -1,15 +1,20 @@
-
-
-
-
-
-{{#if navPages }}
-    <ul class="ul">
-        {{#each navPages}}
-            <li class="tabs">{{this.slug}} - {{this.name}}<a href="{{../this.activePageSlug}}/{{this.id}}">Edit</a></li>
-        {{/each}}
-    </ul>
-{{/if}}
+<div class="og-list-data-display">
+    {{#if navPages }}
+        <ul class="ul">
+            {{#each navPages}}
+                <li class="dataRow">
+                    <div class="data">{{this.slug}}</div>
+                    <div class="data">{{this.name}}</div>
+                    <div class="data"><a href="{{../this.activePageSlug}}/{{this.id}}">📝</a></div>
+                    <form class="data" action="{{../this.activePageSlug}}/{{this.id}}/delete" method="POST">
+                        <input type="checkbox" required="required"/>
+                        <button>🗑</button>
+                    </form>
+                </li>
+            {{/each}}
+        </ul>
+    {{/if}}
+</div>
 
 
 {{> components/forms/navigation

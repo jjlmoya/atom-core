@@ -1,6 +1,7 @@
 const config = require('../config').router().admin;
 const AdminService = require('../services/adminRouter.service');
 const parentPath = config.path;
+const CommonsService = require('../services/commons.services');
 const adminLayout = {layout: 'panel.hbs'};
 const _ = require('lodash');
 
@@ -57,13 +58,10 @@ module.exports = function (app) {
 
     function getDataById(id, page, currentData, next) {
         let path = '/' + id + '/update';
-        console.log(path);
         const newData = getCommonConfiguration(page, path, true);
         let model = {};
         Object.assign(model, currentData, newData);
-        console.log(model);
         page.services.readByID(id).then(val => {
-            console.log(val);
             next(Object.assign(model, model, val));
         });
 
@@ -74,17 +72,15 @@ module.exports = function (app) {
         const newData = getCommonConfiguration(page, '/create');
         let model = {};
         Object.assign(model, currentData, newData);
+
         Promise.all(getPromises(page)).then(values => {
-            _.forEach(values, function (value) {
-                Object.assign(model, model, value)
-            });
-            next(model);
+            next(Object.assign(model, model, CommonsService.join(values)));
         });
     }
 
     function getPromises(page) {
         return _.map(page.services.read, service => {
-            return service()
+            return service();
         })
     }
 };

@@ -1,15 +1,19 @@
+$og-head-nav-height: 40px;
+.og-head-magin {
+  margin-bottom: $og-head-nav-height;
+}
 .og-head-nav {
   padding-top: 5px;
   .og-head-nav-element {
     background-color: $primary-color;
     color: $primary-color-text;
     min-width: 25%;
-    height: 40px;
-    line-height: 40px;
+    height: $og-head-nav-height;
+    line-height: $og-head-nav-height;
     &.is-active {
       position: relative;
       background-color: $primary-color-light;
-      box-shadow: 0px 0px 5px $primary-color-dark;
+      box-shadow: 0 0 5px $primary-color-dark;
     }
   }
 }

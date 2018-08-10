@@ -27,6 +27,21 @@ case: {
             name="title"
             required="true"
     }}
+    <h2>Materials</h2>
+    {{#each model.materials}}
+        {{> atoms/input/checkbox
+                label=this
+                name="material"
+        }}
+    {{/each}}
+    <h2>Colors</h2>
+
+    {{#each colors}}
+        {{> atoms/input/checkbox
+                label=this
+                name="coatingColor"
+        }}
+    {{/each}}
 
     {{> atoms/input/text
             placeholder="Descripción para la página"
