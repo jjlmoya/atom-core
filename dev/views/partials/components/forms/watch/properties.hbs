@@ -10,23 +10,44 @@ properties: {
 
 -->
 
-<fieldset>
-    <legend>Propiedades</legend>
-    {{> atoms/input/text
-            placeholder="Título para la Página"
-            validation="string"
-            label="Título"
-            name="title"
-            required="true"
-    }}
-
-    {{> atoms/input/text
-            placeholder="Descripción para la página"
-            validation="string"
-            label="Descripción"
-            name="description"
-            required="true"
-    }}
-
-
+<fieldset class="{{formClass}} ml-fieldset">
+    <legend>Properties</legend>
+    <div class="ml-fieldset-wrapper">
+        <div class="ml-field">
+            <h2 class="ml-heading">Battery</h2>
+            <div class="ml-group">
+                {{> atoms/input/number
+                        label="Duration (Days)"
+                        name="properties.batteryTime"
+                }}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">Physic</h2>
+            <div class="ml-group">
+                {{> atoms/input/number
+                        label="Weight (gr)"
+                        placeholder="50gr"
+                        name="properties.weight"
+                }}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">Manufacture</h2>
+            <div class="ml-group">
+                {{> atoms/input/text
+                        label="Made in"
+                        placeholder="Country"
+                        name="properties.madeIn"
+                }}
+            </div>
+            <div class="ml-group">
+                {{> atoms/input/number
+                        label="Warranty (years)"
+                        placeholder="2"
+                        name="properties.warraty"
+                }}
+            </div>
+        </div>
+    </div>
 </fieldset>

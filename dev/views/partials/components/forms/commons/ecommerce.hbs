@@ -1,22 +1,91 @@
-<fieldset>
+<fieldset class="{{formClass}} ml-fieldset">
     <legend>eCommerce</legend>
-    {{> atoms/input/text
-            placeholder="Título para la Página"
-            validation="string"
-            label="Título"
-            name="title"
-            required="true"
-    }}
-
-    {{> atoms/input/text
-            placeholder="Descripción para la página"
-            validation="string"
-            label="Descripción"
-            name="description"
-            required="true"
-    }}
-
-
+    <div class="ml-fieldset-wrapper">
+        <div class="ml-field">
+            <h2 class="ml-heading">Title &lt;h1&gt; </h1></h2>
+            <div class="ml-group">
+                {{> atoms/input/text
+                        placeholder="Title"
+                        validation="string"
+                        label="Series"
+                        name="ecommerce.title"
+                        required="true"
+                }}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">Description</h2>
+            <div class="ml-group">
+                {{> atoms/input/area
+                        placeholder="Description"
+                        validation="string"
+                        label="Series"
+                        name="ecommerce.description"
+                        required="true"
+                }}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">Article</h2>
+            <div class="ml-group">
+                {{> atoms/input/area
+                        placeholder="Article"
+                        validation="string"
+                        label="Series"
+                        name="ecommerce.article"
+                        required="true"
+                }}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">Price</h2>
+            <div class="ml-group">
+                {{> atoms/input/number
+                        placeholder="Price"
+                        validation="number"
+                        label="Precio"
+                        name="ecommerce.price"
+                        required="true"
+                }}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">Discount</h2>
+            <div class="ml-group">
+                {{> atoms/input/number
+                        placeholder="Discount"
+                        validation="number"
+                        label="Discount"
+                        name="ecommerce.discount"
+                        required="true"
+                }}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">/watch/{slug}</h2>
+            <div class="ml-group">
+                {{> atoms/input/text
+                        placeholder="slug"
+                        validation="string"
+                        label="Slug"
+                        name="ecommerce.slug"
+                        required="true"
+                }}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">Stock</h2>
+            <div class="ml-group">
+                {{> atoms/input/number
+                        placeholder="Stock"
+                        validation="number"
+                        label="Stock"
+                        name="ecommerce.stock"
+                        required="true"
+                }}
+            </div>
+        </div>
+    </div>
 </fieldset>
 
 

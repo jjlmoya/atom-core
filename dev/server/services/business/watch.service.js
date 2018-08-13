@@ -1,4 +1,24 @@
-var Watch = require('../../model/watch.model');
+const Watch = require('../../model/watch.model');
+const PathToService = './';
+exports.dependences = {
+    ColorsService: require(PathToService + 'color.services'),
+    MaterialsService: require(PathToService + 'material.services'),
+    CrownService: require(PathToService + 'crown.services'),
+    BackCaseServices: require(PathToService + 'backCase.services'),
+    CoatingServices: require(PathToService + 'coating.services'),
+    BrandService: require(PathToService + 'brand.services'),
+    GenderService: require(PathToService + 'gender.services'),
+    IlluminationService: require(PathToService + 'illumination.services'),
+    MechanismService: require(PathToService + 'mechanism.services'),
+    WatchHandService: require(PathToService + 'watchHands.services'),
+    TimeNumbersService: require(PathToService + 'timeNumbers.services'),
+    TimeFormatService: require(PathToService + 'timeFormat.service'),
+    DisplayService: require(PathToService + 'display.services'),
+    CalendarService: require(PathToService + 'calendar.services'),
+    ClosureService: require(PathToService + 'closure.services')
+};
+
+
 exports.create = function (req, next) {
     let watch = createWatch(req.body);
     watch.save(function (err) {
@@ -61,3 +81,5 @@ let createWatch = function (body) {
         }
     )
 };
+
+

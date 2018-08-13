@@ -9,7 +9,7 @@ const db = require('./server/db');
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-db.connect(Config.db().protocol + Config.db().url, function(err) {
+db.connect(Config.db().protocol + Config.db().url + Config.db().dbName, function(err) {
     if (err) {
         console.log('Unable to connect to Mongo.');
         process.exit(1);

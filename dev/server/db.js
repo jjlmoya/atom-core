@@ -6,7 +6,8 @@ var state = {
 
 exports.connect = function (url, done) {
     if (state.db) return done();
-    mongoose.connect(url,  function (err, db) {
+    mongoose.connect(url, { useNewUrlParser: true }, function (err, db) {
+        console.log(url)
         if (err) return done(err);
         state.db = mongoose.connection;
         done();

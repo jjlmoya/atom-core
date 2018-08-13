@@ -1,0 +1,8 @@
+{{#each this.options}}
+    {{> atoms/input/checkbox
+            validation="checkbox"
+            label=this
+            name="illumination.type"
+            required="false"
+    }}
+{{/each}}

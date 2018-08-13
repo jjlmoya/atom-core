@@ -1,55 +1,69 @@
-<!--
+<fieldset class="{{formClass}} ml-fieldset">
+    <legend>Case</legend>
+    <div class="ml-fieldset-wrapper">
+        <div class="ml-field">
+            <h2 class="ml-heading">Materials</h2>
+            <div class="ml-group">
+                {{#each model.materials}}
+                    {{> atoms/input/checkbox
+                            label=this
+                            name="case.material"
+                    }}
+                {{/each}}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">Coating Color</h2>
+            <div class="ml-group">
+                {{#each colors}}
+                    {{> atoms/input/checkbox
+                            label=this
+                            name="case.coatingColor"
+                    }}
+                {{/each}}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">Bezel</h2>
+            <div class="ml-group">
+                {{> atoms/input/checkbox
+                        label="Rotate Bezel"
+                        name="case.rotateBezel"
+                }}
+            </div>
+        </div>
 
-case: {
-        material: [],
-        coating: [],
-        coatingColor: [],
-        rotateBezel: {type: Boolean},
-        crown: {
-            type: {type: String},
-            size: {type: Number}
-        },
-        back: {
-            isTransparent: {type: Boolean},
-            type: {type: String}
-        }
-    }
-
--->
-
-
-<fieldset>
-    <legend>Carcasa</legend>
-    {{> atoms/input/text
-            placeholder="Título para la Página"
-            validation="string"
-            label="Título"
-            name="title"
-            required="true"
-    }}
-    <h2>Materials</h2>
-    {{#each model.materials}}
-        {{> atoms/input/checkbox
-                label=this
-                name="material"
-        }}
-    {{/each}}
-    <h2>Colors</h2>
-
-    {{#each colors}}
-        {{> atoms/input/checkbox
-                label=this
-                name="coatingColor"
-        }}
-    {{/each}}
-
-    {{> atoms/input/text
-            placeholder="Descripción para la página"
-            validation="string"
-            label="Descripción"
-            name="description"
-            required="true"
-    }}
-
-
+        <div class="ml-field">
+            <h2 class="ml-heading">Crown</h2>
+            <div class="ml-group">
+                {{> atoms/input/select
+                        options=this.crownTypes
+                        label=this
+                        name="case.crown.type"
+                }}
+            </div>
+            <div class="ml-group">
+                {{> atoms/input/number
+                        label="Tamaño"
+                        name="case.crown.size"
+                }}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">Back</h2>
+            <div class="ml-group">
+                {{> atoms/input/radio
+                        options=this.backCase
+                        label="Type"
+                        name="case.back.type"
+                }}
+            </div>
+            <div class="ml-group">
+                {{> atoms/input/checkbox
+                        label="Trasparent"
+                        name="case.back.isTransparent"
+                }}
+            </div>
+        </div>
+    </div>
 </fieldset>

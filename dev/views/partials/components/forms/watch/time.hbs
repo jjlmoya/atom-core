@@ -10,23 +10,68 @@ time: {
 
 -->
 
-<fieldset>
-    <legend>Tiempo</legend>
-    {{> atoms/input/text
-            placeholder="Título para la Página"
-            validation="string"
-            label="Título"
-            name="title"
-            required="true"
-    }}
-
-    {{> atoms/input/text
-            placeholder="Descripción para la página"
-            validation="string"
-            label="Descripción"
-            name="description"
-            required="true"
-    }}
-
-
+<fieldset class="{{formClass}} ml-fieldset">
+    <legend>Time</legend>
+    <div class="ml-fieldset-wrapper">
+        <div class="ml-field">
+            <h2 class="ml-heading">Display</h2>
+            <div class="ml-group">
+                {{> atoms/input/checkBoxGroup
+                        validation="checkbox"
+                        label="Type"
+                        name="time.display"
+                        options=this.displays
+                        required="false"
+                }}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">Numbers</h2>
+            <div class="ml-group">
+                {{> atoms/input/checkBoxGroup
+                        validation="checkbox"
+                        label="Type"
+                        name="time.numbers"
+                        options=this.timeNumbers
+                        required="false"
+                }}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">Format</h2>
+            <div class="ml-group">
+                {{> atoms/input/checkBoxGroup
+                        validation="checkbox"
+                        label="Type"
+                        name="time.hourFormat"
+                        options=this.timeFormats
+                        required="false"
+                }}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">Hands</h2>
+            <div class="ml-group">
+                {{> atoms/input/checkBoxGroup
+                        validation="checkbox"
+                        label="Type"
+                        name="time.watchHands"
+                        options=this.watchHands
+                        required="false"
+                }}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">Calendar</h2>
+            <div class="ml-group">
+                {{> atoms/input/checkBoxGroup
+                        validation="checkbox"
+                        label="Type"
+                        name="time.calendar"
+                        options=this.calendarDisplays
+                        required="false"
+                }}
+            </div>
+        </div>
+    </div>
 </fieldset>

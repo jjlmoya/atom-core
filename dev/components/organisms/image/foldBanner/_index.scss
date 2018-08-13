@@ -3,7 +3,7 @@ $banner-background-element: rgba(white, 0.80);
 
 .og-banner-fold {
   z-index: 10;
-  color: #333;
+  color: $mono-color-9;
   border-radius: 5px;
   position: fixed;
   right: -5px;
@@ -74,7 +74,7 @@ $banner-background-element: rgba(white, 0.80);
       color: white !important;
       cursor: pointer;
       border-radius: 4px;
-      background: #EF426F;
+      background: $secondary-color;
       padding: 10px 20px;
       width: 91%;
     }

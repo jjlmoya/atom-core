@@ -1,9 +1,10 @@
 exports.read = function () {
     return new Promise(function (resolve, reject) {
             resolve({
-                colors: [
-                    'red',
-                    'blue'
+                genders: [
+                    'M',
+                    'F',
+                    'U'
                 ]
             });
         }

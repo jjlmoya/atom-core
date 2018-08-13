@@ -9,23 +9,26 @@ illumination: {
 
 -->
 
-<fieldset>
-    <legend>Iluminación</legend>
-    {{> atoms/input/text
-            placeholder="Título para la Página"
-            validation="string"
-            label="Título"
-            name="title"
-            required="true"
-    }}
-
-    {{> atoms/input/text
-            placeholder="Descripción para la página"
-            validation="string"
-            label="Descripción"
-            name="description"
-            required="true"
-    }}
-
-
+<fieldset class="{{formClass}} ml-fieldset">
+    <legend>Illumination</legend>
+    <div class="ml-fieldset-wrapper">
+        <div class="ml-field">
+            <h2 class="ml-heading">Properties</h2>
+            <div class="ml-group">
+                {{> atoms/input/checkbox
+                        label="has"
+                        name="illumination.has"
+                }}
+            </div>
+            <div class="ml-group">
+                {{> atoms/input/checkBoxGroup
+                        validation="select"
+                        label="Type"
+                        name="illumination.type"
+                        options=this.illumation
+                        required="false"
+                }}
+            </div>
+        </div>
+    </div>
 </fieldset>

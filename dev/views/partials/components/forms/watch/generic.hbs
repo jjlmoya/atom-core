@@ -1,20 +1,53 @@
-<fieldset>
+<!--
+generic: {
+        brand: {type: String, required: true}, //VOSTOK
+        gender: {type: String, required: true, lowercase: true, default: 'u'}, //W/M/U
+        series: {type: String, required: false},
+        code: {type: String, required: true}
+    },
+-->
+<fieldset class="{{formClass}} ml-fieldset">
     <legend>Generic</legend>
-    {{> atoms/input/text
-            placeholder="Título para la Página"
-            validation="string"
-            label="Título"
-            name="title"
-            required="true"
-    }}
-
-    {{> atoms/input/text
-            placeholder="Descripción para la página"
-            validation="string"
-            label="Descripción"
-            name="description"
-            required="true"
-    }}
-
-
+    <div class="ml-fieldset-wrapper">
+        <div class="ml-field">
+            <h2 class="ml-heading">Brand Information</h2>
+            <div class="ml-group">
+                {{> atoms/input/select
+                        placeholder="Descripción para la página"
+                        validation="select"
+                        label="Brand"
+                        name="generic.brand"
+                        options=this.brands
+                        required="true"
+                }}
+            </div>
+            <div class="ml-group">
+                {{> atoms/input/select
+                        validation="select"
+                        label="Brand"
+                        name="generic.gender"
+                        options=this.genders
+                        required="true"
+                }}
+            </div>
+            <div class="ml-group">
+                {{> atoms/input/text
+                        placeholder="Colección de este reloj"
+                        validation="select"
+                        label="Series"
+                        name="generic.series"
+                        required="false"
+                }}
+            </div>
+            <div class="ml-group">
+                {{> atoms/input/text
+                        placeholder="Código de este reloj"
+                        validation="select"
+                        label="Code"
+                        name="generic.code"
+                        required="true"
+                }}
+            </div>
+        </div>
+    </div>
 </fieldset>

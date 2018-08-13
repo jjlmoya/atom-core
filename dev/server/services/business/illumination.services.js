@@ -1,9 +1,9 @@
 exports.read = function () {
     return new Promise(function (resolve, reject) {
             resolve({
-                colors: [
-                    'red',
-                    'blue'
+                illumation: [
+                    'IL-1',
+                    'Il-2'
                 ]
             });
         }

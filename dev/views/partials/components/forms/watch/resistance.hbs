@@ -1,35 +1,56 @@
 <!--
-
 resistance: {
-        shock: {type: Boolean, required: true, default: false},
+        shock: {type: Boolean, default: false},
         water: {
-            has: {type: Boolean, required: true, default: false},
+            has: {type: Boolean, default: false},
             meters: {type: Number},
             pressure: {type: Number}
         },
-        magnetism: {type: Boolean, required: true, default: false}
-    },
-
-
+        magnetism: {type: Boolean, default: false}
+    }
 -->
 
-<fieldset>
-    <legend>Resistencia</legend>
-    {{> atoms/input/text
-            placeholder="Título para la Página"
-            validation="string"
-            label="Título"
-            name="title"
-            required="true"
-    }}
-
-    {{> atoms/input/text
-            placeholder="Descripción para la página"
-            validation="string"
-            label="Descripción"
-            name="description"
-            required="true"
-    }}
-
-
+<fieldset class="{{formClass}} ml-fieldset">
+    <legend>Resistance</legend>
+    <div class="ml-fieldset-wrapper">
+        <div class="ml-field">
+            <h2 class="ml-heading">Shock</h2>
+            <div class="ml-group">
+                {{> atoms/input/checkbox
+                        label="Shock Resistance"
+                        name="resistance.shock"
+                }}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">Water</h2>
+            <div class="ml-group">
+                {{> atoms/input/checkbox
+                        label="Water Resistance"
+                        name="resistance.water.has"
+                }}
+            </div>
+            <div class="ml-group">
+                {{> atoms/input/number
+                        label="Meters"
+                        name="resistance.water.meters"
+                }}
+            </div>
+            <div class="ml-group">
+                {{> atoms/input/number
+                        label="Pressure"
+                        name="resistance.water.pressure"
+                }}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">Magnetism</h2>
+            <div class="ml-group">
+                {{> atoms/input/checkbox
+                        label="Magnetism Resistance"
+                        name="resistance.magnetism"
+                }}
+            </div>
+        </div>
+    </div>
 </fieldset>

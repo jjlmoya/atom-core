@@ -1,9 +1,10 @@
 exports.read = function () {
     return new Promise(function (resolve, reject) {
             resolve({
-                colors: [
-                    'red',
-                    'blue'
+                timeNumbers: [
+                    'roman',
+                    'arabic',
+                    'index'
                 ]
             });
         }

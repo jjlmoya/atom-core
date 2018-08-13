@@ -8,23 +8,32 @@ cronograph: {
 
 -->
 
-<fieldset>
-    <legend>Cronógrafo</legend>
-    {{> atoms/input/text
-            placeholder="Título para la Página"
-            validation="string"
-            label="Título"
-            name="title"
-            required="true"
-    }}
-
-    {{> atoms/input/text
-            placeholder="Descripción para la página"
-            validation="string"
-            label="Descripción"
-            name="description"
-            required="true"
-    }}
-
-
+<fieldset class="{{formClass}} ml-fieldset">
+    <legend>Cronograph</legend>
+    <div class="ml-fieldset-wrapper">
+        <div class="ml-field">
+            <h2 class="ml-heading">Basic</h2>
+            <div class="ml-group">
+                {{> atoms/input/checkbox
+                        label="Has Cronograph?"
+                        name="cronograph.has"
+                }}
+            </div>
+            <div class="ml-group">
+                {{> atoms/input/number
+                        label="Max. Time (in Seconds)"
+                        name="cronograph.maxTime"
+                }}
+            </div>
+        </div>
+        <div class="ml-field">
+            <h2 class="ml-heading">Additional</h2>
+            <div class="ml-group">
+                {{> atoms/input/checkbox
+                        label="Quick Reset"
+                        name="cronograph.quickReset"
+                }}
+            </div>
+        </div>
+    </div>
 </fieldset>

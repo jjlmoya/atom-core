@@ -8,7 +8,6 @@ const bannerLand = config.bannerLand;
 console.log(home);
 module.exports = function (app) {
     app.get(home.path, function (req, res) {
-        console.log('hola');
         Promise.all([
             NavPages.read(),
             Commons.read(config)

@@ -7,23 +7,30 @@ mechanism: {
 
 -->
 
-<fieldset>
-    <legend>Mecanismo</legend>
-    {{> atoms/input/text
-            placeholder="Título para la Página"
-            validation="string"
-            label="Título"
-            name="title"
-            required="true"
-    }}
+<fieldset class="{{formClass}} ml-fieldset">
+    <legend>Mechanism</legend>
+    <div class="ml-fieldset-wrapper">
+        <div class="ml-field">
+            <h2 class="ml-heading">Properties</h2>
+            <div class="ml-group">
+                {{> atoms/input/select
 
-    {{> atoms/input/text
-            placeholder="Descripción para la página"
-            validation="string"
-            label="Descripción"
-            name="description"
-            required="true"
-    }}
-
-
+                        validation="select"
+                        label="Type"
+                        name="mechanism.type"
+                        options=this.mechanismTypes
+                        required="true"
+                }}
+            </div>
+            <div class="ml-group">
+                {{> atoms/input/text
+                        placeholder="What Kind of Caliber?"
+                        validation="string"
+                        label="Caliber"
+                        name="mechanism.caliber"
+                        required="true"
+                }}
+            </div>
+        </div>
+    </div>
 </fieldset>

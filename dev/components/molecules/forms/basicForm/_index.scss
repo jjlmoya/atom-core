@@ -1,21 +1,50 @@
 .ml-basic-form {
-  fieldset {
-    max-width: 80%;
-    min-width: 60%;
-    border-radius: 2px;
-    border-top: 2px solid $primary-color;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-    padding: 10px 15px;
-    margin: 20px;
-  }
   legend {
     font-weight: bold;
     margin-bottom: 10px;
     padding-right: 10px;
   }
+  label {
+    @extend .bg--primary;
+    border-radius: 0 4px 4px 0;
+    height: 100%;
+    margin-left: -10px;
+    padding: 0 15px;
+    line-height: 50px;
+  }
+  .ml-fieldset {
+    max-width: 80%;
+    min-width: 60%;
+    border-radius: 2px;
+    border-top: 2px solid $primary-color;
+    box-shadow: 0 5px 30px rgba($mono-color-9, 0.3);
+    padding: 10px 15px;
+    margin: 20px;
+    .ml-fieldset-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .ml-field {
+        text-align: center;
+        padding: 10px;
+        flex-grow: 2;
+        min-width: 30%;
+        margin: 20px;
+        background-color: white;
+        border-radius: 5px;
+        .ml-group {
+        }
+        .ml-heading {
+          padding: 0 10px 10px 10px;
+          font-weight: bold;
+          color: $primary-color;
+        }
+      }
+    }
+  }
 
-  .input-wrapper{
-    display:flex;
+  .input-wrapper {
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
@@ -31,14 +60,5 @@
         outline: none;
       }
     }
-    label{
-      @extend .bg--primary;
-      border-radius: 0 4px 4px 0;
-      height: 100%;
-      margin-left: -10px;
-      padding: 0 15px;
-      line-height: 50px;
-    }
   }
-
 }
