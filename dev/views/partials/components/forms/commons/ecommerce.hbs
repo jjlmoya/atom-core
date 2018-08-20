@@ -8,30 +8,33 @@
                         placeholder="Title"
                         validation="string"
                         label="Series"
+                        value=editElement.ecommerce.title
                         name="ecommerce.title"
                         required="true"
                 }}
             </div>
         </div>
-        <div class="ml-field">
+        <div class="ml-field ml-field-xl">
             <h2 class="ml-heading">Description</h2>
             <div class="ml-group">
                 {{> atoms/input/area
                         placeholder="Description"
                         validation="string"
                         label="Series"
+                        value=editElement.ecommerce.description
                         name="ecommerce.description"
                         required="true"
                 }}
             </div>
         </div>
-        <div class="ml-field">
+        <div class="ml-field ml-field-xl">
             <h2 class="ml-heading">Article</h2>
             <div class="ml-group">
                 {{> atoms/input/area
                         placeholder="Article"
                         validation="string"
                         label="Series"
+                        value=editElement.ecommerce.article
                         name="ecommerce.article"
                         required="true"
                 }}
@@ -44,6 +47,7 @@
                         placeholder="Price"
                         validation="number"
                         label="Precio"
+                        value=editElement.ecommerce.price
                         name="ecommerce.price"
                         required="true"
                 }}
@@ -56,18 +60,20 @@
                         placeholder="Discount"
                         validation="number"
                         label="Discount"
+                        value=editElement.ecommerce.discount
                         name="ecommerce.discount"
                         required="true"
                 }}
             </div>
         </div>
         <div class="ml-field">
-            <h2 class="ml-heading">/watch/{slug}</h2>
+            <h2 class="ml-heading">/{slug}</h2>
             <div class="ml-group">
                 {{> atoms/input/text
                         placeholder="slug"
                         validation="string"
                         label="Slug"
+                        value=editElement.ecommerce.slug
                         name="ecommerce.slug"
                         required="true"
                 }}
@@ -80,6 +86,7 @@
                         placeholder="Stock"
                         validation="number"
                         label="Stock"
+                        value=editElement.ecommerce.stock
                         name="ecommerce.stock"
                         required="true"
                 }}

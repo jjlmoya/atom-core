@@ -1,4 +1,58 @@
 .ml-basic-form {
+  .input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin: 5px;
+    input {
+      width: 200px;
+      border-radius: 3px;
+      text-align: right;
+      height: 100%;
+      border: none;
+      padding: 0 20px;
+      background-color: $mono-color-1;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .ml-simple-checkbox-group {
+    display: inline-block;
+    min-width: 30%;
+    text-align: left;
+    .ml-simple-checkbox {
+    }
+    label {
+      background-color: transparent;
+      color: $mono-color-9;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+  }
+  .ml-basic-textarea {
+    width: 100%;
+    min-height: 200px;
+  }
+  .ml-simple-select {
+    width: 80%;
+    max-width: 600px;
+    height: 40px;
+    margin: 5px 0;
+    text-indent: 10px;
+    direction: rtl;
+    font-size: 1.2rem;
+    &-option {
+    }
+  }
+  .ml-group-inline {
+    display: inline-block;
+  }
+  .ml-simple-number {
+  }
+  .ml-simple-text {
+  }
   legend {
     font-weight: bold;
     margin-bottom: 10px;
@@ -32,32 +86,14 @@
         margin: 20px;
         background-color: white;
         border-radius: 5px;
-        .ml-group {
+        &-xl {
+          width: 100%;
         }
         .ml-heading {
           padding: 0 10px 10px 10px;
           font-weight: bold;
           color: $primary-color;
         }
-      }
-    }
-  }
-
-  .input-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    margin: 5px;
-    input {
-      width: 200px;
-      border-radius: 3px;
-      text-align: left;
-      height: 100%;
-      border: none;
-      padding: 0 10px;
-      &:focus {
-        outline: none;
       }
     }
   }

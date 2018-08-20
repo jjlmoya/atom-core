@@ -1,38 +1,18 @@
-var navAdmin =
-    [{
-        name: 'P1',
-        icon: '',
-        order: 0,
-        tabs: [
-            {
-                name: '',
-                icon: '',
-                path: '',
-                order: 0,
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-            }, {
-                name: '',
-                icon: '',
-                path: '',
-                order: 1
-            }
-        ]
-    }, {
-        name: 'P2',
-        icon: '',
-        order: 0,
-        tabs: [
-            {
-                name: '',
-                icon: '',
-                path: '',
-                order: 0,
+let AdminRouterSchema = new Schema({
+    name: {type: String, required: true},
+    icon: {type: String, lowercase: true},
+    order: {type: Number, required: true, default: 0},
+    tabs: [
+        {
+            name: {type: String, required: true},
+            icon: {type: String, lowercase: true},
+            order: {type: Number, required: true, default: 0},
+            path: {type: String, required: true, lowercase: true}
+        }
+    ]
+});
 
-            }, {
-                name: '',
-                icon: '',
-                path: '',
-                order: 1
-            }
-        ]
-    }];
+module.exports = mongoose.model('AdminRouter', AdminRouterSchema);

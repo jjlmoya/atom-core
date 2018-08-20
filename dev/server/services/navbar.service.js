@@ -40,7 +40,7 @@ exports.create = function (req, next) {
     );
     navbar.save(function (err) {
         if (err) {
-            next();
+            console.log(err);
         }
         next();
     })

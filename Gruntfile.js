@@ -2,6 +2,7 @@ module.exports = function (grunt) {
     var basePath = 'dev/',
         scssPath = basePath + 'components/index.scss',
         jsComponents = "dev/components/**/*.js",
+        jsUtils = "dev/framework/**/*.js",
         tasks = ['jshint', 'clean', 'copy', 'sass', 'uglify'];
     grunt.initConfig({
         jshint: {
@@ -32,7 +33,8 @@ module.exports = function (grunt) {
             },
             build: {
                 files: {
-                    'www/public/js/components.min.js': jsComponents
+                    'www/public/js/components.min.js': jsComponents,
+                    'www/public/js/framework.min.js': jsUtils
                 }
             }
         },

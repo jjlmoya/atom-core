@@ -1,17 +1,12 @@
-let watchService = require('../services/business/watch.service');
-let Config = require('../config');
-let AdminRouter = Config.router().admin;
+const watchService = require('../services/watchBusiness/watch.service');
+const Config = require('../config');
+const AdminRouter = Config.router().admin;
 
 module.exports = function (app) {
-    var parentPath = AdminRouter.path + '/' + AdminRouter.watch.path;
+    const parentPath = AdminRouter.path + '/' + AdminRouter.watch.path;
     app.post(parentPath + '/create', function (req, res) {
         watchService.create(req, function () {
             res.redirect(parentPath);
         })
     });
 };
-
-//CREATE
-//READ
-//UPDATE
-//DELETE

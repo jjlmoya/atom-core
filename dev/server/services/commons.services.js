@@ -15,3 +15,9 @@ exports.join = function (values) {
     });
     return model;
 };
+
+exports.getPromises = function (page) {
+    return _.map(page.services.read, service => {
+        return service();
+    });
+};

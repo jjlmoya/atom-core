@@ -64,23 +64,14 @@ module.exports = function (app) {
         page.services.readByID(id).then(val => {
             next(Object.assign(model, model, val));
         });
-
-
     }
 
     function getDataByPage(page, currentData, next) {
         const newData = getCommonConfiguration(page, '/create');
         let model = {};
         Object.assign(model, currentData, newData);
-
-        Promise.all(getPromises(page)).then(values => {
+        Promise.all(CommonsService.getPromises(page)).then(values => {
             next(Object.assign(model, model, CommonsService.join(values)));
         });
-    }
-
-    function getPromises(page) {
-        return _.map(page.services.read, service => {
-            return service();
-        })
     }
 };

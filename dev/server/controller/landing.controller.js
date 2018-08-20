@@ -5,7 +5,6 @@ const home = config.home;
 const modal = config.modal;
 const bannerLand = config.bannerLand;
 
-console.log(home);
 module.exports = function (app) {
     app.get(home.path, function (req, res) {
         Promise.all([

@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let NavBarScheme = new Schema ({
+let NavBarSchema = new Schema ({
     slug: {type: String, required: true},
     name: {type: String, required: true}
 });
 
 
-module.exports = mongoose.model('NavBar', NavBarScheme);
+module.exports = mongoose.model('NavBar', NavBarSchema);

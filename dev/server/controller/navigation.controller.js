@@ -1,5 +1,6 @@
 const navPages = require('../services/navbar.service');
 const Config = require('../config');
+
 module.exports = function (app) {
     const parentPath = Config.router().admin.path + '/' + Config.router().admin.navigation.path;
     app.post(parentPath + '/create', function (req, res) {
@@ -19,7 +20,6 @@ module.exports = function (app) {
             res.redirect(parentPath);
         })
     });
-
 
 
 };

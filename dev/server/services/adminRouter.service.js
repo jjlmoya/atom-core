@@ -13,10 +13,23 @@ exports.navigation = {
                             path: '/admin/navegacion',
                             order: 0,
 
-                        }, {
-                            name: 'Ejemplo',
+                        }
+                    ]
+                }, {
+                    name: 'Imágenes',
+                    icon: '',
+                    order: 0,
+                    tabs: [
+                        {
+                            name: 'Añadir Imagen',
                             icon: '',
-                            path: '/admin/abc',
+                            path: '/admin/imagen',
+                            order: 0,
+
+                        }, {
+                            name: 'Galería',
+                            icon: '',
+                            path: '/admin/galeria',
                             order: 1
                         }
                     ]
@@ -27,16 +40,49 @@ exports.navigation = {
                     tabs: [
                         {
                             name: 'Relojes',
-                            view: 'watch',
                             icon: '',
                             path: '/admin/relojes',
                             order: 0,
 
                         }, {
-                            name: 'Correas',
+                            name: 'Marcas',
                             icon: '',
                             path: '/admin/correas',
                             order: 1
+                        }
+                    ]
+                }, {
+                    name: 'Desarrollo',
+                    icon: '',
+                    order: 0,
+                    tabs: [
+                        {
+                            name: 'Componentes',
+                            icon: '',
+                            path: '/admin/componentes',
+                            order: 0,
+
+                        },
+                        {
+                            name: 'Programación',
+                            icon: '',
+                            path: '/admin/programacion',
+                            order: 1,
+
+                        },
+                        {
+                            name: 'SEO',
+                            icon: '',
+                            path: '/admin/seo',
+                            order: 2,
+
+                        },
+                        {
+                            name: 'Diseño',
+                            icon: '',
+                            path: '/admin/diseno',
+                            order: 3,
+
                         }
                     ]
                 }]

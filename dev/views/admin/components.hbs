@@ -1,7 +1,21 @@
+<!--
+
+name: {type: String, required: true},
+keyFeatures: [{type: String}],
+description: [{type: String}],
+slug: {type: String, lowercase: true, required: true},
+videoUri: {type: String, lowercase: true, required: true},
+tags: [{type: String}],
+comments: {type: String},
+price: {type: Number}
+
+
+-->
+
 <div class="og-list-data-display">
-    {{#if watchList }}
+    {{#if components }}
         <ul class="ul">
-            {{#each watchList}}
+            {{#each components}}
                 <li class="dataRow">
                     <div class="data">{{this.slug}}</div>
                     <div class="data">{{this.name}}</div>
@@ -15,6 +29,6 @@
         </ul>
     {{/if}}
 </div>
-{{> components/forms/watch/main
+{{> components/forms/components/main
         model=this
         formClass="l-column-distribution l-column-distribution--centered ml-basic-form"}}

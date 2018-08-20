@@ -1,7 +1,9 @@
-const literals = require('./literals/panel');
 const NavBarService = require('./services/navbar.service');
-const WatchService = require('./services/business/watch.service');
+const WatchService = require('./services/watchBusiness/watch.service');
 const WatchDependencies = WatchService.dependences;
+const ImagaeService = require('./services/image.services');
+
+const ComponentService = require('./services/devBusiness/component.services');
 
 
 exports.db = function () {
@@ -28,6 +30,18 @@ exports.router = function () {
             path: '/modal',
             view: 'modal'
         },
+        components: {
+            path: '/componentes',
+            view: 'pages/components/components.hbs',
+            services: {
+                read: [NavBarService.read, ComponentService.read],
+                readBySlug: ComponentService.readBySlug,
+                readByID: ComponentService.readById
+            },
+            component: {
+                view: 'pages/components/component.hbs'
+            }
+        },
         bannerLand: {
             path: '/bannerland',
             view: 'bannerLand'
@@ -36,7 +50,6 @@ exports.router = function () {
             path: '/admin',
             view: 'admin/admin.hbs',
             navigation: {
-                display: literals.titles.navigation,
                 path: 'navegacion',
                 services: {
                     read: [NavBarService.read],
@@ -44,8 +57,15 @@ exports.router = function () {
                 },
                 view: 'admin/navigation.hbs',
             },
+            image: {
+                path: 'imagen',
+                view: 'admin/image.hbs',
+                services: {
+                    read: [],
+                    readByID: ImagaeService.readById
+                }
+            },
             watch: {
-                display: literals.titles.watch,
                 path: 'relojes',
                 services: {
                     read: [WatchService.read,
@@ -67,6 +87,14 @@ exports.router = function () {
                     ]
                 },
                 view: 'admin/watch.hbs',
+            },
+            component: {
+                path: 'componentes',
+                services: {
+                    read: [ComponentService.read],
+                    readByID: ComponentService.readById
+                },
+                view: 'admin/components.hbs',
             }
         }
     }
