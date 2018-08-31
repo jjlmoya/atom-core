@@ -2,13 +2,15 @@
     var locators = {
             parent: '.ml-imagebox',
             label: '.image-label',
-            checkbox: '.checkbox'
+            checkbox: '.checkbox',
+            component: 'imagebox'
         },
         addLinkLabelToCheckbox = function (label) {
             label.addEventListener('change', onChange, false);
         },
         onChange = function (event) {
             var element = event.target.parentNode;
+            $zh.tracking.trackEvent('changeStatus', 'click', locators.component);
             element.classList.toggle('is-active');
         },
         init = function () {
@@ -17,7 +19,7 @@
                 addLinkLabelToCheckbox(labels[i]);
             }
         };
-    document.addEventListener("components::imagebox", function () {
+    document.addEventListener("components::" + locators.component, function () {
         init();
     });
     init();

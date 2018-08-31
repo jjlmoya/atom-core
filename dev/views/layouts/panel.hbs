@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport"
-          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-    <link rel="stylesheet" type="text/css" href="/css/index.css">
-    <title>A. CPanel</title>
-</head>
-<body class="admin l-2columns-left l-2columns-left--tight">
+{{> components/seo/metaHead}}
+<body class="{{activePAge}} admin l-2columns-left l-2columns-left--tight">
 <div class="col">
     {{>components/menu/sideMenu}}
 </div>
@@ -20,6 +13,7 @@
         {{{body}}}
     </div>
 </div>
-    <script type="text/javascript" src="/js/components.min.js"></script>
+<script type="text/javascript" src="/js/framework.min.js"></script>
+<script type="text/javascript" src="/js/components.min.js"></script>
 </body>
 </html>

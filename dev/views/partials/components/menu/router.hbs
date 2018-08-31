@@ -3,8 +3,9 @@
         <nav class="og-nav-tabs-fusion">
             <ul class="ul">
                 {{#each navPages}}
-                    <li class="tabs{{#equals this.slug ../this.activePageSlug}} is-active{{/equals}}">
-                        <a href="{{this.slug}}" class="a">{{this.name}}</a>
+                    <li class="tabs{{#equals this.slug ../activePageSlug}} is-active{{/equals}}">
+                        <a href="{{#equals this.slug ../activePageSlug}}#{{else}}{{this.slug}}{{/equals}}"
+                           class="a">{{this.name}}</a>
                     </li>
                 {{/each}}
             </ul>

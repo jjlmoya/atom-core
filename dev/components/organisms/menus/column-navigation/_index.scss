@@ -1,9 +1,40 @@
 .og-column-navigation {
+
+  &--scroll {
+    display:none;
+  }
+  @media only screen and (min-width: $media-size-m) {
+    &--scroll {
+      display:block;
+      position: fixed;
+      top: 115px;
+      transform: translateY(-200%);
+      transition: 3s transform;
+      will-change: transform;
+      width: 20%;
+      max-width: 200px;
+      &.is-active {
+        transform: translateY(0);
+      }
+    }
+  }
   .og-column-navigation-title {
-    border-bottom: 1px solid #4CAF50;
-    text-align: center;
-    padding: 10px 0 15px 0;
-    margin-bottom: 25px;
+    background-color: $primary-color-light;
+    padding: 20px;
+    color: $mono-color-0;
+    border-radius: 5px 5px 0 0;
+  }
+  .og-column-navigation-subtitle {
+    font-size: 0.7rem;
+    margin: 5px;
+    font-style: italic;
+  }
+  .og-column-navigation-list {
+    padding-bottom: 20px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin: 10px;
+    font-size: 0.8rem;
   }
   .og-column-navigation-list:empty {
     display: none;

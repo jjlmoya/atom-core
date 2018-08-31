@@ -27,10 +27,19 @@
   }
   &--primary {
     background-color: $primary-color-dark;
-    color:white;
+    color:$primary-color-text;
+    .a, .a:hover, .a:visited, .a:active{
+      color:$primary-color-text;
+    }
+    &:hover {
+      background-color: $primary-color;
+    }
     &--glow {
       transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
       box-shadow: 0 2px 25px rgba($primary-color, 0.5);
+      &:hover {
+        box-shadow: 0 2px 25px rgba($primary-color, 1);
+      }
     }
     &:active {
       transform: scale(0.9);
@@ -41,7 +50,10 @@
 
   &--secondary {
     background-color: $secondary-color;
-    color:white;
+    color:$primary-color-text;
+    .a, .a:hover, .a:visited, .a:active{
+      color:$primary-color-text;
+    }
     &--glow {
       transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
       box-shadow: 0 2px 25px rgba($secondary-color, 0.5);
@@ -49,6 +61,23 @@
     &:active {
       transform: scale(0.9);
       background-color: darken($secondary-color, 5%);
+      box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+    }
+  }
+
+  &--cta {
+    background-color: $color-button-highlight;
+    color:$primary-color-text;
+    span {
+      color:$primary-color-text;
+    }
+    &--glow {
+      transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+      box-shadow: 0 2px 25px rgba($color-button-highlight, 0.5);
+    }
+    &:active {
+      transform: scale(0.9);
+      background-color: darken($color-button-highlight, 5%);
       box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
     }
   }

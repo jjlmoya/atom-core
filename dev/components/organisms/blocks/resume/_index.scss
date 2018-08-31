@@ -1,0 +1,66 @@
+$og-block-resume-header: 200px;
+.og-block-resume {
+  h1,h2,h3,h4,h5,h6 {
+    padding: 0 !important;
+  }
+  ul {
+    list-style-type: none !important;
+    padding-left: 0;
+  }
+  p {
+    margin: 0 !important;
+  }
+  display:flex;
+  flex-direction: column;
+  @extend .ml-block-shadow;
+  position: relative;
+  padding: 5px 20px;
+  min-height: $og-block-resume-header;
+  overflow: hidden;
+  &-image {
+    order: 0;
+    height: $og-block-resume-header;
+    background-size: cover;
+    transform: rotate(-4deg);
+    left: -10px;
+    margin-top: -35px;
+    position: absolute;
+    width: calc(100% + 20px);
+    border: 1px solid $secondary-color;
+    margin-bottom: $og-block-resume-header;
+  }
+  &-content {
+    padding: 5px 0;
+    margin: 0 auto;
+    &-links {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 20px;
+      &-element{
+        padding: 0 20px;
+        a{
+        }
+      }
+    }
+  }
+  .og-block-resume-title {
+    padding-top: $og-block-resume-header !important;
+    text-transform: capitalize;
+    padding-bottom: 5px;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  &-cta, &-cta:visited, &-cta:hover {
+    @extend .button;
+    @extend .button--primary;
+    @extend .button--primary--glow;
+    @extend .button--xl;
+    max-width: 250px;
+    margin: 10px auto;
+    color: $primary-color-text;
+    a, a:hover, a:visited {
+      color: $primary-color-text;
+    }
+  }
+}

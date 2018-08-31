@@ -1,0 +1,33 @@
+{{#if sliders}}
+    <div class="og-slider-upper-tabs og-slider-upper-tabs--dotted" data-size="1">
+        <div class="og-slider-upper-tabs-navigation og_slider_upper_tabs_list">
+            {{#each sliders}}
+                <button
+                        class="og-slider-upper-tabs-navigation-tab button{{#equals @index 0}} is-active{{/equals}}"
+                        data-position="{{@index}}">{{{@index}}}
+                </button>
+            {{/each}}
+        </div>
+        <div class="og-slider-upper-tabs-list">
+            <ul class="og-slider-upper-tabs-list-content m-timeline og_slider_upper_tabs_container">
+                {{#each sliders as |slider|}}
+                    <li class="og-slider-upper-tabs-list-content-element">{{> (slider)}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+{{/if}}
+
+
+
+<div class="og-slider-upper-tabs">
+    <div class="og-slider-upper-tabs-navigation og_slider_upper_tabs_list">
+    </div>
+    <div class="og-slider-upper-tabs-list">
+        <ul class="og-slider-upper-tabs-list-content m-timeline og_slider_upper_tabs_container">
+        </ul>
+    </div>
+</div>
+
+
+

@@ -6,30 +6,11 @@
             close: 'og-notification-close'
         },
         model = {
-            event: 'notificationButton',
-            category: 'notification-button'
+            event: 'notificationButton'
         },
-        sendTracking = function (settings) {
-            var ga = window.ga || false;
-            if (ga) {
-                ga('send', 'event', settings);
-            }
-        },
-        analytics = {
-            close: function () {
-                sendTracking({
-                    eventCategory: model.category,
-                    eventAction: 'click',
-                    eventLabel: 'close'
-                });
-            },
-            link: function () {
-                sendTracking({eventCategory: model.category, eventAction: 'click', eventLabel: 'link'});
-            },
-        },
-        closeAction =  function (e) {
-            analytics.close();
+        closeAction = function (e) {
             e.target.parentNode.parentNode.classList.remove('is-active');
+            $zh.tracking.trackEvent(windo.localStorageKey.href, 'close', model.event);
         },
         bindCloseButton = function () {
             var closeButtons = document.getElementsByClassName(locators.close);
@@ -38,7 +19,7 @@
             }
         },
         doSomething = function () {
-            analytics.link();
+            $zh.tracking.trackEvent(window.location.href, 'click', model.event);
             //TODO: REDEFINE BEHAVIOR
         },
         bindAction = function () {

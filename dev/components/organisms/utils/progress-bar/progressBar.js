@@ -16,7 +16,6 @@
                 sh = 'scrollHeight';
             return (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
         },
-
         getPercent = function (element) {
             return (element.getBoundingClientRect().top / document.documentElement.scrollHeight) * 100;
         },
@@ -24,13 +23,13 @@
             document.addEventListener('scroll', function () {
                 setProgress(getCurrentPercent(document.body));
             });
-            var progress = document.getElementsByClassName(locators.progressBar);
-            if (progress.length > 0) {
-                progress[0].addEventListener('click', function (e) {
+            $zh.dom.applyFirst(document.getElementsByClassName(locators.progressBar), function (progressBar) {
+                progressBar.addEventListener('click', function (e) {
                     var doc = document.documentElement;
                     window.scroll(0, (doc.scrollHeight - doc.clientHeight) * (e.screenX / window.innerWidth));
+                    $zh.tracking.trackEvent(window.location.href, 'scroll', locators.event);
                 });
-            }
+            });
         },
         renderElement = function (width) {
             var elements = document.getElementsByClassName(locators.progressBar);
@@ -44,11 +43,14 @@
                 renderElement(getPercent(elements[i]));
             }
         },
+        getSettings = function () {
+            //TODO: Extract From Data
+            return 'h2';
+        },
         init = function () {
             addListeners();
             setProgress(0);
-            drawElements('h2');
-
+            drawElements(getSettings());
         };
     document.addEventListener('components::' + locators.event, function () {
         init();

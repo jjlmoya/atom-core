@@ -1,0 +1,23 @@
+.button {
+  &--logo {
+    text-align: center;
+    max-width: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &--text {
+      width: 100%
+    }
+    &--svg {
+      margin: 0 auto;
+      width: 50%;
+      svg {
+
+      }
+
+    }
+  }
+}
+
+@import "patreon";

@@ -1,0 +1,10 @@
+.button {
+  &--logo {
+    &--patreon {
+
+    }
+    @media only screen and (max-width: $media-size-l) {
+      display: none;
+    }
+  }
+}

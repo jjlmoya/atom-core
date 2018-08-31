@@ -26,10 +26,9 @@
             localStorageKey: 'og-like-menu'
         },
         toggleMenu = function () {
-            var menu = document.getElementsByClassName(locators.menu);
-            if (menu.length > 0) {
-                menu[0].classList.toggle('is-active');
-            }
+            $zh.dom.applyFirst(document.getElementsByClassName(locators.menu), function (firstMenu) {
+                firstMenu.classList.toggle('is-active');
+            });
         },
         saveData = function (data) {
             var dataToAdd = loadData();
@@ -43,35 +42,19 @@
 
         getTitle = function () {
             var header = document.getElementsByTagName('h1') || document.getElementsByTagName('h2');
-            if (header.length > 0) {
-                return header[0].innerText;
-            }
+            $zh.dom.applyFirst(header, function (firstHeader) {
+                return firstHeader.innerText;
+            });
         },
         getDataFromPost = function () {
-            /*
-            {
-               id: '',
-               image: '',
-               title: '',
-               url: ''
-             */
-            /**TODO: REDEFINE FOR EACH PROJECT **/
-            return {
-                id: '',
-                image: '',
-                title: getTitle(),
-                link: window.location.href
-
-            };
-
         },
         addButtonListener = function () {
-            var elements = document.getElementsByClassName(locators.button);
-            if (elements.length > 0) {
-                elements[0].addEventListener('click', function () {
+            $zh.dom.applyFirst(document.getElementsByClassName(locators.button), function (element) {
+                element.addEventListener('click', function () {
+                    $zh.tracking.trackEvent('button', 'click', locators.event);
                     toggleMenu();
                 });
-            }
+            });
         },
         deleteFavById = function (id) {
             var storedData = loadData();
@@ -82,9 +65,8 @@
             }
             saveData(storedData);
             renderLocalStorage();
-
         },
-        closeAction =  function (e) {
+        closeAction = function (e) {
             deleteFavById(e.target.dataset.id);
         },
         addDeleteListener = function () {
@@ -103,18 +85,17 @@
             }
         },
         appendButtonToMenu = function () {
-            var headerMenu = document.getElementsByClassName(locators.nav),
-                button = document.getElementsByClassName(locators.button);
-            if (headerMenu.length > 0 && button.length > 0) {
-                headerMenu[0].appendChild(button[0]);
-            }
-
+            $zh.dom.applyFirst(document.getElementsByClassName(locators.nav), function (headerElement) {
+                $zh.dom.applyFirst(document.getElementsByClassName(locators.button), function (firstButton) {
+                    headerElement.appendChild(firstButton);
+                });
+            });
         },
         init = function () {
             renderLocalStorage();
             addDeleteListener();
             addButtonListener();
-            //appendButtonToMenu();
+            appendButtonToMenu();
         };
     document.addEventListener('components::' + locators.event, function () {
         init();

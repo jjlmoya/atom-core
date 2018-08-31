@@ -25,6 +25,9 @@
         },
         bindCloseEvent = function (element) {
             element.addEventListener('click', function () {
+                if ($zh && $zh.tracking) {
+                    $zh.tracking.trackEvent('Close', 'click', locators.event);
+                }
                 toggleContainer();
             });
         },

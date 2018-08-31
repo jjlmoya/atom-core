@@ -30,6 +30,10 @@ exports.router = function () {
             path: '/modal',
             view: 'modal'
         },
+        slider: {
+            path: '/slider',
+            view: 'slider'
+        },
         components: {
             path: '/componentes',
             view: 'pages/components/components.hbs',

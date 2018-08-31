@@ -1,8 +1,8 @@
 window['$zh'] = window.$zh || {};
 window.$zh.dom = (function () {
     var addListenerToElement = function (event, element, action) {
-            element.addEventListener(event, function () {
-                action(element.target);
+            element.addEventListener(event, function (e) {
+                action(e.target, e);
             });
         },
         delegateListenerToElement = function (event, element, action) {
@@ -18,18 +18,24 @@ window.$zh.dom = (function () {
                 }
             }
         },
-        delegateBindEventToElement = function (locator, event, action) {
-            delegateListenerToElement(event, locator, action);
+        delegateBindEventToElement = function (element, event, action) {
+            delegateListenerToElement(event, element, action);
         },
         getFirstElement = function (arrayOfElement, action) {
             if (arrayOfElement.length > 0) {
                 action(arrayOfElement[0]);
+            }
+        },
+        applyActionAllElements = function (elements, action) {
+            for (var i = 0; i < elements.length; i++) {
+                action(elements[i]);
             }
         };
 
     return {
         on: bindEventToElement,
         onSync: delegateBindEventToElement,
-        applyFirst: getFirstElement
+        applyFirst: getFirstElement,
+        applyAll: applyActionAllElements
     };
 })();

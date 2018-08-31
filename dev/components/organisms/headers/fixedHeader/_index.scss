@@ -1,6 +1,7 @@
 $og-fixed-header-height: 30px;
 
 .og-fixed-header {
+  text-align: center;
   z-index: 1000;
   position: fixed;
   line-height: $og-fixed-header-height;

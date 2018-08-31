@@ -32,12 +32,14 @@
         },
         bindCTAButton = function () {
             $zh.dom.on(locators.CTAButton, 'click', function () {
+                $zh.tracking.trackEvent('CTA', 'click', locators.event);
                 callToAction();
             });
 
         },
         bindInfoButton = function () {
             $zh.dom.on(locators.infoButton, 'click', function () {
+                $zh.tracking.trackEvent('INFO', 'click', locators.event);
                 unfoldContent();
             });
         },

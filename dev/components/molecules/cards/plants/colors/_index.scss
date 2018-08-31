@@ -1,0 +1,73 @@
+.ml-cards-plants-colors {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  &-heading-main {
+
+  }
+  .ml-cards-plants-colors-wrapper {
+    display: flex;
+    margin: 0 auto;
+  }
+  .ml-cards-plants-colors-list {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+
+    &-heading {
+      width: 100%;
+      text-align: center;
+      padding: 0 !important;
+      font-weight: bold;
+    }
+  }
+  .color {
+    width: 25px;
+    height: 25px;
+    &--amarilla {
+      svg {
+        fill: $a-yellow;
+      }
+    }
+    &--rosa {
+      svg {
+        fill: $a-pink;
+      }
+    }
+    &--blanca {
+      svg {
+        fill: $a-white;
+      }
+    }
+    &--naranja {
+      fill: $a-orange;
+    }
+    &--azul {
+      fill: $a-blue;
+    }
+    &--multicolor {
+      fill: $a-rainbow;
+      linearGradient: $a-rainbow;
+
+    }
+    &--roja {
+      fill: $a-red;
+    }
+    &--verde {
+      fill: $a-green;
+    }
+    &--morada {
+      fill: $a-purple;
+    }
+    &--marron {
+      fill: $a-brown;
+    }
+    &--dorada {
+      fill: $a-gold;
+    }
+    &--negra {
+      fill: $a-black;
+    }
+  }
+}

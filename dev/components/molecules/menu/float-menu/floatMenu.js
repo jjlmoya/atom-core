@@ -6,23 +6,6 @@
             list: 'ml-float-menu ul',
             event: 'floatMenu'
         },
-        sendTracking = function (settings) {
-            if (ga) {
-                ga('send', 'event', settings);
-            }
-        },
-        analytics = {
-            button: function () {
-                sendTracking({
-                    eventCategory: 'Menu Float Button',
-                    eventAction: 'click',
-                    eventLabel: 'button'
-                });
-            },
-            element: function (element) {
-                sendTracking({eventCategory: 'Menu Float Button', eventAction: 'click', eventLabel: element.href});
-            }
-        },
         icons = {
             shop: '<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">' +
             '<defs><style>.a{fill:#6b70de;}.b{fill:#ffc82c;}.c{fill:#f2bb20;}.d{fill:#d38e1d;}.e{fill:#ffe62c;}.f,.g{fill:none;stroke-linecap:round;stroke-miterlimit:10;}.f{stroke:#d6a723;stroke-width:1.58578px;}.g{stroke:#f2572f;stroke-width:1.5px;}</style></defs>' +
@@ -59,6 +42,7 @@
         },
         addButtonListener = function (button, container) {
             clearListeners(button).addEventListener('click', function () {
+                $zh.tracking.trackEvent('button', 'click', locators.event);
                 document.body.classList.remove('overflow-blocked');
                 toggleViewMenu(container);
             });
@@ -79,7 +63,7 @@
         addElementListener = function (list) {
             list.addEventListener('click', function (e) {
                 if (e.tagName === 'a') {
-                    analytics.element(e);
+                    $zh.tracking.trackEvent(e.href, 'click', locators.event);
                 }
             });
         },
@@ -107,7 +91,7 @@
             }
         },
         init = function () {
-           createButton();
+            createButton();
             addListListener();
         };
     document.addEventListener("components::" + locators.event, function (e) {

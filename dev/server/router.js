@@ -5,4 +5,4 @@ module.exports = (app) => {
     require('./controller/watch.controller')(app);
     require('./controller/component.controller')(app);
     require('./controller/image.controller')(app);
-}
+};
