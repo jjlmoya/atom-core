@@ -50,6 +50,10 @@ exports.router = function () {
             path: '/bannerland',
             view: 'bannerLand'
         },
+        tetra: {
+            path: '/tetra',
+            view: 'tetra'
+        },
         admin: {
             path: '/admin',
             view: 'admin/admin.hbs',

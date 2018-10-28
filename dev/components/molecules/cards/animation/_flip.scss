@@ -1,0 +1,29 @@
+.ml-card-flip {
+  perspective: 1000px;
+  .ml-card-container {
+    position: relative;
+    text-align: center;
+    transition: all 0.8s;
+    transform-style: preserve-3d;
+    &.flipped {
+      transform: rotateY(180deg);
+    }
+    .ml-card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+    .ml-card-face-front {
+      backface-visibility: hidden;
+    }
+    .ml-card-face-back {
+      transform: rotateY(180deg);
+      background-color: $mono-color-0;
+      border-radius: 50%;
+      .flipped & {
+        z-index: 1;
+      }
+    }
+  }
+}

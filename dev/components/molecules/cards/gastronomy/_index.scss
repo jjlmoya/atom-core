@@ -1,0 +1,38 @@
+.ml-cards-gastronomy {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  &-element {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 5px;
+    text-align: left;
+    &-image {
+      min-width: 50px;
+    }
+    &-text {
+      padding: 0 5px;
+      font-size: $font-size-text--mobile;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 720px) {
+  .ml-cards-gastronomy {
+    &-element {
+      width: 100%;
+      &-image {
+      }
+      &-text {
+      }
+    }
+  }
+}
+

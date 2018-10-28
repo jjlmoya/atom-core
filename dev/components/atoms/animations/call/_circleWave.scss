@@ -1,0 +1,63 @@
+@keyframes circle-wave {
+  15% {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+  }
+  25% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.4), 0 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  25% {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.4), 0 0 0 30px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes circle-wave-black {
+  15% {
+    box-shadow: 0 0 0 5px rgba($mono-color-9, 0.4);
+  }
+  25% {
+    box-shadow: 0 0 0 10px rgba($mono-color-9, 0.4), 0 0 0 20px rgba($mono-color-9, 0.2);
+  }
+  25% {
+    box-shadow: 0 0 0 15px rgba($mono-color-9, 0.4), 0 0 0 30px rgba($mono-color-9, 0.2);
+  }
+}
+
+@keyframes circle-wave-primary {
+  15% {
+    box-shadow: 0 0 0 5px rgba($primary-color, 0.4);
+  }
+  25% {
+    box-shadow: 0 0 0 10px rgba($primary-color, 0.4), 0 0 0 20px rgba($primary-color, 0.2);
+  }
+  25% {
+    box-shadow: 0 0 0 15px rgba($primary-color, 0.4), 0 0 0 30px rgba($primary-color, 0.2);
+  }
+}
+
+@keyframes circle-wave-secondary {
+  15% {
+    box-shadow: 0 0 0 5px rgba($secondary-color, 0.4);
+  }
+  25% {
+    box-shadow: 0 0 0 10px rgba($secondary-color, 0.4), 0 0 0 20px rgba($secondary-color, 0.2);
+  }
+  25% {
+    box-shadow: 0 0 0 15px rgba($secondary-color, 0.4), 0 0 0 30px rgba($secondary-color, 0.2);
+  }
+}
+
+.a-call {
+  will-change:transform, box-shadow;
+  &--white {
+    animation: circle-wave 2s ease infinite;
+  }
+  &--primary {
+    animation: circle-wave-primary 2s ease infinite;
+  }
+  &--secondary {
+    animation: circle-wave-secondary 2s ease infinite;
+  }
+  &--dark {
+    animation: circle-wave-black 2s ease infinite;
+  }
+}

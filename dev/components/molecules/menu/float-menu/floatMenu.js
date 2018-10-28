@@ -42,7 +42,7 @@
         },
         addButtonListener = function (button, container) {
             clearListeners(button).addEventListener('click', function () {
-                $zh.tracking.trackEvent('button', 'click', locators.event);
+                $zh.tracking.trackEvent('button' + locators.event, 'click', locators.event);
                 document.body.classList.remove('overflow-blocked');
                 toggleViewMenu(container);
             });
@@ -63,7 +63,7 @@
         addElementListener = function (list) {
             list.addEventListener('click', function (e) {
                 if (e.tagName === 'a') {
-                    $zh.tracking.trackEvent(e.href, 'click', locators.event);
+                    $zh.tracking.trackEvent(locators.event + e.innertText, 'click', locators.event);
                 }
             });
         },

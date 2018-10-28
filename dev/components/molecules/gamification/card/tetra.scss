@@ -1,0 +1,67 @@
+
+$card-color-light: $primary-color-light;
+$card-color: $primary-color;
+
+.card-container {
+  max-width: 350px;
+}
+
+.frame-header,
+.frame-art,
+.frame-type-line {
+  box-shadow:
+          0 0 0 2px $card-color,
+          0 0 0 5px $card-color-light;
+}
+
+.card-frame {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.frame-header,
+.frame-type-line {
+  background: linear-gradient(0deg,
+          rgba($card-color-light, 0.3),
+          rgba($card-color, 0.3)),
+          url(https://image.ibb.co/jKByZn/tile_bg_1.jpg);
+  margin-top: 10px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+/*
+  Tue 27/3
+*/
+.name,
+.type {
+  font-size: 1.3em;
+  margin-left: 10px;
+  align-self: baseline;
+  font-weight: 600;
+}
+
+#mana-icon {
+  font-size: 1.4em;
+  background: #ADD3AC;
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: -0.05em 0.12em 0px 0 black;
+  margin-right: 5px;
+  height: 20px;
+  align-self: center;
+}
+.frame-art {
+  height: 75%;
+  object-fit:cover;
+}
+
+#set-icon {
+  height: 9%;
+  width: 6%;
+  overflow: hidden;
+  margin-right: 10px;
+  align-self: center;
+}

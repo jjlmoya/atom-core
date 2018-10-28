@@ -1,0 +1,42 @@
+.ml-cards-cosmetics {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  &-element {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+    text-align: left;
+    &-image {
+      min-width: 50px;
+    }
+    &-text {
+      padding: 0 5px;
+      font-size: $font-size-text--mobile;
+    }
+  }
+  &-element:nth-child(even) {
+    .ml-cards-cosmetics-element-image {
+      order: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .ml-cards-cosmetics {
+    &-element {
+
+      &-image {
+      }
+      &-text {
+      }
+    }
+  }
+}
+

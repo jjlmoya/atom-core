@@ -1,0 +1,87 @@
+.og-fx-layer-bubble-container {
+  border: 3px solid $secondary-color;
+  background-color: rgba($mono-color-0, 1);
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  transition: 0.5s opacity linear;
+  opacity: 0;
+  border-radius: 50%;
+  z-index:999;
+  .og-fx-layer-bubble-close {
+    color: $mono-color-0;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 20px;
+    font-size: 25px;
+  }
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    justify-content: center;
+    height: 100%;
+  }
+  &-scrollable {
+    width: 300px;
+    margin: 0 auto;
+  }
+  &.is-active {
+    transition: 0.6s 0.5s opacity linear, 0.3s transform linear;
+    opacity: 1;
+  }
+
+  &-title {
+    font-size: 24px;
+    padding-top: 20px;
+  }
+  &-image {
+    margin: 0 auto;
+    border: 2px solid white;
+  }
+
+  &-description {
+    text-align: center;
+    width: 300px;
+    margin: 20px auto;
+    line-height: 19px;
+  }
+
+  &-claim {
+    margin: 10px auto;
+    line-height: 19px;
+  }
+
+  &-button {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 10px auto;
+    position: relative;
+  }
+  &-status {
+    width: 100px;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    .circle {
+      float: left;
+      margin-right: 12px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      @extend .a-light-fading--secondary;
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 0.2  + s;
+        }
+      }
+      &.last {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.ml-cards-season {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+  }
+  &-image {
+
+  }
+  &-text {
+    font-weight: bold;
+    font-size: $font-size-text;
+  }
+}

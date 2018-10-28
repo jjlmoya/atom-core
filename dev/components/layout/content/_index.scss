@@ -1,0 +1,11 @@
+.l-content {
+  padding: 0 15px;
+  border: 5px;
+}
+
+@media only screen and (max-width: $media-size-m) {
+  .l-content {
+    padding: 0 40px;
+  }
+}
+

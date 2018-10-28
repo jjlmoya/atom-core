@@ -1,0 +1,55 @@
+body {
+  margin-top: 60px;
+}
+
+.og-logo-navigation {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  height: 60px;
+  border-bottom: 1px solid $mono-color-7;
+  background-color: rgba($mono-color-0, 0.6);
+  &-brand {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary-color;
+    &-prepend {
+      padding-right: 5px
+    }
+    &-image {
+
+    }
+    &-append {
+
+    }
+  }
+  &-navigation {
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+    max-width: 500px;
+    margin: 5px auto;
+    font-weight: bold;
+    &-anchor {
+
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  body {
+    margin-top: 45px;
+  }
+  .og-logo-navigation {
+
+    height: 45px;
+    &-navigation {
+      font-size: 10px;
+      margin: 0;
+    }
+  }
+}

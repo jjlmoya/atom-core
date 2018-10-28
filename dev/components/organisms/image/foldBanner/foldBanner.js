@@ -8,9 +8,9 @@
         toggleParent = function () {
             $zh.dom.applyFirst(document.getElementsByClassName('og-banner-fold'), function (element) {
                 if (element.classList.contains('is-active')) {
-                    $zh.tracking.trackEvent('fold', 'click', locators.event, 0);
+                    $zh.tracking.trackEvent('fold' + locators.event, 'click', locators.event, 0);
                 } else {
-                    $zh.tracking.trackEvent('unfold', 'click', locators.event, 1);
+                    $zh.tracking.trackEvent('unfold' + locators.event, 'click', locators.event, 1);
                 }
                 element.classList.toggle('is-active');
             });

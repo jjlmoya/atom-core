@@ -6,6 +6,7 @@ const home = config.home;
 const modal = config.modal;
 const slider = config.slider;
 const bannerLand = config.bannerLand;
+const tetra = config.tetra;
 
 module.exports = function (app) {
     app.get(home.path, function (req, res) {
@@ -40,6 +41,14 @@ module.exports = function (app) {
             MockService.readSlider()
         ]).then(values => {
             res.render(slider.view, Commons.join(values));
+        });
+    });
+    app.get(tetra.path, function (req, res) {
+        Promise.all([
+            NavPages.read(),
+            Commons.read(tetra)
+        ]).then(values => {
+            res.render(tetra.view, Commons.join(values));
         });
     });
 };

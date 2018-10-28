@@ -1,0 +1,50 @@
+@keyframes bg-fading-white {
+  from {
+    background: rgba($mono-color-0, .1);
+  }
+  to {
+    background: rgba($mono-color-0, .9);
+  }
+}
+
+@keyframes bg-fading-black {
+  from {
+    background: rgba($mono-color-9, .1);
+  }
+  to {
+    background: rgba($mono-color-9, .9);
+  }
+}
+
+@keyframes bg-fading-primary {
+  from {
+    background: rgba($primary-color, .1);
+  }
+  to {
+    background: rgba($primary-color, .9);
+  }
+}
+
+@keyframes bg-fading-secondary {
+  from {
+    background: rgba($secondary-color, .1);
+  }
+  to {
+    background: rgba($secondary-color, .9);
+  }
+}
+
+.a-light-fading {
+  &--white {
+    animation: bg-fading-white 1s backwards infinite;
+  }
+  &--primary {
+    animation: bg-fading-primary 1s backwards infinite;
+  }
+  &--secondary {
+    animation: bg-fading-secondary 1s backwards infinite;
+  }
+  &--dark {
+    animation: bg-fading-black 1s backwards infinite;
+  }
+}

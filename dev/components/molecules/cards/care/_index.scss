@@ -1,0 +1,21 @@
+.ml-cards-care {
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+  &-content {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 150px;
+  }
+  &-title {
+    font-weight: bold;
+    height: 20px;
+  }
+  &-image {
+    height: 60px;
+  }
+  &-text {
+    height: 20px;
+  }
+}

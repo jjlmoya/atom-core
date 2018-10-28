@@ -32,7 +32,7 @@
         },
         bindCTAButton = function () {
             $zh.dom.on(locators.CTAButton, 'click', function () {
-                $zh.tracking.trackEvent('CTA', 'click', locators.event);
+                $zh.tracking.trackEvent('CTA fixedSummaryPrice', 'click', locators.event);
                 callToAction();
             });
 

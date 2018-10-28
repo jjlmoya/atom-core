@@ -1,10 +1,16 @@
+
 .avatar {
-  
+  object-fit: cover;
+
   &--small {
     width: 100px;
     height: 100px;
   }
-  &--rounded{
+  &--medium {
+    width: 150px;
+    height: 150px;
+  }
+  &--rounded {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;

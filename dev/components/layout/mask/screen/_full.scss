@@ -1,0 +1,24 @@
+.l-mask-full-screen {
+  display: flex;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 100%;
+  position: fixed;
+  border-radius: 50%;
+  transition: 0.3s 0.6s all ease-in;
+  background-color: rgba($mono-color-9, 0.7);
+  &.is-active {
+    transition: 0.5s all ease-in;
+    width: 200%;
+    height: 200%;
+    left: -50%;
+    top: -50%;
+  }
+
+  &--center {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}

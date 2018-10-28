@@ -1,0 +1,10 @@
+.ml-cards-symbolism  {
+  display: flex;
+  justify-content: center;
+  flex-flow: row;
+  flex-wrap: wrap;
+  width: 100%;
+  &-element {
+    padding: 5px;
+  }
+}

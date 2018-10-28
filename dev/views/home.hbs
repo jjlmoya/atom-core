@@ -1,15 +1,14 @@
-{{> components/title}}
+{{> components/header/og-logo-navigation}}
+{{> components/breadcrumbs/arrow}}
+<div class="l-3-column">
+    <div class="l-3-column-main">
+        {{> components/seo/title}}
+        {{> components/blog/description anchor="description"}}
+        {{> components/blog/preparation anchor="preparation"}}
+        {{> components/blog/grow anchor="grow"}}
+        {{> components/blog/properties anchor="properties"}}
+        {{> components/blog/use anchor="use"}}
+        {{> components/blog/meaning anchor="meaning"}}
+    </div>
+</div>
 
-
-{{> atoms/button/logo}}
-
-Plants:
-{{> components/cards/plants/main}}
-
-Food:
-{{> components/cards/food/main}}
-
-Scoville:
-{{> components/cards/scoville/main}}
-
-{{> components/utils/progress-bar}}

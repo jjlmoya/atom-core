@@ -1,0 +1,27 @@
+.ml-cards-duration {
+  &-image {
+    width: 300px;
+    object-fit: cover;
+    margin: 0 auto;
+    svg {
+      max-width: 300px;
+    }
+  }
+  &-text {
+    padding: 10px;
+    strong {
+      font-weight: bold;
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .ml-cards-duration {
+    &-image {
+      width: 200px;
+      svg {
+        max-width: 200px;
+      }
+    }
+  }
+}

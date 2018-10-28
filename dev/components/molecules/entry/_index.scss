@@ -1,0 +1,55 @@
+.ml-entry-intro {
+
+  &-h2 {
+    font-size: $font-size-h2;
+    font-weight: bold;
+    padding: $padding-title;
+  }
+  &-text {
+    text-align:justify;
+    font-size: $font-size-text;
+    padding: $padding-text;
+  }
+}
+
+.ml-entry-subintro {
+  padding: 5px;
+  &-h3 {
+    font-size: $font-size-h3;
+    font-weight: bold;
+    padding: $padding-subtitle;
+  }
+  &-text {
+    text-align:justify;
+    font-size: $font-size-text;
+    padding: $padding-text;
+  }
+  &-infographic {
+    text-align: center;
+    padding: 10px;
+  }
+  strong {
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .ml-entry-intro {
+    &-h2 {
+      font-size: $font-size-h2--mobile;
+    }
+    &-text {
+      font-size: $font-size-text--mobile;
+    }
+  }
+
+  .ml-entry-subintro {
+    padding: 5px;
+    &-h3 {
+      font-size: $font-size-h3--mobile;
+    }
+    &-text {
+      font-size: $font-size-text--mobile;
+    }
+  }
+}
