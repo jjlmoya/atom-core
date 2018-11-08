@@ -21,9 +21,10 @@
   }
   &-image {
 
-    svg {
+    svg, picture, img {
       min-width: 90px;
       max-height: 70px;
+      object-fit: contain;
     }
 
   }
