@@ -1,15 +1,14 @@
-body {
-  margin-top: 60px;
-}
-
 .og-logo-navigation {
+  & body  {
+    margin-top: 60px;
+  }
   top: 0;
   position: fixed;
   width: 100%;
   z-index: 10;
   height: 60px;
   border-bottom: 1px solid $mono-color-7;
-  background-color: rgba($mono-color-0, 0.6);
+  background-color: rgba($mono-color-0, 1);
   &-brand {
     height: 30px;
     display: flex;

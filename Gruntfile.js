@@ -1,9 +1,11 @@
 module.exports = function (grunt) {
     var basePath = 'dev/',
-        scssPath = basePath + 'components/index.scss',
+        brand = grunt.option('brand') || 'index',
         jsComponents = "dev/components/**/*.js",
         jsUtils = "dev/framework/**/*.js",
         tasks = ['jshint', 'clean', 'copy', 'sass', 'uglify'];
+    var scssPath = brand ? basePath + 'components/' + brand + '.scss' : basePath + 'components/index.scss';
+    console.log('path:' + scssPath);
     grunt.initConfig({
         jshint: {
             files: [jsComponents],
@@ -23,7 +25,7 @@ module.exports = function (grunt) {
                 options: {                       // Target options
                     style: 'expanded'
                 },
-                files: {'www/public/css/index.css': scssPath}            // Dictionary of files// 'destination': 'source'
+                files: {'www/public/css/index.css': scssPath}
 
             }
         },
@@ -42,7 +44,7 @@ module.exports = function (grunt) {
             main: {
                 files: [
                     {expand: false, src: 'dev/apps.js', dest: 'www/apps.js', filter: 'isFile'},
-                    {expand: true, dest: 'www', cwd: 'dev', src: 'public/**'},
+                    {expand: true, dest: 'www', cwd: 'dev', src: 'public/*/**'},
                     {expand: true, dest: 'www', cwd: 'dev', src: 'server/**'},
                     {expand: true, dest: 'www', cwd: 'dev', src: 'views/**'},
                 ],

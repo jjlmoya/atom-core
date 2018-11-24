@@ -6,15 +6,17 @@
   flex-wrap: wrap;
   &-element {
     display: flex;
-    width: 50%;
     align-items: center;
-    justify-content: center;
     flex-direction: row;
     flex-wrap: nowrap;
     margin-top: 5px;
-    text-align: left;
+    width: 50%;
     &-image {
       min-width: 50px;
+      img {
+        max-width: 50px;
+      }
+
     }
     &-text {
       padding: 0 5px;

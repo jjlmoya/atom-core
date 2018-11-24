@@ -1,6 +1,6 @@
 .h6 {
   font-size: 8px;
-  margin:0;
+  margin: 0;
   &--left {
     text-align: left;
   }
@@ -18,10 +18,47 @@
   }
 }
 
-.h1--primary{
+.h1--primary {
   color: $primary-color-text;
 }
 
 .h2--secondary {
-  color:$secondary-color-text;
+  color: $secondary-color-text;
+}
+
+h2 {
+  font-size: $font-size-h2;
+  font-weight: bold;
+  padding: $padding-title;
+}
+
+p {
+  text-align: justify;
+  font-size: $font-size-text;
+  padding: $padding-text;
+}
+
+h3 {
+  font-size: $font-size-h3;
+  font-weight: bold;
+  padding: $padding-subtitle;
+}
+
+strong {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 720px) {
+  h2 {
+    font-size: $font-size-h2--mobile;
+  }
+  p {
+    font-size: $font-size-text--mobile;
+  }
+  h3 {
+    font-size: $font-size-h3--mobile;
+  }
+  p {
+    font-size: $font-size-text--mobile;
+  }
 }

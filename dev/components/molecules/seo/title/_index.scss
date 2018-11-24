@@ -1,6 +1,11 @@
 .ml-seo-title {
   padding: 5px;
   text-align: center;
+  img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
   &-h1 {
     font-weight: bold;
     font-size: $font-size-h1;
@@ -12,6 +17,7 @@
   }
   &-image {
     object-fit: cover;
+
   }
 }
 
@@ -26,6 +32,7 @@
     &-image {
       max-width: 100%;
       height: 150px;
+
     }
   }
 }

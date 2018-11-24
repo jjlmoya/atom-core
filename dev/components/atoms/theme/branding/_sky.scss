@@ -1,6 +1,7 @@
-$primary-color-dark: #0097A7;
-$primary-color: #00BCD4;
-$primary-color-light: #B2EBF2;
+
+$primary-color: #00a0f4;
+$primary-color-dark: darken($primary-color, 10);
+$primary-color-light: lighten($primary-color, 10);
 $primary-color-text: #FFFFFF;
 
 $secondary-color-dark: #0288D1;

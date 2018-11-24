@@ -24,51 +24,51 @@
     }
   }
   .color {
+    margin-top: 5px;
     width: 25px;
     height: 25px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid black;
     &--amarilla {
-      svg {
-        fill: $a-yellow;
-      }
+      background-color: $a-yellow;
     }
     &--rosa {
-      svg {
-        fill: $a-pink;
-      }
+      background-color: $a-pink;
     }
     &--blanca {
-      svg {
-        fill: $a-white;
-      }
+      background-color: $a-white;
     }
     &--naranja {
-      fill: $a-orange;
+      background-color: $a-orange;
     }
     &--azul {
       fill: $a-blue;
+      background-color: $a-blue;
     }
     &--multicolor {
       fill: $a-rainbow;
       linearGradient: $a-rainbow;
-
+      background-color: $a-rainbow;
     }
     &--roja {
-      fill: $a-red;
+      background-color: $a-red;
     }
     &--verde {
-      fill: $a-green;
+      background-color: $a-green;
     }
     &--morada {
-      fill: $a-purple;
+      background-color: $a-purple;
     }
     &--marron {
-      fill: $a-brown;
+      background-color: $a-brown;
     }
     &--dorada {
-      fill: $a-gold;
+      background-color: $a-gold;
     }
     &--negra {
-      fill: $a-black;
+      background-color: $a-black;
     }
   }
 }

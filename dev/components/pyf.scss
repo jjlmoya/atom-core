@@ -20,7 +20,7 @@
 /***********/
 @import "atoms/spaces/padding";
 // ---> ATOMS/THEME
-@import "atoms/theme/branding/sky";
+@import "atoms/theme/branding/forest";
 // ---> ATOMS/THEME/COLOR
 @import "atoms/theme/colors/neutral";
 @import "atoms/theme/colors/utility";
@@ -35,28 +35,6 @@
 @import "atoms/theme/backgrounds/index";
 
 $primary-brand-color: $primary-color;
-
-// ---> ATOMS/ANIMATIONS
-@import "atoms/animations/bell/index";
-@import "atoms/animations/wave/index";
-@import "atoms/animations/call/index";
-
-// ---> ATOMS/IMAGES
-@import "atoms/images/avatar";
-@import "atoms/images/hero";
-@import "atoms/images/logo";
-@import "atoms/images/parallax";
-
-// ---> ATOMS/INPUT
-@import "atoms/input/email";
-@import "atoms/input/file";
-@import "atoms/input/number";
-@import "atoms/input/radio";
-@import "atoms/input/select";
-@import "atoms/input/telephone";
-@import "atoms/input/text";
-@import "atoms/input/textarea";
-@import "atoms/input/checkbox";
 
 // ---> ATOMS/TEXT
 @import "atoms/text/sizes/index";
@@ -100,20 +78,9 @@ $primary-brand-color: $primary-color;
 @import 'layout/menu/oversized-column/index';
 @import 'layout/menu/slider/index';
 
-// ---> LAYOUT/INLINES
-@import "layout/inlines/wrap/index";
-
 // ---> LAYOUT/3-COLUMN
 @import "layout/3-column/index";
 
-// ---> LAYOUT/COLUMN-DISPLAY
-@import "layout/columnDisplay/index";
-
-// ---> LAYOUT/MASKS
-@import "layout/mask/screen/full";
-
-// ---> LAYOUT/CONTENT
-@import "layout/content/index";
 /*****************/
 /** END  LAYOUT **/
 /*****************/
@@ -125,13 +92,6 @@ $primary-brand-color: $primary-color;
 @import "molecules/titles/inline";
 @import "molecules/titles/heading-minimalist/index";
 
-// ---> MOLECULES/FORMS
-@import "molecules/forms/checbox";
-@import "molecules/forms/imagebox/imagebox";
-@import "molecules/forms/basicForm/index";
-
-// ---> MOLECULES/CARDS
-@import "molecules/cards/shadow/index";
 // ---> MOLECULES/CARDS/PLANTS
 @import "molecules/cards/plants/colors/index";
 @import "molecules/cards/origin/index";
@@ -152,15 +112,8 @@ $primary-brand-color: $primary-color;
 @import "molecules/cards/gastronomy/index";
 @import "molecules/cards/cometics/index";
 @import "molecules/cards/symbolsim/index";
-// ---> MOLECULES/CARDS/ANIMATIONS
-@import "molecules/cards/animation/flip";
 // ---> MOLECULES/MENU
 @import "molecules/menu/float-menu/index";
-// ---> MOLECULES/MODAL
-@import "molecules/modal/bottom-urgency/index";
-// ---> MOLECULES/GAMIFICATION
-@import "molecules/gamification/cell/index";
-@import "molecules/gamification/card/index";
 // ---> MOLECULES/SEO
 @import "molecules/seo/title/index";
 // ---> MOLECULES/MESSAGES
@@ -172,13 +125,6 @@ $primary-brand-color: $primary-color;
 /** END MOLECULES **/
 /*******************/
 
-/***********/
-/** PAGES **/
-/***********/
-
-// ---> PAGES/SPLASH
-@import "pages/splash/index";
-
 /**************/
 /** ORGANISM **/
 /**************/
@@ -188,62 +134,13 @@ $primary-brand-color: $primary-color;
 // ---> ORGANISM/BLOCKS
 // ---> ORGANISM/BLOCKS/ARTICLES
 @import "organisms/blocks/articles/minimalist/index";
-@import "organisms/blocks/socialInk/index";
-// ---> ORGANISM/BLOCKS/AUTHOR
-@import "organisms/blocks/author/fullWidth/index";
-// ---> ORGANISM/BLOCKS/COMMENTS
-@import "organisms/blocks/comments/comic/index";
-// ---> ORGANISM/BLOCKS/RESUME
-@import "organisms/blocks/resume/index";
 
 // ---> ORGANISM/HEADERS
-@import "organisms/headers/simpleHeader/index";
-@import "organisms/headers/fixedHeader/index";
-@import "organisms/headers/logoNavigation/inline";
 @import "organisms/headers/logoNavigation/center";
 
 // ---> ORGANISM/MENUS
-@import "organisms/menus/router/floatVertical";
-@import "organisms/menus/nav-tabs/fusion/index";
-@import "organisms/menus/head-nav-scroll/index";
 @import "organisms/menus/gallery-root/index";
-@import "organisms/menus/like-menu/index";
 @import "organisms/menus/column-navigation/index";
-@import "organisms/menus/fixed-summary-price/index";
-@import "organisms/menus/flags/index";
-
-// ---> ORGANISM/UTILS
-@import "organisms/utils/progress-bar/index";
-
-// ---> ORGANISM/SOCIAL
-@import "organisms/social/clickToTweet/index";
-@import "organisms/social/socialShare/index";
-
-// ---> ORGANISM/INFOGRAPHICS
-@import "organisms/infographics/scoville/index";
-
-// ---> ORGANISM/MODAL
-@import "organisms/modal/notification/index";
-
-// ---> ORGANISM/PANEL
-@import "organisms/panel/listDataDisplay/index";
-
-// ---> ORGANISM/IMAGE
-@import "organisms/image/banner/index";
-@import "organisms/image/foldBanner/index";
-
-// ---> ORGANISM/GAMIFICATION
-@import "organisms/gamification/tutorial/screen";
-@import "organisms/gamification/board/index";
-
-// ---> ORGANISM/SLIDER
-@import "organisms/slider/upperTabs/index";
-
-// ---> ORGANISM/HEADINGS
-@import "organisms/headings/imageClaim/index";
-
-// ---> ORGANISM/FX
-@import "organisms/fx/layer/bubble";
 
 // ---> ORGANISM/BREADCRUMBS
 @import "organisms/breadcrumbs/arrow/index";

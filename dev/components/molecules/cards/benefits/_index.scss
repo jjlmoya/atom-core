@@ -29,13 +29,20 @@
   }
   &-image {
     padding: 5px;
+    margin: 0 auto;
+    img {
+      max-width: 75%;
+    }
   }
   &-list {
-    h3 {
+    h3, h4 {
       font-weight: bold;
+      padding: 5px 0;
     }
     span {
-      display:block;
+      display: block;
+      font-size: 14px;
+      padding: 2px 0;
     }
   }
 }

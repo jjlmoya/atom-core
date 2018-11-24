@@ -12,11 +12,14 @@
   &-arrow {
     cursor: pointer;
 
+    img {
+      animation: ring 2s ease infinite;
+    }
     &.left{
-      transform:rotate(180deg);
     }
     &.right{
-      animation: ring 2s ease infinite;
+      transform:rotate(180deg);
+
     }
     &.is-disabled {
       visibility: hidden;

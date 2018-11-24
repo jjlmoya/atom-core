@@ -34,6 +34,10 @@ exports.router = function () {
             path: '/slider',
             view: 'slider'
         },
+        bonseo: {
+            path: '/bonseo',
+            view: 'bonseo'
+        },
         components: {
             path: '/componentes',
             view: 'pages/components/components.hbs',

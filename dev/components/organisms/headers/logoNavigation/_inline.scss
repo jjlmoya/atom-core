@@ -1,0 +1,23 @@
+.og-logo-inline {
+  display: flex;
+  align-items: center;
+  &-image {
+    max-width: 150px;
+  }
+  &-navigation {
+    margin-left: auto;
+    font-size: 14px;
+    &-link {
+      color: $mono-color-8;
+      margin-left: 2px;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .og-logo-inline {
+    &-navigation {
+    }
+  }
+}

@@ -7,6 +7,7 @@ const modal = config.modal;
 const slider = config.slider;
 const bannerLand = config.bannerLand;
 const tetra = config.tetra;
+const bonseo = config.bonseo;
 
 module.exports = function (app) {
     app.get(home.path, function (req, res) {
@@ -49,6 +50,14 @@ module.exports = function (app) {
             Commons.read(tetra)
         ]).then(values => {
             res.render(tetra.view, Commons.join(values));
+        });
+    });
+    app.get(bonseo.path, function (req, res) {
+        Promise.all([
+            NavPages.read(),
+            Commons.read(tetra)
+        ]).then(values => {
+            res.render(bonseo.view, Commons.join(values));
         });
     });
 };
