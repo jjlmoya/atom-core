@@ -12,6 +12,8 @@
 @import "utils/overflow/index";
 @import "utils/backgrounds/colors";
 @import "utils/images/index";
+@import "utils/display/index";
+
 /*******************/
 /**   END UTILS   **/
 /*******************/
@@ -19,71 +21,30 @@
 /** ATOMS **/
 /***********/
 @import "atoms/spaces/padding";
-// ---> ATOMS/THEME
-@import "atoms/theme/branding/sky";
 // ---> ATOMS/THEME/COLOR
 @import "atoms/theme/colors/neutral";
 @import "atoms/theme/colors/utility";
 @import "atoms/theme/colors/text";
 @import "atoms/theme/colors/rainbow";
+// ---> ATOMS/THEME
+@import "atoms/theme/branding/sky";
 // ---> ATOMS/THEME/BRAND
 @import "atoms/theme/images/brand";
 @import "atoms/theme/images/util";
 // ---> ATOMS/THEME/FONT
 @import "atoms/theme/decoration/text";
-// ---> ATOMS/THEME/BACKGROUNDS
-@import "atoms/theme/backgrounds/index";
+@import "atoms/text/sizes/index";
+//---> ATOMS/IMAGE
+@import "atoms/images/sizes";
 
 $primary-brand-color: $primary-color;
-
-// ---> ATOMS/ANIMATIONS
-@import "atoms/animations/bell/index";
-@import "atoms/animations/wave/index";
-@import "atoms/animations/call/index";
-
-// ---> ATOMS/IMAGES
-@import "atoms/images/avatar";
-@import "atoms/images/hero";
-@import "atoms/images/logo";
-@import "atoms/images/parallax";
-
-// ---> ATOMS/INPUT
-@import "atoms/input/email";
-@import "atoms/input/file";
-@import "atoms/input/number";
-@import "atoms/input/radio";
-@import "atoms/input/select";
-@import "atoms/input/telephone";
-@import "atoms/input/text";
-@import "atoms/input/textarea";
-@import "atoms/input/checkbox";
-
-// ---> ATOMS/TEXT
-@import "atoms/text/sizes/index";
-@import "atoms/text/headings/h1";
-@import "atoms/text/headings/h2";
-@import "atoms/text/headings/h3";
-@import "atoms/text/headings/h4";
-@import "atoms/text/headings/h5";
-@import "atoms/text/headings/h6";
-@import "atoms/text/a/index";
-@import "atoms/text/p";
-@import "atoms/text/span";
-
-// ---> ATOMS/LABELS
-@import "atoms/labels/imageLabel";
-
-// ---> ATOMS/MENU **/
-@import "atoms/menu/tabs/index";
-@import "atoms/menu/nav/index";
-
 // ---> ATOMS/LINKS
 @import "atoms/links/index";
-
-// ---> ATOMS/BUTTON
+@import "atoms/text/headings/h1";
 @import "atoms/button/button";
-@import "atoms/button/text";
-@import "atoms/button/third/index";
+
+// ---> ATOMS/CARTOONS
+@import "atoms/cartoon/square";
 
 /***************/
 /** END ATOMS **/
@@ -92,26 +53,12 @@ $primary-brand-color: $primary-color;
 /************/
 /** LAYOUT **/
 /************/
-// ---> LAYOUT/ASIDE
-@import "layout/aside/twoColumns/index";
 
-// ---> LAYOUT/MENU
-@import 'layout/menu/hortizonal-squares/index';
-@import 'layout/menu/oversized-column/index';
-@import 'layout/menu/slider/index';
+// ---> LAYOUT/BASIC
+@import "layout/basic/flex";
+@import "layout/basic/fixed";
 
-// ---> LAYOUT/INLINES
 @import "layout/inlines/wrap/index";
-
-// ---> LAYOUT/3-COLUMN
-@import "layout/3-column/index";
-
-// ---> LAYOUT/COLUMN-DISPLAY
-@import "layout/columnDisplay/index";
-
-// ---> LAYOUT/MASKS
-@import "layout/mask/screen/full";
-
 // ---> LAYOUT/CONTENT
 @import "layout/content/index";
 /*****************/
@@ -121,52 +68,16 @@ $primary-brand-color: $primary-color;
 /***************/
 /** MOLECULES **/
 /**************/
-// ---> MOLECULES/TITLE
-@import "molecules/titles/inline";
-@import "molecules/titles/heading-minimalist/index";
-
-// ---> MOLECULES/FORMS
-@import "molecules/forms/checbox";
-@import "molecules/forms/imagebox/imagebox";
-@import "molecules/forms/basicForm/index";
-
-// ---> MOLECULES/CARDS
-@import "molecules/cards/shadow/index";
-// ---> MOLECULES/CARDS/PLANTS
-@import "molecules/cards/plants/colors/index";
-@import "molecules/cards/origin/index";
-@import "molecules/cards/flavor/index";
-@import "molecules/cards/plantType/index";
-@import "molecules/cards/variety/index";
-@import "molecules/cards/tools/index";
-@import "molecules/cards/duration/index";
-@import "molecules/cards/separation/index";
-@import "molecules/cards/trasplants/index";
-@import "molecules/cards/illumination/index";
-@import "molecules/cards/care/index";
-@import "molecules/cards/soil/index";
-@import "molecules/cards/season/index";
-@import "molecules/cards/benefits/index";
-@import "molecules/cards/nutritional/index";
-@import "molecules/cards/scoville/index";
-@import "molecules/cards/gastronomy/index";
-@import "molecules/cards/cometics/index";
-@import "molecules/cards/symbolsim/index";
-// ---> MOLECULES/CARDS/ANIMATIONS
-@import "molecules/cards/animation/flip";
-// ---> MOLECULES/MENU
-@import "molecules/menu/float-menu/index";
-// ---> MOLECULES/MODAL
-@import "molecules/modal/bottom-urgency/index";
-// ---> MOLECULES/GAMIFICATION
-@import "molecules/gamification/cell/index";
-@import "molecules/gamification/card/index";
-// ---> MOLECULES/SEO
-@import "molecules/seo/title/index";
-// ---> MOLECULES/MESSAGES
-@import "molecules/messages/index";
-// ---> MOLECULES/ENTRY
-@import "molecules/entry/index";
+@import "molecules/titles/index";
+@import "molecules/titles/colorful";
+@import "molecules/icons/text";
+// ---> MOLECULES/CONTENT
+@import "molecules/content/basic";
+// ---> MOLECULES/IMAGES
+@import "molecules/image/basic";
+// ---> MOLECULES/BANNER
+@import "molecules/banner/email";
+@import "molecules/cartoon/_slider";
 
 /*******************/
 /** END MOLECULES **/
@@ -175,78 +86,25 @@ $primary-brand-color: $primary-color;
 /***********/
 /** PAGES **/
 /***********/
-
-// ---> PAGES/SPLASH
-@import "pages/splash/index";
+@import "pages/legal";
+@import "pages/default";
 
 /**************/
 /** ORGANISM **/
 /**************/
-// ---> ORGANISM/TITLES
-@import "organisms/titles/mainTitle";
 
 // ---> ORGANISM/BLOCKS
-// ---> ORGANISM/BLOCKS/ARTICLES
-@import "organisms/blocks/articles/minimalist/index";
-@import "organisms/blocks/socialInk/index";
-// ---> ORGANISM/BLOCKS/AUTHOR
-@import "organisms/blocks/author/fullWidth/index";
-// ---> ORGANISM/BLOCKS/COMMENTS
-@import "organisms/blocks/comments/comic/index";
-// ---> ORGANISM/BLOCKS/RESUME
-@import "organisms/blocks/resume/index";
-
-// ---> ORGANISM/HEADERS
-@import "organisms/headers/simpleHeader/index";
-@import "organisms/headers/fixedHeader/index";
 @import "organisms/headers/logoNavigation/inline";
-@import "organisms/headers/logoNavigation/center";
+@import "organisms/image/banner/claim";
+@import "organisms/menus/vertical";
+@import "organisms/footers/layered";
+@import "organisms/titles/splash";
 
-// ---> ORGANISM/MENUS
-@import "organisms/menus/router/floatVertical";
-@import "organisms/menus/nav-tabs/fusion/index";
-@import "organisms/menus/head-nav-scroll/index";
-@import "organisms/menus/gallery-root/index";
-@import "organisms/menus/like-menu/index";
-@import "organisms/menus/column-navigation/index";
-@import "organisms/menus/fixed-summary-price/index";
-@import "organisms/menus/flags/index";
 
-// ---> ORGANISM/UTILS
-@import "organisms/utils/progress-bar/index";
 
-// ---> ORGANISM/SOCIAL
-@import "organisms/social/clickToTweet/index";
-@import "organisms/social/socialShare/index";
 
-// ---> ORGANISM/INFOGRAPHICS
-@import "organisms/infographics/scoville/index";
 
-// ---> ORGANISM/MODAL
-@import "organisms/modal/notification/index";
 
-// ---> ORGANISM/PANEL
-@import "organisms/panel/listDataDisplay/index";
-
-// ---> ORGANISM/IMAGE
-@import "organisms/image/banner/index";
-@import "organisms/image/foldBanner/index";
-
-// ---> ORGANISM/GAMIFICATION
-@import "organisms/gamification/tutorial/screen";
-@import "organisms/gamification/board/index";
-
-// ---> ORGANISM/SLIDER
-@import "organisms/slider/upperTabs/index";
-
-// ---> ORGANISM/HEADINGS
-@import "organisms/headings/imageClaim/index";
-
-// ---> ORGANISM/FX
-@import "organisms/fx/layer/bubble";
-
-// ---> ORGANISM/BREADCRUMBS
-@import "organisms/breadcrumbs/arrow/index";
 
 
 

@@ -1,0 +1,195 @@
+<div class="uip-tabs__tabs-panel"
+     id="TOURS-searcher">
+    <form class="m-search-form  m-search-form--tours  js-has-datepicker js-is-focusable  m-search-form--horizontal m-search-form--tours-horizontal"
+          data-base-path="/viajes" id="tours-search-form" data-ajax="false">
+        <div class="m-search-form__item m-search-form__item--tours-destination">
+            <div class="c-input">
+                <label for="destinationTours" class="c-input__label">DESTINO</label>
+                <input placeholder="Selecciona tu destino"
+                       class="c-input__element js-autocomplete" type="text" name="destination" id="destinationTours"
+                       data-searcher="[{&quot;code&quot;:&quot;america&quot;,&quot;name&quot;:&quot;América&quot;,&quot;destinationType&quot;:&quot;CONTINENT&quot;,&quot;childrenDestinations&quot;:[{&quot;code&quot;:&quot;belice&quot;,&quot;name&quot;:&quot;Belice&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;bolivia&quot;,&quot;name&quot;:&quot;Bolivia&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;costarica&quot;,&quot;name&quot;:&quot;Costa Rica&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;ecuador&quot;,&quot;name&quot;:&quot;Ecuador&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;estados-unidos&quot;,&quot;name&quot;:&quot;Estados Unidos&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;guatemala&quot;,&quot;name&quot;:&quot;Guatemala&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;mexico&quot;,&quot;name&quot;:&quot;México&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;peru&quot;,&quot;name&quot;:&quot;Perú&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;}]},{&quot;code&quot;:&quot;asia&quot;,&quot;name&quot;:&quot;Asia&quot;,&quot;destinationType&quot;:&quot;CONTINENT&quot;,&quot;childrenDestinations&quot;:[{&quot;code&quot;:&quot;camboya&quot;,&quot;name&quot;:&quot;Camboya&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;china&quot;,&quot;name&quot;:&quot;China&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;india&quot;,&quot;name&quot;:&quot;India&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;japon&quot;,&quot;name&quot;:&quot;Japón&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;laos&quot;,&quot;name&quot;:&quot;Laos&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;malasia&quot;,&quot;name&quot;:&quot;Malasia&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;myanmar&quot;,&quot;name&quot;:&quot;Myanmar&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;nepal&quot;,&quot;name&quot;:&quot;Nepal&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;tailandia&quot;,&quot;name&quot;:&quot;Tailandia&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;vietnam&quot;,&quot;name&quot;:&quot;Vietnam&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;}]},{&quot;code&quot;:&quot;europe&quot;,&quot;name&quot;:&quot;Europa&quot;,&quot;destinationType&quot;:&quot;CONTINENT&quot;,&quot;childrenDestinations&quot;:[{&quot;code&quot;:&quot;alemania&quot;,&quot;name&quot;:&quot;Alemania&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;austria&quot;,&quot;name&quot;:&quot;Austria&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;bulgaria&quot;,&quot;name&quot;:&quot;Bulgaria&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;belgica&quot;,&quot;name&quot;:&quot;Bélgica&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;croacia&quot;,&quot;name&quot;:&quot;Croacia&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;dinamarca&quot;,&quot;name&quot;:&quot;Dinamarca&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;escocia&quot;,&quot;name&quot;:&quot;Escocia&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;eslovenia&quot;,&quot;name&quot;:&quot;Eslovenia&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;estonia&quot;,&quot;name&quot;:&quot;Estonia&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;finlandia&quot;,&quot;name&quot;:&quot;Finlandia&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;francia&quot;,&quot;name&quot;:&quot;Francia&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;grecia&quot;,&quot;name&quot;:&quot;Grecia&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;holanda&quot;,&quot;name&quot;:&quot;Holanda&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;hungria&quot;,&quot;name&quot;:&quot;Hungría&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;inglaterra&quot;,&quot;name&quot;:&quot;Inglaterra&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;irlanda&quot;,&quot;name&quot;:&quot;Irlanda&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;irlanda-norte&quot;,&quot;name&quot;:&quot;Irlanda del Norte&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;italia&quot;,&quot;name&quot;:&quot;Italia&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;letonia&quot;,&quot;name&quot;:&quot;Letonia&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;lituania&quot;,&quot;name&quot;:&quot;Lituania&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;luxemburgo&quot;,&quot;name&quot;:&quot;Luxemburgo&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;noruega&quot;,&quot;name&quot;:&quot;Noruega&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;polonia&quot;,&quot;name&quot;:&quot;Polonia&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;portugal&quot;,&quot;name&quot;:&quot;Portugal&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;republica-checa&quot;,&quot;name&quot;:&quot;República Checa&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;rumania&quot;,&quot;name&quot;:&quot;Rumanía&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;rusia&quot;,&quot;name&quot;:&quot;Rusia&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;suecia&quot;,&quot;name&quot;:&quot;Suecia&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;suiza&quot;,&quot;name&quot;:&quot;Suiza&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;}]},{&quot;code&quot;:&quot;africa&quot;,&quot;name&quot;:&quot;África&quot;,&quot;destinationType&quot;:&quot;CONTINENT&quot;,&quot;childrenDestinations&quot;:[{&quot;code&quot;:&quot;kenia&quot;,&quot;name&quot;:&quot;Kenia&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;sudafrica&quot;,&quot;name&quot;:&quot;Sudáfrica&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;},{&quot;code&quot;:&quot;tanzania&quot;,&quot;name&quot;:&quot;Tanzania&quot;,&quot;destinationType&quot;:&quot;COUNTRY&quot;}]}]"/>
+                <i class="c-input__icon c-icon c-icon-arrow c-icon-location"></i>
+            </div>
+        </div>
+        <div class="m-search-form__item m-search-form__item--tours-dates">
+            <div class="c-select">
+                <label for="duration" class="c-select__label">FECHAS</label>
+                <select class="c-select__element" id="tourDate">
+                    <option value="">Cualquier fecha</option>
+                    <option value="12/2018">Diciembre 2018</option>
+                    <option value="1/2019">Enero 2019</option>
+                    <option value="2/2019">Febrero 2019</option>
+                    <option value="3/2019">Marzo 2019</option>
+                    <option value="4/2019">Abril 2019</option>
+                    <option value="5/2019">Mayo 2019</option>
+                    <option value="6/2019">Junio 2019</option>
+                    <option value="7/2019">Julio 2019</option>
+                    <option value="8/2019">Agosto 2019</option>
+                    <option value="9/2019">Septiembre 2019</option>
+                    <option value="10/2019">Octubre 2019</option>
+                    <option value="11/2019">Noviembre 2019</option>
+                    <option value="12/2019">Diciembre 2019</option>
+                </select>
+                <i class="c-select__icon c-icon c-icon-arrow c-icon-arrow--bottom"></i>
+            </div>
+        </div>
+        <div class="m-search-form__item m-search-form__item--tours-duration">
+            <div class="c-select">
+                <label for="duration" class="c-select__label">DURACIÓN</label>
+                <select class="c-select__element" id="tourDuration">
+                    <option value="">Cualquier duración</option>
+                    <option value="1#7">De 1 día a 7 días</option>
+                    <option value="8#14">de 8 días a 14 días</option>
+                    <option value="15#21">de 15 días a 21 días</option>
+                </select>
+                <i class="c-select__icon c-icon c-icon-arrow c-icon-arrow--bottom"></i>
+            </div>
+        </div>
+        <div id="categoryForm" class="m-search-form__item m-search-form__item--tours-category"
+             data-any-category="Cualquier categoría">
+            <div class="c-input">
+                <label for="category" class="c-input__label">CATEGORÍA</label>
+                <input value="Cualquier categoría" class="c-input__element" type="text" name="category"
+                       readonly="readonly" id="category"/>
+                <i class="c-select__icon c-icon c-icon-arrow c-icon-arrow--bottom"></i>
+            </div>
+            <div class="uip-popover">
+                <div class="uip-popover__arrow uip-popover__arrow--bottom"></div>
+                <div id="categoryList" class="uip-popover__inner">
+                    <ul class="m-tours-search__box">
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="star0" type="checkbox" name="0"
+                                       value="CRUCERO">
+                                <label for="star0">Cruceros</label>
+                            </div>
+                        </li>
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="star1" type="checkbox" name="1"
+                                       value="playa">
+                                <label for="star1">Playa</label>
+                            </div>
+                        </li>
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="star2" type="checkbox" name="2"
+                                       value="TI">
+                                <label for="star2">Todo Incluido</label>
+                            </div>
+                        </li>
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="star3" type="checkbox" name="3"
+                                       value="EXOTIC">
+                                <label for="star3">Exótico</label>
+                            </div>
+                        </li>
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="star4" type="checkbox" name="4"
+                                       value="PAREJAS">
+                                <label for="star4">Parejas</label>
+                            </div>
+                        </li>
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="star5" type="checkbox" name="5"
+                                       value="CULTURAL">
+                                <label for="star5">Cultural</label>
+                            </div>
+                        </li>
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="star6" type="checkbox" name="6"
+                                       value="AVENTURA">
+                                <label for="star6">Aventura</label>
+                            </div>
+                        </li>
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="star7" type="checkbox" name="7"
+                                       value="CAPITALES">
+                                <label for="star7">Capitales</label>
+                            </div>
+                        </li>
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="star8" type="checkbox" name="8"
+                                       value="COMPRAS">
+                                <label for="star8">Compras</label>
+                            </div>
+                        </li>
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="star9" type="checkbox" name="9"
+                                       value="FAMILIA">
+                                <label for="star9">En familia</label>
+                            </div>
+                        </li>
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="star10" type="checkbox" name="10"
+                                       value="NATURALEZA">
+                                <label for="star10">Naturaleza</label>
+                            </div>
+                        </li>
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="star11" type="checkbox" name="11"
+                                       value="GASTRONOMI">
+                                <label for="star11">Gastronómicos</label>
+                            </div>
+                        </li>
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="star12" type="checkbox" name="12"
+                                       value="AMIGOS">
+                                <label for="star12">Con amigos</label>
+                            </div>
+                        </li>
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="ptype0" type="checkbox" name="0"
+                                       value="GRANVIAJE">
+                                <label for="ptype0" data-productype="ptype">Gran Viaje</label>
+                            </div>
+                        </li>
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="ptype1" type="checkbox" name="1"
+                                       value="ESCAPADA">
+                                <label for="ptype1" data-productype="ptype">Escapada</label>
+                            </div>
+                        </li>
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="ptype2" type="checkbox" name="2"
+                                       value="CIRCLASICO">
+                                <label for="ptype2" data-productype="ptype">Circuito</label>
+                            </div>
+                        </li>
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="ptype3" type="checkbox" name="3"
+                                       value="COMBINADO">
+                                <label for="ptype3" data-productype="ptype">Combinado</label>
+                            </div>
+                        </li>
+                        <li class="m-tours-search__box-item">
+                            <div class="m-tours-search__check c-checkbox">
+                                <input id="ptype4" type="checkbox" name="4"
+                                       value="SAFARIS">
+                                <label for="ptype4" data-productype="ptype">Safari</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="m-search-form__item m-search-form__item--button">
+            <a id="tours-search-btn" href="#" class="c-btn c-btn--big c-btn--uppercase c-btn--full"
+               data-target="#destinationTours">Buscar</a>
+        </div>
+    </form>
+</div>

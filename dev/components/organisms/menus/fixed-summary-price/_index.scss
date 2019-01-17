@@ -5,7 +5,6 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    @extend .bg--primary;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -26,13 +25,6 @@
     .og-fixed-summary-price-button {
       order: 2;
       flex-grow: 1;
-      button {
-        @extend .button;
-        @extend .button--secondary;
-        @extend .button--secondary--glow;
-        @extend .button--tight;
-        @extend .button--strong;
-      }
       margin: 5px 0;
 
     }
@@ -43,18 +35,6 @@
       display: flex;
       justify-content: flex-start;
       max-width: 50px;
-      button {
-        @extend .button;
-        @extend .button--primary;
-        border-radius: 50%;
-        border: 1px solid white;
-        font-style: italic;
-        font-family: initial;
-        font-size: 20px;
-        line-height: 20px;
-        width: 30px;
-        height: 30px;
-      }
     }
 
   }

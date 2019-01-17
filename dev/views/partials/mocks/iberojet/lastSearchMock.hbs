@@ -1,0 +1,98 @@
+<div id="mockLastSearch">
+    <div class="l-flex l-flex--justify__center">
+        <button class="button button--secondary"
+                data-destination="La Selva Negra"
+                data-date="13-09-2018"
+                data-url="https://www.google.es3"
+                data-image="http://lorempixel.com/400/200/sports/3">
+            [N][13/09/2018] Selva Negra
+        </button>
+        <button class="button button--secondary"
+                data-destination="Ruta Romántica por la Savana Africana"
+                data-date="13-01-2019"
+                data-url="https://www.google.e4"
+                data-image="http://lorempixel.com/400/200/sports/3">
+            [N][13/01/2019] Ruta Romántica
+        </button>
+        <button class="button button--secondary"
+                data-destination="Caducilandia"
+                data-date="16-01-2019"
+                data-url="https://www.google.e4"
+                data-image="http://lorempixel.com/400/200/sports/3">
+            [N][16/01/2019] Caducilandia
+        </button>
+    </div>
+    <div class="l-flex l-flex--justify__center">
+        <button class="button button--secondary"
+                data-destination="Punta Cana"
+                data-date="30-01-2019"
+                data-url="https://www.google.es1"
+                data-image="http://lorempixel.com/400/200/sports/Dummy-Text">
+            [L][30/01/2019] Punta Cana
+        </button>
+        <button class="button button--secondary"
+                data-destination="Riviera Maya"
+                data-date="25-02-2019"
+                data-url="https://www.google.es2"
+                data-image="http://lorempixel.com/400/200/sports/2">
+            [L][25/02/2019] Riviera Maya
+        </button>
+        <button class="button button--secondary"
+                data-destination="Laponia"
+                data-date="25-06-2019"
+                data-url="https://www.google.e5"
+                data-image="http://lorempixel.com/400/200/sports/3">
+            [L][25/06/2019] Laponia
+        </button>
+        <button class="button button--secondary"
+                data-destination="Uruguay"
+                data-date="25-03-2019"
+                data-url="https://www.google.e6"
+                data-image="http://lorempixel.com/400/200/sports/3">
+            [L][25/03/2019] Uruguay
+        </button>
+        <button class="button button--secondary"
+                data-destination="Islas Maldivas"
+                data-date="13-08-2019"
+                data-url="https://www.google.e7"
+                data-image="http://lorempixel.com/400/200/sports/3">
+            [L][13/08/2019] Islas Maldivas
+        </button>
+        <button class="button button--secondary"
+                data-destination="Bayahibe"
+                data-date="13-09-2019"
+                data-url="https://www.google.e8"
+                data-image="http://lorempixel.com/400/200/sports/3">
+            [L][13/09/2019] Bayahibe
+        </button>
+        <button class="button button--secondary"
+                data-destination="Italia Monumental"
+                data-date="30-12-2019"
+                data-url="https://www.google.e9"
+                data-image="http://lorempixel.com/400/200/sports/3">
+            [L][30/12/2019] Italia Monumental - Venecia, Roma
+        </button>
+    </div>
+</div>
+
+<style>
+    #mockLastSearch .button.button--secondary {
+        margin: 5px;
+    }
+</style>
+<script>
+    (function () {
+        document.getElementById('mockLastSearch').addEventListener('click', function (e) {
+            var data = e.target.dataset,
+                    date = data.date.split('-');
+            var mock = new commons.Model.LastSearch()
+                    .withDate(new Date(date[1] + '/' + date[0] + '/' + date[2]))
+                    .withDestination(data.destination)
+                    .withUrl(data.url)
+                    .withImage(data.image)
+                    .build();
+            commons.Service.LastSearch.save(mock);
+            commons.Service.LastSearch.init();
+        });
+    })();
+</script>

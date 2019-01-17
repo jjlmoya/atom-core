@@ -1,0 +1,64 @@
+$pill-background: #0d545f;
+.ml-pill {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  padding: 5px 0;
+  color: #a6e8f9;
+
+  &__wrapper {
+    justify-content: center;
+    background-color: $pill-background;
+    height: 30px;
+    padding: 2px 15px 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+  &__close {
+    display: inline-block;
+    padding: 5px;
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    .c-icon {
+      color: #a3e4f6;
+    }
+  }
+  &:after, &:before {
+    display: block;
+  }
+  &:after {
+    min-width: 30px;
+    content: "\e916";
+    display: flex;
+    justify-content: center;
+    font-family: pegasus-base-fonts;
+    align-items: center;
+    border-radius: 0 0 50px 50px;
+    background-color: $pill-background;
+    color: #d0e2e7;
+    transform: rotate(-90deg);
+    border-top: 1px solid rgba($mono-color-1, 0.3);
+  }
+  &:before {
+    min-width: 20px;
+    content: " ";
+    background-color: $pill-background;
+    border-radius: 50px 0 0 50px;
+  }
+
+  &__title {
+    font-size: 13px;
+  }
+  &__date {
+    padding-bottom: 1px;
+    font-size: 8px;
+  }
+}

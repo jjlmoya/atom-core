@@ -1,20 +1,18 @@
+$primary-color: #2196F3;
+$primary-color-dark: #1976D2;
+$primary-color-light: #BBDEFB;
+$primary-color-text:#212121;
 
-$primary-color: #00a0f4;
-$primary-color-dark: darken($primary-color, 10);
-$primary-color-light: lighten($primary-color, 10);
-$primary-color-text: #FFFFFF;
+$secondary-color: #7C4DFF;
+$secondary-color-dark: darken($secondary-color, 10);
+$secondary-color-light: lighten($secondary-color, 10);
+$secondary-color-text: #FFF;
 
-$secondary-color-dark: #0288D1;
-$secondary-color: #03A9F4;
-$secondary-color-light: #B3E5FC;
-$secondary-color-text: #FFFFFF;
-
-$accent-color: #03A9F4;
+$accent-color: #F8F8F8;
+$icons-color: #FFFFFF;
 $divider-color: #BDBDBD;
-$inner-shadow-color: black;
-$inner-shadow-color: $primary-color-dark;
-
 $color-button-highlight: orange;
 
+@import "fonts/istok";
 
 

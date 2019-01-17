@@ -56,9 +56,9 @@
 
   &--secondary {
     background-color: $secondary-color;
-    color:$primary-color-text;
+    color:$secondary-color-text;
     .a, .a:hover, .a:visited, .a:active{
-      color:$primary-color-text;
+      color:$secondary-color-text;
     }
     &--glow {
       transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;

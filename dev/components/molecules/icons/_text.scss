@@ -1,0 +1,37 @@
+.ml-icons-text {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px;
+  text-align: center;
+  width: 150px;
+  max-width: 30%;
+  &-title {
+    color: $secondary-color;
+    font-weight: bold;
+    @extend .a-size-h1;
+  }
+  &-image {
+    background-color: rgba($primary-color, 0.2);
+    position: relative;
+    width: 75px;
+    height: 75px;
+    transform: rotate(45deg);
+    z-index: -1;
+    margin: 20px auto;
+    box-shadow: 0 0px 20px 0px rgba($secondary-color, 0.2);
+
+    img {
+      height: 100px;
+      transform: rotate(-45deg);
+      width: 100px;
+      object-fit: cover;
+      text-align: center;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+    }
+  }
+  &-description {
+    @extend .a-size-legend;
+  }
+}

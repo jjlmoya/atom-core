@@ -3,7 +3,7 @@ module.exports = function (grunt) {
         brand = grunt.option('brand') || 'index',
         jsComponents = "dev/components/**/*.js",
         jsUtils = "dev/framework/**/*.js",
-        tasks = ['jshint', 'clean', 'copy', 'sass', 'uglify'];
+        tasks = ['jshint', 'clean', 'copy', 'sass', 'uglify', 'cssmin'];
     var scssPath = brand ? basePath + 'components/' + brand + '.scss' : basePath + 'components/index.scss';
     console.log('path:' + scssPath);
     grunt.initConfig({
@@ -40,6 +40,17 @@ module.exports = function (grunt) {
                 }
             }
         },
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: 'www/public/css/',
+                    src: ['*.css', '!*.min.css'],
+                    dest: 'www/public/css',
+                    ext: '.min.css'
+                }]
+            }
+        },
         copy: {
             main: {
                 files: [
@@ -70,6 +81,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 
     grunt.registerTask('default', tasks);

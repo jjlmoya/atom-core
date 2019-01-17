@@ -16,7 +16,7 @@ module.exports = function (app) {
             },
             times: function (n, block) {
                 var accum = '';
-                for(var i = 0; i < n; ++i) {
+                for (var i = 0; i < n; ++i) {
                     block.data.index = i;
                     block.data.first = i === 0;
                     block.data.last = i === (n - 1);
@@ -24,15 +24,18 @@ module.exports = function (app) {
                 }
                 return accum;
             },
-            setVar: function(varName, varValue, options) {
+            setVar: function (varName, varValue, options) {
                 options.data.root[varName] = varValue;
             },
             concat: function () {
                 var result = "";
-                for(var i in arguments) {
+                for (var i in arguments) {
                     result += (typeof arguments[i] === "string" ? arguments[i] : "") + "";
                 }
                 return result;
+            },
+            partial: function (name) {
+                return name;
             }
         }
     }));

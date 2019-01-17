@@ -1,0 +1,27 @@
+.og-fixed-price {
+  color: $secondary-color-text;
+  background-color: $secondary-color;
+  min-width: 100%;
+  padding: 5px;
+  border-top: 1px solid $primary-color;
+  &--title {
+    color: $primary-color-text;
+    max-width: 50%;
+    flex-grow: 1;
+    text-align: right;
+    font-size: 25px;
+  }
+  &--button {
+    max-width: 30%;
+    padding: 5px;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f97779), to(#ce2424));
+    background: -moz-linear-gradient(#f97779, #ce2424);
+    background: linear-gradient(#f97779, #ce2424);
+    cursor: pointer;
+    border: solid 1px #be2424;
+    border-bottom: solid 3px #bd2524;
+    box-shadow: inset 0 0 0 1px #e67e7b;
+    color: #fff;
+    text-shadow: 0 1px 0 #bd2524;
+  }
+}

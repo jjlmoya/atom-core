@@ -1,0 +1,156 @@
+/*****************/
+/** ATOM DESIGN **/
+/*****************/
+/*******************/
+/** UTILS DESIGN  **/
+/*******************/
+@import "utils/thirdParty/bootstrapReboot";
+@import "utils/layers/index";
+@import "utils/medias/index";
+@import "utils/devices/index";
+@import "utils/text/index";
+@import "utils/overflow/index";
+@import "utils/backgrounds/colors";
+@import "utils/images/index";
+@import "utils/display/index";
+/*******************/
+/**   END UTILS   **/
+/*******************/
+/***********/
+/** ATOMS **/
+/***********/
+@import "atoms/spaces/padding";
+// ---> ATOMS/THEME
+@import "atoms/theme/colors/neutral";
+@import "atoms/theme/branding/purpleSkies";
+// ---> ATOMS/THEME/COLOR
+@import "atoms/theme/colors/neutral";
+@import "atoms/theme/colors/utility";
+@import "atoms/theme/colors/text";
+@import "atoms/theme/colors/rainbow";
+// ---> ATOMS/THEME/BRAND
+@import "atoms/theme/images/brand";
+@import "atoms/theme/images/util";
+// ---> ATOMS/THEME/FONT
+@import "atoms/theme/decoration/text";
+// ---> ATOMS/THEME/BACKGROUNDS
+@import "atoms/theme/backgrounds/index";
+
+$primary-brand-color: $primary-color;
+
+// ---> ATOMS/ANIMATIONS
+@import "atoms/animations/bell/index";
+@import "atoms/animations/wave/index";
+@import "atoms/animations/call/index";
+
+// ---> ATOMS/IMAGES
+@import "atoms/images/avatar";
+@import "atoms/images/hero";
+@import "atoms/images/logo";
+@import "atoms/images/parallax";
+
+// ---> ATOMS/INPUT
+@import "atoms/input/email";
+@import "atoms/input/file";
+@import "atoms/input/number";
+@import "atoms/input/radio";
+@import "atoms/input/select";
+@import "atoms/input/telephone";
+@import "atoms/input/text";
+@import "atoms/input/textarea";
+@import "atoms/input/checkbox";
+
+// ---> ATOMS/TEXT
+@import "atoms/text/sizes/index";
+@import "atoms/text/headings/h1";
+@import "atoms/text/headings/h2";
+@import "atoms/text/headings/h3";
+@import "atoms/text/headings/h4";
+@import "atoms/text/headings/h5";
+@import "atoms/text/headings/h6";
+@import "atoms/text/a/index";
+
+// ---> ATOMS/LABELS
+@import "atoms/labels/imageLabel";
+
+// ---> ATOMS/MENU **/
+@import "atoms/menu/tabs/index";
+@import "atoms/menu/nav/index";
+
+// ---> ATOMS/LINKS
+@import "atoms/links/index";
+
+// ---> ATOMS/BUTTON
+@import "atoms/button/button";
+@import "atoms/button/text";
+@import "atoms/button/third/index";
+
+@import "molecules/button/_pill";
+
+/***************/
+/** END ATOMS **/
+/***************/
+/************/
+/** LAYOUT **/
+/************/
+// ---> LAYOUT/ASIDE
+
+// ---> LAYOUT/MENU
+@import 'layout/menu/hortizonal-squares/index';
+@import 'layout/menu/oversized-column/index';
+@import 'layout/menu/slider/index';
+
+// ---> LAYOUT/INLINES
+@import "layout/inlines/wrap/index";
+
+// ---> LAYOUT/3-COLUMN
+@import "layout/3-column/index";
+
+// ---> LAYOUT/COLUMN-DISPLAY
+@import "layout/columnDisplay/index";
+
+// ---> LAYOUT/MASKS
+@import "layout/mask/screen/full";
+
+// ---> LAYOUT/CONTENT
+@import "layout/content/index";
+
+@import "layout/basic/flex";
+/*****************/
+/** END  LAYOUT **/
+/*****************/
+
+/***************/
+/** MOLECULES **/
+/**************/
+/*******************/
+/** END MOLECULES **/
+/*******************/
+// ---> MOLECULES/BANNER
+@import "molecules/banner/badge";
+/***********/
+/** PAGES **/
+/***********/
+/**************/
+/** ORGANISM **/
+/**************/
+
+
+@import "organisms/utils/last-searches/index";
+// ---> ORGANISM/UTILS
+@import "organisms/utils/progress-bar/index";
+// ---> ORGANISM/MODAL
+@import "organisms/modal/notification/button/index";
+@import "organisms/modal/notification/classic/index";
+// ---> ORGANISM/MENU
+@import "organisms/menus/fixed-summary-price/_index.scss";
+// ---> ORGANISM/IMAGE
+@import "organisms/image/banner/index";
+@import "organisms/image/foldBanner/index";
+// ---> ORGANISM/GAMIFICATION
+@import "organisms/gamification/tutorial/screen";
+@import "organisms/gamification/board/index";
+// ---> ORGANISM/FX
+@import "organisms/fx/layer/bubble";
+
+

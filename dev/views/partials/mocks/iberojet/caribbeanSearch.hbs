@@ -1,0 +1,475 @@
+<div class="uip-tabs__tabs-panel uip-tabs__tabs-panel--active uip-tabs__tabs-panel--is-active"
+     id="CARIBBEAN-searcher">
+    <form id="caribbean-search"
+          class="m-search-form m-search-form--caribbean js-has-datepicker js-is-focusable m-search-form--horizontal m-search-form--caribbean-horizontal"
+          data-base-path="/viajes-caribe"
+          data-url-path="/viajes-caribe/disponibilidad">
+        <div class="m-search-form__item m-search-form__item--caribbean-destination">
+            <div class="c-select">
+                <label for="destination" class="c-select__label">Destino</label>
+                <select id="destination" name="destination"
+                        class="c-select__element">
+                    <option data-country="republica-dominicana"
+                            value="punta-cana">Punta Cana / Playa Bávaro</option>
+                    <option data-country="mexico"
+                            value="riviera-maya">Riviera Maya</option>
+                    <option data-country="cuba"
+                            value="la-habana">La Habana</option>
+                    <option data-country="mexico"
+                            value="cancun">Cancún</option>
+                    <option data-country="cuba"
+                            value="habana-varadero">Combinado Habana-Varadero</option>
+                    <option data-country="world"
+                            value="islas-maldivas">Maldivas</option>
+                    <option data-country="cuba"
+                            value="varadero">Varadero</option>
+                    <option data-country="world"
+                            value="isla-mauricio">Isla Mauricio</option>
+                    <option data-country="world"
+                            value="zanzibar">Zanzíbar</option>
+                    <option data-country="jamaica_country"
+                            value="jamaica">Jamaica</option>
+                    <option data-country="republica-dominicana"
+                            value="bayahibe">Bayahibe</option>
+                </select>
+                <i class="c-select__icon c-icon c-icon-arrow c-icon-arrow--bottom"></i>
+            </div>
+        </div>
+        <div class="m-search-form__item m-search-form__item--caribbean-origin">
+            <div class="c-select">
+                <label for="origin" class="c-select__label">Origen</label>
+                <select id="origin" data-default-origin="MAD" name="origin"
+                        class="c-select__element"></select>
+                <i class="c-select__icon c-icon c-icon-arrow c-icon-arrow--bottom"></i>
+            </div>
+        </div>
+        <div class="m-search-form__item m-search-form__item--caribbean-duration">
+            <div class="c-select">
+                <label for="duration" class="c-select__label">Duración</label>
+                <select class="c-select__element" id="duration" name="duration"
+                        data-text-nights="noches"
+                        data-default-duration="7"></select>
+                <i class="c-select__icon c-icon c-icon-arrow c-icon-arrow--bottom"></i>
+            </div>
+        </div>
+        <div class="m-search-form__item m-search-form__item--caribbean-date">
+            <div class="c-input c-form-validation" data-tooltip-content="Debe seleccionar una fecha">
+                <input id="mainOrigin" name="mainOrigin" class="hidden">
+                <label for="date" class="c-input__label">fecha</label>
+                <i class="c-form-validation__icon"></i>
+                <input placeholder="Selecciona una fecha"
+                       class="c-input__element js-modal-trigger"
+                       data-modal-type="medium" data-modal-url="/viajes-caribe/calendar" type="text" name="date"
+                       readonly="readonly" id="date" data-modal-callback="onOpenedCalendar"/>
+                <i class="c-input__icon c-icon c-icon-arrow c-icon-calendar"></i>
+            </div>
+        </div>
+        <div class="m-search-form__item m-search-form__item--caribbean-lodging">
+            <div class="c-input">
+                <label for="lodging" class="c-input__label">Habitaciones</label>
+                <input placeholder="Selecciona las habitaciones" class="c-input__element"
+                       type="text" name="lodging"
+                       data-text-adultroom="1 adulto en 1 habitación"
+                       data-text-adultchildroom="	1 adulto y 1 niño en 1 habitación"
+                       data-text-adultchildrenooms="??caribbean.form.lodging-adultchildrenrooms_es_ES_IBJ-ES??"
+                       data-text-adultsroom="{0} adultos en 1 habitación"
+                       data-text-adultsrooms="{0} adultos en {2} habitaciones"
+                       data-text-adultschildroom="{0} adultos y 1 niño en 1 habitación"
+                       data-text-adultschildrooms="{0} adultos y 1 niño en {2} habitaciones"
+                       data-text-adultschildrenroom="{0} adultos y {1} niños en 1 habitación"
+                       data-text-adultschildrenrooms="{0} adultos y {1} niños en {2} habitaciones"
+                       data-text-error-maximumtravellers="La reserva tiene demasiados pasajeros, el máximo es 9."
+                       data-text-error-monoparentalroom="No puede viajar un adulto con niños."
+                       data-text-error-childrenages="Por favor seleccione todas las edades de los niños."
+                       readonly="readonly" id="lodging"/>
+                <i class="c-input__icon c-icon c-icon-arrow c-icon-arrow--bottom"></i>
+            </div>
+            <div class="uip-popover uip-popover_bottom-position">
+                <div class="uip-popover__arrow uip-popover__arrow--bottom"></div>
+                <div class="uip-popover__inner">
+                    <header class="uip-popover__header">
+                        Alojamiento
+
+                        <a class="uip-popover__close c-icon c-icon--tiny c-icon-close js-uip-popover-close"></a>
+                    </header>
+                    <div class="m-lodging" id="rooms">
+                        <div class="m-message m-message--error hidden">
+                            <div class="m-message__text">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="m-lodging__no-removable active">
+                            <div class="m-lodging__item">
+                                <label class="c-select__label c-select__label--inline m-lodging__label">hab 1</label>
+                                <div class="c-select c-select--inline c-select--small">
+                                    <div class="c-select__box">
+                                        <select id="numAdults1" name="numAdults1"
+                                                class="c-select__element c-select__element--small numAdults">
+                                            <option value="1">1 adulto</option>
+                                            <option value="2"
+                                                    selected="selected">2 adultos</option>
+                                            <option value="3">3 adultos</option>
+                                            <option value="4">4 adultos</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--small c-icon c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                                <div class="c-select c-select--inline c-select--small">
+                                    <div class="c-select__box">
+                                        <select id="numChildren1"
+                                                name="numChildren1"
+                                                class="c-select__element c-select__element--small numChildren">
+                                            <option value="0">Sin niños</option>
+                                            <option value="1">1 niño</option>
+                                            <option value="2">2 niños</option>
+                                            <option value="3">3 niños</option>
+                                            <option value="4">4 niños</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--small c-icon c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="m-lodging__literal hidden" name="numChildren1_explication">Edades de los niños en la fecha de estancia</p>
+                            <div class="m-lodging__item m-lodging__item--added hidden" name="numChildren1_boxes">
+                                <div class="c-select c-select--inline c-select--xsmall numChildren1">
+                                    <div class="c-select__box">
+                                        <select class="m-lodging__select-xsmall c-select__element c-select__element--xsmall childAge" required="required">
+                                            <option disabled="disabled" selected> - </option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--xsmall c-icon c-icon--tiny c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                                <div class="c-select c-select--inline c-select--xsmall numChildren1">
+                                    <div class="c-select__box">
+                                        <select class="m-lodging__select-xsmall c-select__element c-select__element--xsmall childAge" required="required">
+                                            <option disabled="disabled" selected> - </option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--xsmall c-icon c-icon--tiny c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                                <div class="c-select c-select--inline c-select--xsmall numChildren1">
+                                    <div class="c-select__box">
+                                        <select class="m-lodging__select-xsmall c-select__element c-select__element--xsmall childAge" required="required">
+                                            <option disabled="disabled" selected> - </option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--xsmall c-icon c-icon--tiny c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                                <div class="c-select c-select--inline c-select--xsmall numChildren1">
+                                    <div class="c-select__box">
+                                        <select class="m-lodging__select-xsmall c-select__element c-select__element--xsmall childAge" required="required">
+                                            <option disabled="disabled" selected> - </option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--xsmall c-icon c-icon--tiny c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-lodging__removable hidden">
+                            <div class="m-lodging__item">
+                                <label class="c-select__label c-select__label--inline m-lodging__label">hab 2</label>
+                                <div class="c-select c-select--inline c-select--small">
+                                    <div class="c-select__box">
+                                        <select id="numAdults2" name="numAdults2"
+                                                class="c-select__element c-select__element--small numAdults">
+                                            <option value="1">1 adulto</option>
+                                            <option value="2"
+                                                    selected="selected">2 adultos</option>
+                                            <option value="3">3 adultos</option>
+                                            <option value="4">4 adultos</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--small c-icon c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                                <div class="c-select c-select--inline c-select--small">
+                                    <div class="c-select__box">
+                                        <select id="numChildren2"
+                                                name="numChildren2"
+                                                class="c-select__element c-select__element--small numChildren">
+                                            <option value="0">Sin niños</option>
+                                            <option value="1">1 niño</option>
+                                            <option value="2">2 niños</option>
+                                            <option value="3">3 niños</option>
+                                            <option value="4">4 niños</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--small c-icon c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="m-lodging__literal hidden" name="numChildren2_explication">Edades de los niños en la fecha de estancia</p>
+                            <div class="m-lodging__item m-lodging__item--added hidden" name="numChildren2_boxes">
+                                <div class="c-select c-select--inline c-select--xsmall numChildren2">
+                                    <div class="c-select__box">
+                                        <select class="m-lodging__select-xsmall c-select__element c-select__element--xsmall childAge" required="required">
+                                            <option disabled="disabled" selected> - </option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--xsmall c-icon c-icon--tiny c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                                <div class="c-select c-select--inline c-select--xsmall numChildren2">
+                                    <div class="c-select__box">
+                                        <select class="m-lodging__select-xsmall c-select__element c-select__element--xsmall childAge" required="required">
+                                            <option disabled="disabled" selected> - </option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--xsmall c-icon c-icon--tiny c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                                <div class="c-select c-select--inline c-select--xsmall numChildren2">
+                                    <div class="c-select__box">
+                                        <select class="m-lodging__select-xsmall c-select__element c-select__element--xsmall childAge" required="required">
+                                            <option disabled="disabled" selected> - </option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--xsmall c-icon c-icon--tiny c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                                <div class="c-select c-select--inline c-select--xsmall numChildren2">
+                                    <div class="c-select__box">
+                                        <select class="m-lodging__select-xsmall c-select__element c-select__element--xsmall childAge" required="required">
+                                            <option disabled="disabled" selected> - </option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--xsmall c-icon c-icon--tiny c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="m-lodging__close c-icon c-icon--tiny c-icon-close remove_room"></a>
+                        </div>
+                        <div class="m-lodging__removable hidden">
+                            <div class="m-lodging__item">
+                                <label class="c-select__label c-select__label--inline m-lodging__label">hab 3</label>
+                                <div class="c-select c-select--inline c-select--small">
+                                    <div class="c-select__box">
+                                        <select id="numAdults3" name="numAdults3"
+                                                class="c-select__element c-select__element--small numAdults">
+                                            <option value="1">1 adulto</option>
+                                            <option value="2"
+                                                    selected="selected">2 adultos</option>
+                                            <option value="3">3 adultos</option>
+                                            <option value="4">4 adultos</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--small c-icon c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                                <div class="c-select c-select--inline c-select--small">
+                                    <div class="c-select__box">
+                                        <select id="numChildren3"
+                                                name="numChildren3"
+                                                class="c-select__element c-select__element--small numChildren">
+                                            <option value="0">Sin niños</option>
+                                            <option value="1">1 niño</option>
+                                            <option value="2">2 niños</option>
+                                            <option value="3">3 niños</option>
+                                            <option value="4">4 niños</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--small c-icon c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="m-lodging__literal hidden" name="numChildren3_explication">Edades de los niños en la fecha de estancia</p>
+                            <div class="m-lodging__item m-lodging__item--added hidden" name="numChildren3_boxes">
+                                <div class="c-select c-select--inline c-select--xsmall numChildren3">
+                                    <div class="c-select__box">
+                                        <select class="m-lodging__select-xsmall c-select__element c-select__element--xsmall childAge" required="required">
+                                            <option disabled="disabled" selected> - </option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--xsmall c-icon c-icon--tiny c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                                <div class="c-select c-select--inline c-select--xsmall numChildren3">
+                                    <div class="c-select__box">
+                                        <select class="m-lodging__select-xsmall c-select__element c-select__element--xsmall childAge" required="required">
+                                            <option disabled="disabled" selected> - </option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--xsmall c-icon c-icon--tiny c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                                <div class="c-select c-select--inline c-select--xsmall numChildren3">
+                                    <div class="c-select__box">
+                                        <select class="m-lodging__select-xsmall c-select__element c-select__element--xsmall childAge" required="required">
+                                            <option disabled="disabled" selected> - </option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--xsmall c-icon c-icon--tiny c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                                <div class="c-select c-select--inline c-select--xsmall numChildren3">
+                                    <div class="c-select__box">
+                                        <select class="m-lodging__select-xsmall c-select__element c-select__element--xsmall childAge" required="required">
+                                            <option disabled="disabled" selected> - </option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <i class="c-select__icon c-select__icon--xsmall c-icon c-icon--tiny c-icon-arrow c-icon-arrow--bottom"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="m-lodging__close c-icon c-icon--tiny c-icon-close remove_room"></a>
+                        </div>
+                        <a name="addRoom" class="m-lodging__more-icon c-link c-link--uppercase c-link--has-icon">
+                            <i class="c-icon c-icon-plus c-icon--small"></i>
+                            Añadir habitación
+
+                        </a>
+                        <button class="c-btn c-btn--tertiary c-btn--big c-btn--uppercase c-btn--full"
+                                name="acceptRooms">aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-search-form__item m-search-form__item--button" id="caribbean-search-btn">
+            <a class="c-btn c-btn--big c-btn--uppercase c-btn--full">buscar</a>
+        </div>
+    </form>
+</div>

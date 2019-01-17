@@ -1,0 +1,58 @@
+.ml-title {
+  &--colorful {
+    margin: 20px 0;
+    position: relative;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    &-image {
+      position: absolute;
+      height: 125px;
+      width: 125px;
+      border-radius: 50%;
+      top: -25px;
+      left: calc(50% - 62px);
+      overflow: hidden;
+      img {
+        object-fit: cover;
+        height: 125px;
+        width: 125px;
+      }
+    }
+    &-ribbon  {
+      position: absolute;
+      width: 100%;
+      margin: 0 auto;
+      left: 0;
+      text-align: center;
+      font-size: 40px;
+      text-shadow: 0px 0 20px rgba($mono-color-9, 0.5);
+    }
+    &--primary {
+      background-color: $primary-color;
+      .ml-title--colorful {
+        &-image {
+          background-color: $primary-color;
+          border: 2px solid $primary-color-light;
+        }
+        &-ribbon {
+          background-color: rgba($mono-color-0, 0.1);
+          color: rgba($secondary-color-text, 0.9);
+        }
+      }
+    }
+    &--secondary {
+      background-color: $secondary-color;
+      .ml-title--colorful {
+        &-image {
+          background-color: $secondary-color;
+          border: 2px solid $secondary-color-light;
+        }
+        &-ribbon {
+          background-color: rgba($mono-color-9, 0.1);
+          color: rgba($mono-color-0, 0.9);
+        }
+      }
+    }
+  }
+}

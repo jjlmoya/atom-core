@@ -1,6 +1,6 @@
 .h1 {
-  font-size: 18px;
-  margin: 0;
+  @extend .a-size-h1;
+  font-weight: bold;
   &--left {
     text-align: left;
   }
@@ -9,12 +9,10 @@
   }
   &--center {
     text-align: center;
-  }
-  &--strong {
-    font-weight: bold;
+    padding: 30px;
   }
   &--light {
-    font-weight: lighter;
+    font-weight: normal;
   }
 }
 

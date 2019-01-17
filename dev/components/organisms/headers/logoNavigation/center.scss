@@ -40,11 +40,11 @@
 }
 
 @media only screen and (max-width: 720px) {
-  body {
-    margin-top: 45px;
-  }
-  .og-logo-navigation {
 
+  .og-logo-navigation {
+    & body  {
+      margin-top: 45px;
+    }
     height: 45px;
     &-navigation {
       font-size: 10px;

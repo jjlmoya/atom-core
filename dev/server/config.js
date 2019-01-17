@@ -24,19 +24,37 @@ exports.router = function () {
     return {
         home: {
             path: '/',
-            view: 'home'
+            view: 'home',
+            layout: 'landing'
         },
         modal: {
             path: '/modal',
-            view: 'modal'
+            view: 'modal',
+            layout: 'abtasty'
+        },
+        aviator: {
+            path: '/aviator',
+            view: 'aviator',
+            layout: 'aviator'
         },
         slider: {
             path: '/slider',
             view: 'slider'
         },
         bonseo: {
+            services: {
+                path: '/bonseo/servicios',
+                view: 'bonseoServices',
+                layout: 'landing'
+            },
+            learn: {
+                path: '/bonseo/aprende',
+                view: 'bonseoLearning',
+                layout: 'landing'
+            },
             path: '/bonseo',
-            view: 'bonseo'
+            view: 'bonseo',
+            layout: 'landing'
         },
         components: {
             path: '/componentes',
@@ -49,10 +67,6 @@ exports.router = function () {
             component: {
                 view: 'pages/components/component.hbs'
             }
-        },
-        bannerLand: {
-            path: '/bannerland',
-            view: 'bannerLand'
         },
         tetra: {
             path: '/tetra',

@@ -1,0 +1,29 @@
+.og-title-splash {
+  width: 100vw;
+  height: 50vh;
+  background-color: $primary-color;
+  background: -moz-linear-gradient(top, rgba($primary-color,1) 0%, rgba($primary-color,0.5) 50%, rgba($primary-color,0.49) 51%, rgba($primary-color,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba($primary-color,1) 0%, rgba($primary-color,0.5) 50%, rgba($primary-color,0.49) 51%, rgba($primary-color,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba($primary-color,1) 0%, rgba($primary-color,0.5) 50%, rgba($primary-color,0.49) 51%, rgba($primary-color,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &-media {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    overflow: hidden;
+    margin-left: 10px;
+  }
+  .ml-title {
+    flex: 1;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .og-title-splash {
+    height: 25vh;
+  }
+}

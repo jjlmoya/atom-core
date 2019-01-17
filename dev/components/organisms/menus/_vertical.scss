@@ -1,0 +1,25 @@
+.og-menu-vertical {
+  width: 125px;
+  max-width: 20%;
+  height: 300px;
+  &-image {
+    position: relative;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 300px;
+    }
+  }
+  &-claim {
+    width: 100%;
+    background-color: $secondary-color-dark;
+    color: $secondary-color-text;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    bottom: 0;
+    line-height: 25px;
+  }
+}

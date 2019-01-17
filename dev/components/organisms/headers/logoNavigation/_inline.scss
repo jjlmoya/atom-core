@@ -1,15 +1,32 @@
 .og-logo-inline {
+  position: sticky;
+  top: 0;
+  background: $mono-color-0;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  box-shadow: 1px 1px 1px rgba($primary-color-light, 0.2);
+  height: 50px;
   &-image {
-    max-width: 150px;
+    align-self: flex-end;
+    width: auto;
+    display: block;
+    margin-bottom: -2px;
+    height: 100%;
+    object-fit: cover;
   }
   &-navigation {
-    margin-left: auto;
-    font-size: 14px;
-    &-link {
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    font-size: 16px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    text-transform: capitalize;
+    &-link.a {
       color: $mono-color-8;
-      margin-left: 2px;
+      font-size: 15px;
+      margin-left: 10px;
       text-decoration: underline;
     }
   }
@@ -17,7 +34,15 @@
 
 @media only screen and (max-width: 720px) {
   .og-logo-inline {
+    height: 30px;
+    &-image {
+
+      img {
+      }
+    }
     &-navigation {
+      font-size: 12px;
+      padding: 5px;
     }
   }
 }

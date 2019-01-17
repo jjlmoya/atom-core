@@ -1,0 +1,32 @@
+.og-footer-layered {
+  margin-top: 40px;
+  height: 60px;
+  border-top: 1px solid $primary-color;
+  display: flex;
+  text-align: right;
+  position: relative;
+  background-color: rgba($primary-color, 0.1);
+  border-bottom: 10px solid $primary-color;
+  &-image {
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    height: 60px;
+    img {
+      height: 100%;
+    }
+  }
+  &-navigation {
+    padding-right: 5px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .a {
+      @extend .a-size-legend;
+      color: $primary-color-text;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<script>
+    if (!toggleSection) {
+        function toggleSection(id) {
+            document.getElementsByClassName(id)[0].classList.toggle('u-hide');
+        }
+    }
+</script>
+<div style="cursor:pointer" data-id="{{id}}" onclick="toggleSection('{{id}}')">
+    <hr>
+    <h1 class="h1 h1--center">
+        {{title}}
+    </h1>
+    <hr>
+</div>
+<div class="{{id}} u-hide">
+    {{> (partial this.section) }}
+</div>

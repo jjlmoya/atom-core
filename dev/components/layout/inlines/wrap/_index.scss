@@ -2,6 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  &--center {
+    justify-content: center;
+    & > div {
+      margin: 0 5px;
+    }
+  }
   .l-inline-wrap-element {
     margin-bottom: 10px;
   }

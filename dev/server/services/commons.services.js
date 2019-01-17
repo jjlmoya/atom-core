@@ -2,7 +2,8 @@ const _ = require('lodash');
 exports.read = function (config) {
     return new Promise(function (resolve) {
             resolve({
-                activePageSlug: config.path
+                activePageSlug: config.path,
+                layout: config.layout ? config.layout : 'main'
             });
         }
     );
