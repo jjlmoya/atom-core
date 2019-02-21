@@ -1,0 +1,12 @@
+<article class="og-articles--slim {{modifier}} a-pad--y-20">
+    {{> atoms/title/h3
+            title="Artículos Relacionados"
+            size="a-text--l"
+            modifier="l-column--1-1 a-text--center a-text--brand"
+    }}
+    <div class="og-articles--slim__container l-flex l-flex--wrap l-flex--justify-center a-pad">
+        {{#times 5}}
+            {{> molecules/article/slim modifier="l-column--1-3 l-column--mobile--1-2 a-pad"}}
+        {{/times}}
+    </div>
+</article>

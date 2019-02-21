@@ -1,12 +1,7 @@
-<div class="input-wrapper">
-    <input
-            name="{{name}}"
-            type="text"
-            class="input-text {{modifier}}"
-            placeholder="{{placeholder}}"
-            data-validation="{{validation}}"
-            value="{{value}}"
-            {{#equals required "true"}}required="required"{{/equals}}
+<div class="a-input {{modifier}} a-pad">
+    <input type="text"
+           class="l-column--1-1 a-pad"
+           {{#if required}}required="required"{{/if}}
+           placeholder="{{placeholder}}"
     />
-    <label for="{{name}}">{{label}}{{#equals required "true"}}*{{/equals}}</label>
 </div>

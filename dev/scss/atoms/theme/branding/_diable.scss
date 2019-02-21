@@ -1,0 +1,15 @@
+$primary-color: #A50D1A;
+$primary-color-dark: #850D18;
+$primary-color-light: #FF543E;
+$primary-color-text: #1b1b1b;
+
+$secondary-color: #060606;
+$secondary-color-dark: darken($secondary-color, 10);
+$secondary-color-light: lighten($secondary-color, 10);
+$secondary-color-text: #FFF;
+
+$contrast-color: #dd8d3a;
+
+@import "fonts/condensed";
+
+

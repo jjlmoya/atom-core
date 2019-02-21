@@ -1,84 +1,60 @@
 const config = require('../config').router();
-const NavPages = require('../services/navbar.service');
 const Commons = require('../services/commons.services');
-const MockService = require('../services/mocks/mock.service');
 const home = config.home;
-const modal = config.modal;
-const slider = config.slider;
-const tetra = config.tetra;
+
 const bonseo = config.bonseo;
-const aviator = config.aviator;
+const bonseoPages = config.bonseo.pages;
+
+const iberojet = config.iberojet;
+
+const cp = config.cp;
+
+const lmg = config.lmg;
+
+const vostok = config.vostok;
+
 
 module.exports = function (app) {
-    app.get(home.path, function (req, res) {
-        Promise.all([
-            NavPages.read(),
-            Commons.read(home)
-        ]).then(values => {
-            res.render(home.view, Commons.join(values));
-        });
-    });
-    app.get(modal.path, function (req, res) {
-        Promise.all([
-            NavPages.read(),
-            Commons.read(modal)
-        ]).then(values => {
-            res.render(modal.view, Commons.join(values));
-        });
-    });
 
-    app.get(slider.path, function (req, res) {
-        Promise.all([
-            NavPages.read(),
-            Commons.read(slider),
-            MockService.readSlider()
-        ]).then(values => {
-            res.render(slider.view, Commons.join(values));
-        });
-    });
-    app.get(tetra.path, function (req, res) {
-        Promise.all([
-            NavPages.read(),
-            Commons.read(tetra)
-        ]).then(values => {
-            res.render(tetra.view, Commons.join(values));
-        });
+    app.get(home.path, function (req, res) {
+        res.render(home.view, Commons.join({
+            layout: home.layout
+        }));
     });
     app.get(bonseo.path, function (req, res) {
-        Promise.all([
-            Commons.read(bonseo)
-        ]).then(values => {
-            console.log(Commons.join(values));
-            res.render(bonseo.view, Commons.join(values));
-        });
+        res.render(bonseo.view, Commons.join({
+            layout: bonseo.layout
+        }));
     });
-    app.get(bonseo.services.path, function (req, res) {
-        console.log(bonseo.services.path);
-        Promise.all([
-            Commons.read(bonseo.services)
-        ]).then(values => {
-            console.log(Commons.join(values));
-            res.render(bonseo.services.view, Commons.join(values));
-        });
+    app.get(bonseoPages.diy.path, function (req, res) {
+        res.render(bonseoPages.diy.view, Commons.join({
+            layout: bonseo.layout
+        }));
     });
-
-    app.get(aviator.path, function (req, res) {
-        console.log(aviator.path);
-        Promise.all([
-            Commons.read(aviator)
-        ]).then(values => {
-            console.log(Commons.join(values));
-            res.render(aviator.view, Commons.join(values));
-        });
+    app.get(bonseoPages.services.path, function (req, res) {
+        res.render(bonseo.services.view, Commons.join({
+            layout: bonseo.layout
+        }));
+    });
+    app.get(bonseoPages.courses.path, function (req, res) {
+        res.render(bonseoPages.courses.view, Commons.join({
+            layout: bonseo.layout
+        }));
     });
 
-    app.get(bonseo.learn.path, function (req, res) {
-        console.log(bonseo.learn.path);
-        Promise.all([
-            Commons.read(bonseo.learn)
-        ]).then(values => {
-            console.log(Commons.join(values));
-            res.render(bonseo.learn.view, Commons.join(values));
-        });
+    app.get(cp.path, function (req, res) {
+        res.render(cp.view, Commons.join({layout: cp.layout}));
+    });
+
+    app.get(lmg.path, function (req, res) {
+        res.render(lmg.view, Commons.join({layout: lmg.layout}));
+    });
+
+    app.get(vostok.path, function (req, res) {
+        res.render(vostok.view, Commons.join({layout: vostok.layout}));
+    });
+
+    app.get(iberojet.path, function (req, res) {
+        res.render(iberojet.view, Commons.join({layout: iberojet.layout}));
     });
 };

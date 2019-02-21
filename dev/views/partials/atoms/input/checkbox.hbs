@@ -1,9 +1,8 @@
-<div class="ml-simple-checkbox-group">
-    <input id="{{label}}" class="ml-simple-checkbox"
+<div class="l-flex {{modifier}}">
+    <input class="a-input a-input__checkbox l-flex-item--align-center"
            type="checkbox"
-           name="{{name}}"
-        {{#if nusenuse}}
-           checked="checked"
-        {{/if}} />
-    <label for="{{label}}">{{label}}</label>
+           {{#if required}}required="required"{{/if}}
+           id="{{name}}"
+           value="{{value}}">
+    <label class="a-pad--x" for="{{name}}">{{{label}}}</label>
 </div>

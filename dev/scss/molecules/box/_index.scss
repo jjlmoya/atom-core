@@ -1,0 +1,13 @@
+.ml-box {
+  height: 150px;
+  width: 150px;
+  background-color: $mono-color-0;
+  &--circle {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+  }
+  &--transparent {
+    background-color: transparent;
+  }
+}

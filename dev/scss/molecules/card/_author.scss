@@ -1,0 +1,13 @@
+.ml-card-author {
+  &__image {
+    margin: -5px;
+    img {
+      object-fit: contain;
+      max-height: 175px;
+    }
+  }
+  &__description {
+    border: 1px solid black;
+    border-top: 5px solid black;
+  }
+}

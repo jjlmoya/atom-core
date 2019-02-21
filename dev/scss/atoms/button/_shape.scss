@@ -1,0 +1,25 @@
+.a-button {
+  &--rounded {
+    border-radius: 5px;
+  }
+  &--linear {
+    background-color: transparent;
+    border: 1px solid $mono-color-0;
+    &--double {
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        height: calc(100% + 8px);
+        width: calc(100% + 8px);
+        top: -4px;
+        left: -4px;
+        border: 1px double $mono-color-0;
+      }
+    }
+  }
+  &--slider {
+    width: 10px;
+    height: 10px;
+  }
+}

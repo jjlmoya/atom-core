@@ -1,0 +1,78 @@
+<section class="og-banner-float a-bg
+                l-column--1-1
+                l-position--fixed
+                u-shadow--top
+                {{modifier}}
+                bs_state"
+         data-close="og-banner-float__close"
+         data-active=""
+         data-delay="2000">
+    <div class="og-banner-float__content
+                l-flex
+                l-flex--justify-center align
+                l-flex--align-center
+                l-column--2-3
+                l-column--mobile--1-1
+                a-mar-auto">
+        {{> atoms/icons/badge icon=icon
+                modifier=textModifier
+                modifierIcon="a-text--secondary"}}
+        <div class="l-column--2-3  l-column--mobile--1-1 l-flex l-flex--direction-column l-flex--align-center">
+            {{> atoms/paragraph/simple
+                    text=claim modifier=titleModifier}}
+            {{> atoms/paragraph/simple
+                    text=title modifier=claimModifier}}
+        </div>
+    </div>
+    <div class="og-banner-float__close c-icon c-icon-close u-pointer"></div>
+</section>
+
+<script>
+    (function () {
+        var locators = {
+                    trigger: '.bs_state',
+                    activeClass: 'is-active',
+                    eventClick: 'click'
+                },
+                bindToggleElement = function (element, component, state) {
+                    if (element.length > 0) {
+                        element[0].addEventListener(locators.eventClick, function () {
+                            component.classList.toggle(locators.activeClass, state);
+                        });
+                    }
+                },
+                bindClose = function (closeElement, component) {
+                    bindToggleElement(document.getElementsByClassName(closeElement), component, false);
+
+                },
+                bindActive = function (activeElement, component) {
+                    bindToggleElement(document.getElementsByClassName(activeElement), component, true);
+                },
+                bindDelay = function (timeout, component) {
+                    if (timeout) {
+                        setTimeout(function () {
+                            component.classList.add(locators.activeClass);
+                        }, timeout);
+                    }
+                },
+                extractData = function (dataset) {
+                    return {
+                        close: dataset.close,
+                        delay: dataset.delay,
+                        active: dataset.active
+                    };
+                },
+                bindEvents = function (settings, component) {
+                    bindClose(settings.close, component);
+                    bindDelay(settings.delay, component);
+                    bindActive(settings.active, component);
+                },
+                init = function () {
+                    var elementsToActive = document.querySelectorAll(locators.trigger);
+                    for (var i = 0; i < elementsToActive.length; i++) {
+                        bindEvents(extractData(elementsToActive[i].dataset), elementsToActive[i])
+                    }
+                };
+        init();
+    })();
+</script>

@@ -1,0 +1,10 @@
+.ml-arrow {
+  background-color: rgba($mono-color-0, 0.3);
+  color: $secondary-color-text;
+  &--right {
+    transform: rotate(180deg);
+  }
+  &--full {
+    height: 100%;
+  }
+}

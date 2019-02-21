@@ -12,6 +12,6 @@
     </h1>
     <hr>
 </div>
-<div class="{{id}} u-hide">
+<div class="{{id}} {{#unless active}}u-hide{{/unless}}">
     {{> (partial this.section) }}
 </div>

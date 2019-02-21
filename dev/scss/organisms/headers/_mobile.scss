@@ -1,0 +1,21 @@
+.og-header--mobile {
+  height: 30px;
+  background-color: $mono-color-0;
+  &--brand {
+    background-color: $primary-color;
+  }
+  .a-image {
+    height: 30px;
+  }
+  &__burger {
+    top: 0;
+    &--right {
+      padding: 5px;
+      right: 0;
+    }
+    &--left {
+      padding: 5px;
+      left: 0;
+    }
+  }
+}

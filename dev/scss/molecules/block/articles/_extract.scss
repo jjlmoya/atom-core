@@ -1,0 +1,25 @@
+.ml-article-extract {
+  &__content {
+    order: 1;
+    .is-reverse & {
+      order: 0;
+    }
+  }
+  &__image {
+    order: 0;
+    .is-reverse & {
+      order: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .ml-article-extract {
+    &__image {
+      order: 1;
+      .is-reverse & {
+        order: 0;
+      }
+    }
+  }
+}

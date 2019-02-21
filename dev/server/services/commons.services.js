@@ -11,9 +11,13 @@ exports.read = function (config) {
 
 exports.join = function (values) {
     let model = {};
+    if (typeof values !== 'array') {
+        values = [values];
+    }
     _.forEach(values, function (value) {
         Object.assign(model, model, value)
     });
+    console.log(model);
     return model;
 };
 

@@ -1,0 +1,11 @@
+.a-image {
+  &--avatar {
+    border-radius: 50%;
+  }
+  &--thumbnail {
+    border-radius: 5px;
+  }
+  &--cover {
+    object-fit: cover;
+  }
+}

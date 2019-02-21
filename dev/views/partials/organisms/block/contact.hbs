@@ -1,0 +1,58 @@
+<section class="og-block-contact a-bg--image l-flex a-pad-20 l-flex--align-center l-flex--wrap">
+    <div class="og-block-contact__text l-flex l-flex--direction-column l-column--1-2 l-column--mobile--1-1">
+        {{> atoms/title/h2
+                title="¿Quienes somos?"
+                color="secondary"
+                modifier="a-slash a-slash--contrast a-slash--bottom a-slash--slim "
+        }}
+        {{> atoms/paragraph/simple
+                text="<strong class='a-text--bold a-text--contrast'>Importante</strong>: Haz realidad tu proyecto. Consigue una gran proyección y visibilidad."
+                modifier="a-text--secondary a-pad--y-20 a-text--s"
+        }}
+        {{> atoms/paragraph/simple
+                text="<strong class='a-text--bold a-text--contrast'>Nota</strong>: Los datos introducidos no serán compartidos con terceros y se usarán exclusivamente para contactar. En caso de que lo prefieras puedes ponerte en contacto con nosotros directamente a través de <a href='mailto:info@bonseo.es' class='a-text--contrast'>info@bonseo.es</a>"
+                modifier="a-text--secondary a-text--s"
+        }}
+    </div>
+    <form class="og-block-contact__form l-column--1-2 l-column--mobile--1-1 a-pad-40 l-flex l-flex--direction-row l-flex--wrap">
+        {{> atoms/input/text
+                modifier="l-column--1-2"
+                required="true"
+                placeholder="Nombre"
+        }}
+        {{> atoms/input/email
+                modifier="l-column--1-2"
+                required="true"
+                placeholder="Email"
+        }}
+        {{> atoms/input/text
+                modifier="l-column--1-1"
+                required="true"
+                placeholder="Nombre del Proyecto"
+        }}
+        {{> atoms/input/textArea
+                modifier="l-column--1-1"
+                required="true"
+                placeholder="Describe brevemente tu idea de proyecto"
+        }}
+        <div class="og-block-contact__form__submit l-flex a-pad l-flex--align-center">
+            <div class="og-block-contact__form__gdpr l-flex l-flex--direction-column">
+                {{> atoms/input/checkbox
+                        modifier="a-text-s a-text--secondary"
+                        label="Aceptar <a class='a-text a-text--underline a-text--secondary' href=''>política de privacidad</a>"
+                        name="gdpr-1"
+                        value="gdpr-1"
+                        required="true"
+                }}
+                {{> atoms/input/checkbox
+                        modifier="a-text-s a-text--secondary"
+                        label="Aceptar <a class='a-text a-text--underline a-text--secondary' href=''>política de privacidad</a>"
+                        name="gdpr-2"
+                        value="gdpr-2"
+                        required="true"
+                }}
+            </div>
+            {{> atoms/button/rounded cta="Enviar" modifier="a-button a-button--s a-button--secondary a-mar-auto"}}
+        </div>
+    </form>
+</section>
