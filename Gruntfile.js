@@ -1,8 +1,12 @@
 module.exports = function (grunt) {
-    var basePath = 'dev/',
-        scssPath = basePath + 'components/index.scss',
-        jsComponents = "dev/components/**/*.js",
-        tasks = ['jshint', 'clean', 'copy', 'sass', 'uglify'];
+    var brand = grunt.option('brand') || 'index',
+        jsComponents = "atom-script/**/*.js",
+        tasks = ['jshint', 'clean', 'copy', 'sass', 'uglify', 'postcss', 'cssmin'],
+        tasksWatch = ['jshint', 'clean', 'copy', 'sass', 'uglify', 'postcss', 'cssmin', 'watch'];
+    var scssPath = brand ?
+        'atom-style/__compile/' + brand + '.scss'
+        : 'atom-style/index.scss';
+    console.log('path:' + scssPath);
     grunt.initConfig({
         jshint: {
             files: [jsComponents],
@@ -22,7 +26,7 @@ module.exports = function (grunt) {
                 options: {                       // Target options
                     style: 'expanded'
                 },
-                files: {'www/public/css/index.css': scssPath}            // Dictionary of files// 'destination': 'source'
+                files: {'www/public/css/index.css': scssPath}
 
             }
         },
@@ -36,24 +40,49 @@ module.exports = function (grunt) {
                 }
             }
         },
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: 'www/public/css/',
+                    src: ['*.css', '!*.min.css'],
+                    dest: 'www/public/css',
+                    ext: '.min.css'
+                }]
+            }
+        },
         copy: {
             main: {
                 files: [
-                    {expand: false, src: 'dev/apps.js', dest: 'www/apps.js', filter: 'isFile'},
-                    {expand: true, dest: 'www', cwd: 'dev', src: 'public/**'},
-                    {expand: true, dest: 'www', cwd: 'dev', src: 'server/**'},
-                    {expand: true, dest: 'www', cwd: 'dev', src: 'views/**'},
+                    {expand: true, dest: 'www', src: '/assets/*/**'},
+                    {expand: true, dest: 'www', src: '/atom-html/**'},
                 ],
             },
         },
         clean: ['www'],
         watch: {
             scripts: {
-                files: ['dev/**/*'],
+                files: ['atom-script/**/*',
+                    'atom-html/**/*',
+                    'atom-style/**/*'],
                 tasks: tasks,
                 options: {
                     spawn: false,
                 },
+            },
+        },
+        postcss: {
+            options: {
+                map: {
+                    inline: false,
+                    annotation: 'www/public/css/'
+                },
+                processors: [
+                    require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+                ]
+            },
+            dist: {
+                src: 'www/public/css/*.css'
             },
         }
     });
@@ -65,10 +94,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-postcss');
 
 
     grunt.registerTask('default', tasks);
-    grunt.registerTask('auto', ['watch']);
+    grunt.registerTask('auto', tasksWatch);
 
 };
