@@ -1,5 +1,6 @@
-
+/atom-*/
+/assets/
 /node_modules/
 /www/
 /.idea/
-/platforms/
+

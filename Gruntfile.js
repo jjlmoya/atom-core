@@ -1,10 +1,11 @@
 module.exports = function (grunt) {
-    var basePath = 'dev/',
-        brand = grunt.option('brand') || 'index',
-        jsComponents = "dev/components/**/*.js",
-        jsUtils = "dev/framework/**/*.js",
-        tasks = ['jshint', 'clean', 'copy', 'sass', 'uglify', 'postcss', 'cssmin'];
-    var scssPath = brand ? basePath + 'scss/' + brand + '.scss' : basePath + 'scss/index.scss';
+    var brand = grunt.option('brand') || 'index',
+        jsComponents = "atom-script/**/*.js",
+        tasks = ['jshint', 'clean', 'copy', 'sass', 'uglify', 'postcss', 'cssmin'],
+        tasksWatch = ['jshint', 'clean', 'copy', 'sass', 'uglify', 'postcss', 'cssmin', 'watch'];
+    var scssPath = brand ?
+        'atom-style/__compile/' + brand + '.scss'
+        : 'atom-style/index.scss';
     console.log('path:' + scssPath);
     grunt.initConfig({
         jshint: {
@@ -35,8 +36,7 @@ module.exports = function (grunt) {
             },
             build: {
                 files: {
-                    'www/public/js/components.min.js': jsComponents,
-                    'www/public/js/framework.min.js': jsUtils
+                    'www/public/js/components.min.js': jsComponents
                 }
             }
         },
@@ -54,17 +54,17 @@ module.exports = function (grunt) {
         copy: {
             main: {
                 files: [
-                    {expand: false, src: 'dev/apps.js', dest: 'www/apps.js', filter: 'isFile'},
-                    {expand: true, dest: 'www', cwd: 'dev', src: 'public/*/**'},
-                    {expand: true, dest: 'www', cwd: 'dev', src: 'server/**'},
-                    {expand: true, dest: 'www', cwd: 'dev', src: 'views/**'},
+                    {expand: true, dest: 'www', src: '/assets/*/**'},
+                    {expand: true, dest: 'www', src: '/atom-html/**'},
                 ],
             },
         },
         clean: ['www'],
         watch: {
             scripts: {
-                files: ['dev/**/*'],
+                files: ['atom-script/**/*',
+                    'atom-html/**/*',
+                    'atom-style/**/*'],
                 tasks: tasks,
                 options: {
                     spawn: false,
@@ -99,6 +99,6 @@ module.exports = function (grunt) {
 
 
     grunt.registerTask('default', tasks);
-    grunt.registerTask('auto', ['watch']);
+    grunt.registerTask('auto', tasksWatch);
 
 };
