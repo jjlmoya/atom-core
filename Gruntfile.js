@@ -3,9 +3,7 @@ module.exports = function (grunt) {
         jsComponents = "atom-script/**/*.js",
         tasks = ['jshint', 'clean', 'copy', 'sass', 'uglify', 'postcss', 'cssmin'],
         tasksWatch = ['jshint', 'clean', 'copy', 'sass', 'uglify', 'postcss', 'cssmin', 'watch'];
-    var scssPath = brand ?
-        'atom-style/__compile/' + brand + '.scss'
-        : 'atom-style/index.scss';
+    var scssPath = 'atom-style/index.scss';
     console.log('path:' + scssPath);
     grunt.initConfig({
         jshint: {
