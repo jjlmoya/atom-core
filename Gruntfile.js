@@ -1,10 +1,11 @@
 module.exports = function (grunt) {
-    var brand = grunt.option('brand') || 'index',
+    const webpackConfig = require('./webpack.config.js'),
+        brand = grunt.option('brand') || 'index',
         jsComponents = "atom-script/**/*.js",
-        tasks = ['jshint', 'clean', 'copy', 'sass', 'uglify', 'postcss', 'cssmin'],
-        tasksWatch = ['jshint', 'clean', 'copy', 'sass', 'uglify', 'postcss', 'cssmin', 'watch'];
-    var scssPath = 'atom-style/index.scss';
-    console.log('path:' + scssPath);
+        tasks = ['jshint', 'clean', 'copy', 'sass', 'postcss', 'cssmin'],
+        tasksWatch = ['jshint', 'clean', 'copy', 'sass', 'postcss', 'cssmin', 'watch'],
+        scssPath = 'atom-style/index.scss';
+
     grunt.initConfig({
         jshint: {
             files: [jsComponents],
@@ -26,16 +27,6 @@ module.exports = function (grunt) {
                 },
                 files: {'www/public/css/index.css': scssPath}
 
-            }
-        },
-        uglify: {
-            options: {
-                sourceMap: true
-            },
-            build: {
-                files: {
-                    'www/public/js/components.min.js': jsComponents
-                }
             }
         },
         cssmin: {
@@ -82,6 +73,13 @@ module.exports = function (grunt) {
             dist: {
                 src: 'www/public/css/*.css'
             },
+        },
+        webpack: {
+            options: {
+                stats: !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
+            },
+            prod: webpackConfig,
+            dev: Object.assign({watch: true}, webpackConfig)
         }
     });
 
@@ -93,6 +91,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-webpack');
     grunt.loadNpmTasks('grunt-postcss');
 
 
