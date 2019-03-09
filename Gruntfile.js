@@ -48,7 +48,7 @@ module.exports = function (grunt) {
                 ],
             },
         },
-        clean: ['www'],
+        clean: ['www/public/css'],
         watch: {
             scripts: {
                 files: ['atom-script/**/*',
