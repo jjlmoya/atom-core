@@ -43,8 +43,12 @@ module.exports = function (grunt) {
         copy: {
             main: {
                 files: [
-                    {expand: true, dest: 'www', src: '/assets/*/**'},
-                    {expand: true, dest: 'www', src: '/atom-html/**'},
+                    {
+                        cwd: './assets/',  // set working folder / root to copy
+                        src: '*/**',           // copy all files and subfolders
+                        dest: 'www/public',    // destination folder
+                        expand: true
+                    },
                 ],
             },
         },
