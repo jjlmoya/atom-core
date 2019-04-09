@@ -10,8 +10,8 @@ module.exports = function (grunt) {
         jshint: {
             files: [jsComponents],
             options: {
+                'esversion': 6,
                 globals: {
-                    jQuery: true,
                     handlebars: true
                 }
             }
