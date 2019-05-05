@@ -1,16 +1,16 @@
-#Atom Core
+# Atom Core
 
-##How to start:
+## How to start:
 
-#####Live Reload JS:
+##### Live Reload JS:
 
 `grunt webpack`
 
-#####Live Reload CSS;
+##### Live Reload CSS;
 
 `grunt auto`
 
-#####Start Server
+##### Start Server
 
 `mongod`
 `node atom-server/app-js` 
