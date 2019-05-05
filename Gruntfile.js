@@ -1,6 +1,5 @@
 module.exports = function (grunt) {
     const webpackConfig = require('./webpack.config.js'),
-        brand = grunt.option('brand') || 'index',
         jsComponents = "atom-script/**/*.js",
         tasks = ['jshint', 'clean', 'copy', 'sass', 'postcss', 'cssmin'],
         tasksWatch = ['jshint', 'clean', 'copy', 'sass', 'postcss', 'cssmin', 'watch'],
@@ -20,9 +19,9 @@ module.exports = function (grunt) {
             files: ['<%= jshint.files %>'],
             tasks: ['jshint', 'sass']
         },
-        sass: {                              // Task
-            dev: {                            // Target
-                options: {                       // Target options
+        sass: {
+            dev: {
+                options: {
                     style: 'expanded'
                 },
                 files: {'www/public/css/index.css': scssPath}
@@ -87,7 +86,6 @@ module.exports = function (grunt) {
         }
     });
 
-
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -97,7 +95,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-webpack');
     grunt.loadNpmTasks('grunt-postcss');
-
 
     grunt.registerTask('default', tasks);
     grunt.registerTask('auto', tasksWatch);
