@@ -1,0 +1,3 @@
+[submodule "atom-server"]
+	path = atom-server
+	url = https://github.com/jjlmoya/atom-server.git
