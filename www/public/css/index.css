@@ -405,6 +405,30 @@ button {
   --contrast-color: #dd8d3a;
 }
 
+.celeste {
+  --primary-color: #31A68D;
+  --primary-color--dark: #3847F6;
+  --primary-color--light: #C0FFEE;
+  --secondary-color: #3847F6;
+  --secondary-color--dark: #0754B5;
+  --secondary-color--light: #CCEEFF;
+  --primary-color-text: #000000;
+  --secondary-color-text: #ffffff;
+  --contrast-color: #FFED82;
+}
+
+.clouds {
+  --primary-color: #AEDAEF;
+  --primary-color--dark: #3CADD7;
+  --primary-color--light: #E4EFFF;
+  --secondary-color: #273745;
+  --secondary-color--dark: #262626;
+  --secondary-color--light: #111111;
+  --primary-color-text: #8a8787;
+  --secondary-color-text: #ffffff;
+  --contrast-color: #FFED82;
+}
+
 .diable {
   --primary-color: #ed1b23;
   --primary-color--dark: #8c0a0a;
@@ -465,6 +489,30 @@ button {
   --contrast-color: #dd8d3a;
 }
 
+.mint {
+  --primary-color: #4ECDC4;
+  --primary-color--dark: #3A535C;
+  --primary-color--light: #87fff8;
+  --secondary-color: #FF6B6B;
+  --secondary-color--dark: #FF9393;
+  --secondary-color--light: #A35E5E;
+  --primary-color-text: black;
+  --secondary-color-text: white;
+  --contrast-color: #FFEC94;
+}
+
+.nature {
+  --primary-color: #AOC099;
+  --primary-color--dark: #609082;
+  --primary-color--light: #AACCAA;
+  --secondary-color: #31A68D;
+  --secondary-color--dark: #3847F6;
+  --secondary-color--light: #C0FFEE;
+  --primary-color-text: #0754B5;
+  --secondary-color-text: #ffffff;
+  --contrast-color: #FFED82;
+}
+
 .paradise-orange {
   --primary-color: #f5a631;
   --primary-color--dark: #e88f0b;
@@ -472,8 +520,8 @@ button {
   --secondary-color: #81ffff;
   --secondary-color--dark: #4effff;
   --secondary-color--light: #b4ffff;
-  --primary-color-text: #d9fbff;
-  --secondary-color-text: #462603;
+  --primary-color-text: #025c67;
+  --secondary-color-text: #ffffff;
   --contrast-color: #FFED82;
 }
 
@@ -511,18 +559,6 @@ button {
   --primary-color-text: #212121;
   --secondary-color-text: #FFFFFF;
   --contrast-color: #FFED82;
-}
-
-.mint {
-  --primary-color: #4ECDC4;
-  --primary-color--dark: #3A535C;
-  --primary-color--light: #87fff8;
-  --secondary-color: #FF6B6B;
-  --secondary-color--dark: #FF9393;
-  --secondary-color--light: #A35E5E;
-  --primary-color-text: black;
-  --secondary-color-text: white;
-  --contrast-color: #FFEC94;
 }
 
 /*

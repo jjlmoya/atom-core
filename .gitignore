@@ -1,6 +1,3 @@
-/assets/
 /node_modules/
-/www/
 /.idea/
-
-.gitignore
+www/public/video/
