@@ -1,3 +1,5 @@
 /node_modules/
 /.idea/
 www/public/video/
+.sass-cache/
+package-lock.json
