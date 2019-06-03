@@ -1,8 +1,8 @@
 module.exports = function (grunt) {
     const webpackConfig = require('./webpack.config.js'),
         jsComponents = "atom-script/**/*.js",
-        tasks = ['jshint', 'clean', 'copy', 'sass', 'postcss', 'cssmin'],
-        tasksWatch = ['jshint', 'clean', 'copy', 'sass', 'postcss', 'cssmin', 'watch'],
+        tasks = ['jshint', 'clean', 'copy', 'sass', 'postcss', 'cssmin', 'kss'],
+        tasksWatch = ['jshint', 'clean', 'copy', 'sass', 'postcss', 'cssmin', 'kss', 'watch'],
         scssPath = 'atom-style/index.scss';
 
     grunt.initConfig({
@@ -77,6 +77,21 @@ module.exports = function (grunt) {
                 src: 'www/public/css/*.css'
             },
         },
+        kss: {
+            options: {
+                title: 'Atomic Project',
+                css: [
+                    "../../css/index.min.css",
+                ],
+                js: [
+                    "../../js/components.min.js",
+                ]
+            },
+            dist: {
+                src: 'atom-style',
+                dest: "www/public/core/styleguide/",
+            }
+        },
         webpack: {
             options: {
                 stats: !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
@@ -95,6 +110,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-webpack');
     grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-kss');
 
     grunt.registerTask('default', tasks);
     grunt.registerTask('auto', tasksWatch);
