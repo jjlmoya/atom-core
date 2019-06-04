@@ -3,5 +3,7 @@
 www/public/video/
 .sass-cache/
 package-lock.json
+/www/
 www/public/css/
 www/public/js/
+.DS_Store
