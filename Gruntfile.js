@@ -84,6 +84,7 @@ module.exports = function (grunt) {
                     "../../css/index.min.css",
                 ],
                 js: [
+                    "../../js/custom.min.js",
                     "../../js/components.min.js",
                 ]
             },
