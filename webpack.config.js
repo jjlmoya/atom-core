@@ -1,9 +1,14 @@
 var path = require('path');
 module.exports = {
     mode: 'development',
-    entry: path.join(__dirname, "/atom-script/apps.js"),
+    entry:
+        {
+            components: path.join(__dirname, "/atom-script/apps.js"),
+            custom: path.join(__dirname, "/atom-script/custom.js"),
+            flow: path.join(__dirname, "/atom-script/flow.js")
+        },
     output: {
         path: __dirname + '/www/public/js/',
-        filename: "components.min.js",
+        filename: "[name].min.js",
     },
 };
