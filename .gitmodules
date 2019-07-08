@@ -1,12 +1,15 @@
 [submodule "atom-server"]
 	path = atom-server
 	url = https://github.com/jjlmoya/atom-server.git
+
 [submodule "atom-html"]
 	path = atom-html
 	url = https://github.com/jjlmoya/atom-html.git
+
 [submodule "atom-style"]
 	path = atom-style
 	url = https://github.com/jjlmoya/atom-style.git
+
 [submodule "atom-script"]
 	path = atom-script
 	url = https://github.com/jjlmoya/atom-script.git
