@@ -2458,6 +2458,23 @@ a.a-button {
             transform: translatey(0px) scale(1);
   }
 }
+.bs_tooltip {
+  position: relative;
+}
+
+.a-tooltip {
+  position: absolute;
+  padding: 10px;
+  max-width: 220px;
+  text-align: center;
+  color: #fff;
+  background: #2a2a2a;
+}
+.a-tooltip--top {
+  bottom: 25px;
+  left: -25px;
+}
+
 /**SVG**/
 .a-svg-meter {
   width: 100px;
