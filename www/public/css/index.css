@@ -2460,6 +2460,7 @@ a.a-button {
 }
 .bs_tooltip {
   position: relative;
+  cursor: pointer;
 }
 
 .a-tooltip {
@@ -2467,10 +2468,8 @@ a.a-button {
   padding: 10px;
   max-width: 220px;
   text-align: center;
-  color: #fff;
-  background: #2a2a2a;
-}
-.a-tooltip--top {
+  color: var(--mono-color-0);
+  background: var(--mono-color-8);
   bottom: 25px;
   left: -25px;
 }
