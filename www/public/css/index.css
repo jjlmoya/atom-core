@@ -2473,6 +2473,13 @@ a.a-button {
   bottom: 25px;
   left: -25px;
 }
+.a-tooltip--full {
+  position: fixed;
+  min-width: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
 
 /**SVG**/
 .a-svg-meter {
