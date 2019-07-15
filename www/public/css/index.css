@@ -2501,8 +2501,8 @@ a.a-button {
   }
 }
 .a-splash--fade.is-loaded {
-  -webkit-animation: vanish 3s ease-in-out forwards;
-          animation: vanish 3s ease-in-out forwards;
+  -webkit-animation: vanish 1.5s ease-in-out forwards;
+          animation: vanish 1.5s ease-in-out forwards;
 }
 
 .bs_tooltip {
@@ -4093,12 +4093,12 @@ body {
   width: 100vw;
 }
 .og-banner-screen__logo {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
 .og-banner-screen__image {
   display: block;
-  max-height: 300px;
+  max-height: 150px;
 }
 .og-banner-screen__claim {
   bottom: 25%;
