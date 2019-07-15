@@ -1810,6 +1810,48 @@ a.a-button {
     opacity: 1;
   }
 }
+@-webkit-keyframes vanish {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes vanish {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .a-image--cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -2435,8 +2477,8 @@ a.a-button {
             transform: translatey(0px) scale(1);
   }
   50% {
-    -webkit-transform: translatey(-20px) scale(0.8);
-            transform: translatey(-20px) scale(0.8);
+    -webkit-transform: translatey(-10px) scale(1);
+            transform: translatey(-10px) scale(1);
   }
   100% {
     -webkit-transform: translatey(0px) scale(1);
@@ -2450,20 +2492,26 @@ a.a-button {
             transform: translatey(0px) scale(1);
   }
   50% {
-    -webkit-transform: translatey(-20px) scale(0.8);
-            transform: translatey(-20px) scale(0.8);
+    -webkit-transform: translatey(-10px) scale(1);
+            transform: translatey(-10px) scale(1);
   }
   100% {
     -webkit-transform: translatey(0px) scale(1);
             transform: translatey(0px) scale(1);
   }
 }
+.a-splash--fade.is-loaded {
+  -webkit-animation: vanish 3s ease-in-out forwards;
+          animation: vanish 3s ease-in-out forwards;
+}
+
 .bs_tooltip {
   position: relative;
   cursor: pointer;
 }
 
 .a-tooltip {
+  z-index: 10;
   position: absolute;
   padding: 10px;
   max-width: 220px;
@@ -4043,6 +4091,10 @@ body {
 .og-banner-screen {
   height: 100vh;
   width: 100vw;
+}
+.og-banner-screen__logo {
+  width: 100px;
+  height: 100px;
 }
 .og-banner-screen__image {
   display: block;
