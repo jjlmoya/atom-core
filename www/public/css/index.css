@@ -3420,6 +3420,73 @@ body {
           box-shadow: 20px 20px 60px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px var(--primary-color);
 }
 
+.p-wordpress > h1, .p-wordpress > h2, .p-wordpress > h3, .p-wordpress > h4, .p-wordpress > h5, .p-wordpress > h6 {
+  color: var(--primary-color);
+}
+.p-wordpress > h1 {
+  padding: 15px 0;
+}
+.p-wordpress > h2 {
+  padding: 10px 0;
+}
+.p-wordpress > h3, .p-wordpress h4, .p-wordpress h5, .p-wordpress h6 {
+  padding: 5px 0;
+}
+.p-wordpress > p {
+  padding: 5px 0;
+  letter-spacing: 0;
+  word-spacing: 1px;
+  font-size: 14px;
+  line-height: 25px;
+}
+.p-wordpress > strong, .p-wordpress b {
+  color: var(--primary-color--dark);
+  font-weight: bold;
+}
+.p-wordpress > em, .p-wordpress i {
+  text-decoration: underline;
+}
+.p-wordpress > ul, .p-wordpress ol {
+  list-style: none;
+}
+.p-wordpress > ul li, .p-wordpress ol li {
+  padding-left: 5px;
+}
+.p-wordpress > figure {
+  background-color: black;
+  margin: 20px auto;
+  position: relative;
+  color: var(--secondary-color-text);
+}
+.p-wordpress > figure img {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.p-wordpress > figure figcaption {
+  background-color: var(--primary-color);
+  opacity: 0.7;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.p-wordpress .wp-block-image {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 5px;
+}
+.p-wordpress .wp-block-image img {
+  width: 100%;
+  border-radius: 5px;
+}
+.p-wordpress .wp-block-image figcaption {
+  color: var(--primary-color);
+  padding: 0 10px;
+}
+
 /** MOLECULES  **/
 .ml-article-rainbow {
   width: 250px;
@@ -4412,63 +4479,6 @@ body {
        -moz-column-count: 1;
             column-count: 1;
   }
-}
-
-.p-wordpress h1, .p-wordpress h2, .p-wordpress h3, .p-wordpress h4, .p-wordpress h5, .p-wordpress h6 {
-  color: var(--primary-color);
-}
-.p-wordpress h1 {
-  padding: 15px 0;
-}
-.p-wordpress h2 {
-  padding: 10px 0;
-}
-.p-wordpress h3, .p-wordpress h4, .p-wordpress h5, .p-wordpress h6 {
-  padding: 5px 0;
-}
-.p-wordpress p {
-  padding: 10px 0;
-}
-.p-wordpress a, .p-wordpress strong, .p-wordpress b {
-  color: var(--primary-color--dark);
-  font-weight: bold;
-}
-.p-wordpress a, .p-wordpress em, .p-wordpress i {
-  text-decoration: underline;
-}
-.p-wordpress figure {
-  background-color: black;
-  margin: 20px auto;
-  position: relative;
-  color: var(--secondary-color-text);
-}
-.p-wordpress figure img {
-  width: 100%;
-  display: block;
-  position: relative;
-}
-.p-wordpress figure figcaption {
-  background-color: var(--primary-color);
-  opacity: 0.7;
-  padding: 10px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.p-wordpress .wp-block-image {
-  max-width: 50%;
-  margin: 0 auto;
-  padding: 5px;
-  border-radius: 5px;
-}
-.p-wordpress .wp-block-image img {
-  width: 100%;
-  border-radius: 5px;
-}
-.p-wordpress .wp-block-image figcaption {
-  color: var(--primary-color);
-  padding: 0 10px;
 }
 
 /*# sourceMappingURL=index.css.map */
