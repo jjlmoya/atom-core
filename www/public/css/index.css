@@ -2056,8 +2056,11 @@ a.a-button {
   position: fixed;
   height: 100vh;
   width: 100vw;
+  opacity: 0.3;
   left: 0;
   top: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .a-slash {
@@ -3336,14 +3339,15 @@ body {
 }
 
 .bs_step {
+  -webkit-animation: stepping-out 3s linear forwards;
+          animation: stepping-out 3s linear forwards;
   display: none;
-  -webkit-animation: stepping-out 1s linear;
-          animation: stepping-out 1s linear;
 }
 .bs_step.is-active {
-  -webkit-animation: stepping-in 1s linear;
-          animation: stepping-in 1s linear;
+  -webkit-animation: stepping-in 3s linear forwards;
+          animation: stepping-in 3s linear forwards;
   display: block;
+  margin: 0 auto;
 }
 
 @-webkit-keyframes stepping-in {
@@ -3358,6 +3362,9 @@ body {
   }
   90% {
     opacity: 1;
+  }
+  100% {
+    display: block;
   }
 }
 
@@ -3374,9 +3381,13 @@ body {
   90% {
     opacity: 1;
   }
+  100% {
+    display: block;
+  }
 }
 @-webkit-keyframes stepping-out {
   0% {
+    display: block;
     opacity: 1;
   }
   1% {
@@ -3387,10 +3398,14 @@ body {
   }
   90% {
     opacity: 0;
+  }
+  100% {
+    display: none;
   }
 }
 @keyframes stepping-out {
   0% {
+    display: block;
     opacity: 1;
   }
   1% {
@@ -3401,6 +3416,9 @@ body {
   }
   90% {
     opacity: 0;
+  }
+  100% {
+    display: none;
   }
 }
 .u-shadow {
@@ -4193,6 +4211,7 @@ body {
 .og-banner-screen__logo {
   width: 150px;
   height: 150px;
+  margin: calc(50vh - 130px) auto 0 auto;
 }
 .og-banner-screen__image {
   display: block;
@@ -4510,6 +4529,15 @@ body {
        -moz-column-count: 1;
             column-count: 1;
   }
+}
+
+.og-filter-linear {
+  max-width: 100px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f9007e), to(transparent));
+  background-image: linear-gradient(180deg, #f9007e, transparent);
+}
+.og-filter-linear .ml.ml-button-pill {
+  padding: 0;
 }
 
 /*# sourceMappingURL=index.css.map */
