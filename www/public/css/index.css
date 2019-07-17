@@ -3420,6 +3420,9 @@ body {
           box-shadow: 20px 20px 60px rgba(34, 50, 84, 0.5), 1px 1px 0px 1px var(--primary-color);
 }
 
+.p-wordpress {
+  min-height: 650px;
+}
 .p-wordpress > h1, .p-wordpress > h2, .p-wordpress > h3, .p-wordpress > h4, .p-wordpress > h5, .p-wordpress > h6 {
   color: var(--primary-color);
 }
@@ -3439,6 +3442,13 @@ body {
   font-size: 14px;
   line-height: 25px;
 }
+.p-wordpress > p > strong, .p-wordpress > p b {
+  color: var(--primary-color--dark);
+  font-weight: bold;
+}
+.p-wordpress > p > em, .p-wordpress > p i {
+  text-decoration: underline;
+}
 .p-wordpress > strong, .p-wordpress b {
   color: var(--primary-color--dark);
   font-weight: bold;
@@ -3451,6 +3461,27 @@ body {
 }
 .p-wordpress > ul li, .p-wordpress ol li {
   padding-left: 5px;
+}
+.p-wordpress > table thead {
+  width: 400px;
+  background: var(--primary-color);
+  color: var(--secondary-color-text);
+  text-align: left;
+}
+.p-wordpress > table tbody {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  height: 25rem;
+}
+.p-wordpress > table thead tr {
+  display: block;
+  cursor: pointer;
+}
+.p-wordpress > table th, .p-wordpress > table td {
+  padding: 5px;
+  text-align: left;
+  width: 400px;
 }
 .p-wordpress > figure {
   background-color: black;
