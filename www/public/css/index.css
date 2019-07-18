@@ -3202,6 +3202,9 @@ body {
 .l-position--absolute {
   position: absolute;
 }
+.l-position--absolute--anchor {
+  top: -50px;
+}
 .l-position--absolute--center {
   left: 0;
   right: 0;
