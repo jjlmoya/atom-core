@@ -2295,6 +2295,10 @@ a.a-button {
   fill: var(--mono-color-9);
 }
 
+.a-svg--burger path:first-child {
+  fill: var(--primary-color);
+}
+
 /** ASSETS **/
 .a-cursor {
   cursor: auto;
@@ -4532,6 +4536,21 @@ body {
        -moz-column-count: 1;
             column-count: 1;
   }
+}
+
+.og-menu-classic {
+  position: fixed;
+  right: 0;
+  -webkit-transform: translateX(200vw);
+          transform: translateX(200vw);
+  height: 100vh;
+  width: 80vw;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+.og-menu-classic.is-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .og-filter-linear {
