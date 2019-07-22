@@ -4554,12 +4554,14 @@ body {
 }
 
 .og-filter-linear {
-  max-width: 100px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f9007e), to(transparent));
   background-image: linear-gradient(180deg, #f9007e, transparent);
 }
 .og-filter-linear .ml.ml-button-pill {
   padding: 0;
+}
+.og-filter-linear--vertical {
+  max-width: 100px;
 }
 
 /*# sourceMappingURL=index.css.map */
