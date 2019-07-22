@@ -3313,6 +3313,17 @@ body {
   overflow: hidden;
 }
 
+.bs_overflow_layer {
+  z-index: 10;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  background-color: black;
+  opacity: 0.5;
+}
+
 .u-touch {
   cursor: pointer;
 }
