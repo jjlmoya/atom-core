@@ -3865,6 +3865,8 @@ body {
 }
 .ml-arrow--full {
   height: 100%;
+  padding: 100px;
+  background-color: black;
 }
 
 .ml-visual-color:first-child .ml-visual-color__rectangle {
