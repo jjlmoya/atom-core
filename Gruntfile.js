@@ -1,4 +1,4 @@
-module.exports = function (grunt) {
+module.exports = (grunt) => {
     const webpackConfig = require('./webpack.config.js'),
         jsComponents = "atom-script/**/*.js",
         tasks = ['jshint', 'clean', 'copy', 'sass', 'postcss', 'cssmin', 'kss'],
