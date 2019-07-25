@@ -3358,7 +3358,7 @@ body {
 }
 
 .u-hide {
-  display: none;
+  display: none !important;
 }
 
 .bs_step {
@@ -3860,21 +3860,24 @@ body {
 .ml-arrow {
   position: absolute;
 }
+.ml-arrow svg {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  fill: var(--mono-color-0);
+}
 .ml-arrow--right {
   right: 0;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 .ml-arrow--left {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   left: 0;
 }
 .ml-arrow--full {
-  height: 25px;
-  width: 25px;
   padding: 25px;
   margin: 0 10px;
   border-radius: 50%;
-  font-weight: bold;
   background-color: var(--mono-color-9);
 }
 
