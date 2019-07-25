@@ -3,32 +3,32 @@
   "displayName": "Atom-Core",
   "version": "1.0.0",
   "devDependencies": {
-    "autoprefixer": "^9.4.8",
-    "express": "^4.16.4",
-    "express-handlebars": "^3.0.1",
-    "grunt": "^1.0.3",
+    "autoprefixer": "^9.6.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "grunt": "^1.0.4",
     "grunt-browser-sync": "^2.2.0",
     "grunt-browserify": "^5.3.0",
     "grunt-cli": "^1.3.2",
-    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-jshint": "2.1.0",
     "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-kss": "^5.0.1",
     "grunt-postcss": "^0.9.0",
     "grunt-webpack": "^3.1.3",
     "standard-version": "^6.0.1",
-    "webpack": "^4.29.6"
+    "webpack": "^4.37.0"
   },
   "dependencies": {
     "grunt-sass": "^3.0.2",
-    "load-grunt-tasks": "^4.0.0",
-    "mongoose": "^5.4.13",
-    "multer": "^1.3.1",
-    "node-sass": "^4.11.0"
+    "load-grunt-tasks": "^5.0.0",
+    "mongoose": "^5.6.6",
+    "multer": "^1.4.2",
+    "node-sass": "^4.12.0"
   },
   "scripts": {
     "release": "standard-version"
