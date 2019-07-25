@@ -4251,26 +4251,19 @@ body {
   overflow: hidden;
 }
 .og-slider--simple__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  -ms-scroll-snap-points-x: repeat(100vw);
-      scroll-snap-points-x: repeat(100vw);
-  -ms-scroll-snap-type: mandatory;
-      scroll-snap-type: mandatory;
-}
-.og-slider--simple__content::-webkit-scrollbar, .og-slider--simple__content::-webkit-scrollbar-thumb, .og-slider--simple__content::-webkit-scrollbar-track {
-  display: none;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
 }
 .og-slider--simple__slide {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  width: 100vw;
   height: 80vh;
+  width: 100vw;
+  scroll-snap-align: start;
 }
 
 .og-slider--articles__text {
