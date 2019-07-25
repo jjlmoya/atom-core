@@ -1413,7 +1413,6 @@ button {
 
 a.a-button, .a-button {
   font-size: 10px;
-  margin: 0 auto;
 }
 a.a-button--xs, .a-button--xs {
   padding: 0 10px;
@@ -1497,10 +1496,6 @@ a.a-button--linear:hover, .a-button--linear:hover {
   background-color: transparent;
   border-width: 3px;
 }
-a.a-button--slider, .a-button--slider {
-  width: 10px;
-  height: 10px;
-}
 
 a.a-button {
   display: -webkit-box;
@@ -1515,8 +1510,18 @@ a.a-button {
           align-items: center;
 }
 
+.a-button--slider {
+  background-color: var(--mono-color-0);
+  opacity: 0.5;
+}
 .a-button--slider.is-active {
   background-color: var(--secondary-color);
+  opacity: 0.9;
+}
+.a-button--slider--pill {
+  width: 25px;
+  height: 10px;
+  border-radius: 25px;
 }
 
 .a-button--icon {
@@ -3864,9 +3869,13 @@ body {
   left: 0;
 }
 .ml-arrow--full {
-  height: 100%;
-  padding: 100px;
-  background-color: black;
+  height: 25px;
+  width: 25px;
+  padding: 25px;
+  margin: 0 10px;
+  border-radius: 50%;
+  font-weight: bold;
+  background-color: var(--mono-color-9);
 }
 
 .ml-visual-color:first-child .ml-visual-color__rectangle {
@@ -4278,6 +4287,9 @@ body {
   scroll-behavior: smooth;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
+}
+.og-slider--simple__content::-webkit-scrollbar, .og-slider--simple__content::-webkit-scrollbar-thumb, .og-slider--simple__content::-webkit-scrollbar-track {
+  display: none;
 }
 .og-slider--simple__slide {
   -ms-flex-negative: 0;
