@@ -1282,6 +1282,16 @@ button {
   -webkit-background-clip: text;
           background-clip: text;
 }
+.a-text--inset {
+  background-color: var(--mono-color-9);
+  font-weight: bold;
+  color: transparent;
+  text-shadow: 0px 2px 3px var(--primary-color--light);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  font-size: 130px;
+}
 .a-text--mono-0 {
   color: var(--mono-color-0);
 }
@@ -3138,6 +3148,9 @@ body {
     justify-self: flex-end;
   }
 }
+.l-column--vw {
+  width: 100vw;
+}
 .l-column--1-1 {
   width: 100%;
   max-width: 100%;
@@ -4295,8 +4308,6 @@ body {
   display: none;
 }
 .og-slider--simple__slide {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
   height: 80vh;
   width: 100vw;
   scroll-snap-align: start;
