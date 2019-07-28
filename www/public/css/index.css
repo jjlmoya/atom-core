@@ -1965,6 +1965,10 @@ a.a-button {
   background-image: radial-gradient(var(--shadow-white) 20%, transparent 20%);
   background-size: 5px 5px;
 }
+.a-texture--paper {
+  -webkit-mask-image: url("../textures/paper.png");
+          mask-image: url("../textures/paper.png");
+}
 
 .a-bg, .og-content-plain--secondary {
   background-color: var(--primary-color);
