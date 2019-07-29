@@ -3590,6 +3590,56 @@ body {
   padding: 0 10px;
 }
 
+.alignleft, .alignright, .aligncenter, .alignnone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.alignleft img, .alignright img, .aligncenter img, .alignnone img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+}
+
+div.alignright {
+  width: 100% !important;
+}
+
+.alignright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.alignright img {
+  text-align: right;
+  margin-left: auto;
+  display: block;
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+.alignleft {
+  text-align: left;
+}
+
+.wp-caption {
+  max-width: 100%;
+}
+
 /** MOLECULES  **/
 .ml-article-rainbow {
   width: 250px;
