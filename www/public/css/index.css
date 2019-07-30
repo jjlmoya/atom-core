@@ -4373,6 +4373,12 @@ body {
   height: 80vh;
   width: 100vw;
   scroll-snap-align: start;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.og-slider--simple__slide.is-active {
+  opacity: 1;
 }
 
 .og-slider--articles__text {
