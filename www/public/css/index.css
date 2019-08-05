@@ -4201,6 +4201,7 @@ body {
     display: none;
   }
   .og-logo-inline__mobile__menu {
+    right: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4449,7 +4450,6 @@ body {
   right: 20vw;
 }
 .og-slider--movie__nav {
-  background-color: black;
   width: 20vw;
 }
 .og-slider--movie__slide {
