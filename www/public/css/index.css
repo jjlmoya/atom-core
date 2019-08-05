@@ -1533,6 +1533,14 @@ a.a-button {
   height: 10px;
   border-radius: 25px;
 }
+.a-button--slider--title {
+  color: var(--primary-color);
+  background-color: inherit;
+}
+.a-button--slider--title.is-active {
+  -webkit-box-shadow: 0 2px 4px 0 var(--shadow-dark);
+          box-shadow: 0 2px 4px 0 var(--shadow-dark);
+}
 
 .a-button--icon {
   background-color: var(--primary-color);
