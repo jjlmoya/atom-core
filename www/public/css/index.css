@@ -1536,10 +1536,15 @@ a.a-button {
 .a-button--slider--title {
   color: var(--primary-color);
   background-color: inherit;
+  line-height: 14px;
+  padding: 10px 0;
+  letter-spacing: 0;
+  border-left: 10px solid var(--mono-color-9);
 }
 .a-button--slider--title.is-active {
-  -webkit-box-shadow: 0 2px 4px 0 var(--shadow-dark);
-          box-shadow: 0 2px 4px 0 var(--shadow-dark);
+  background-color: var(--mono-color-1);
+  font-weight: bold;
+  border-color: var(--primary-color);
 }
 
 .a-button--icon {
@@ -4449,6 +4454,7 @@ body {
   display: none;
 }
 .og-slider--movie .ml-arrow {
+  opacity: 0.5;
   top: 50%;
 }
 .og-slider--movie .ml-arrow--left {
@@ -4464,9 +4470,12 @@ body {
   height: 100%;
   width: 80vw;
   scroll-snap-align: start;
+  will-transform: border;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 .og-slider--movie__slide.is-active {
-  opacity: 1;
+  border-right: 4px solid var(--primary-color);
 }
 
 .og-title-brand p {
