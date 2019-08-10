@@ -4501,6 +4501,24 @@ body {
   border-right: 4px solid var(--primary-color);
 }
 
+@media only screen and (max-width: 768px) {
+  .og-slider--movie {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .og-slider--movie__content {
+    width: 100vw;
+  }
+  .og-slider--movie__nav {
+    width: 100vw;
+  }
+  .og-slider--movie__slide {
+    width: 100vw;
+  }
+  .og-slider--movie .ml-arrow--right {
+    right: 0;
+  }
+}
 .og-title-brand p {
   padding: 5px 0;
 }
