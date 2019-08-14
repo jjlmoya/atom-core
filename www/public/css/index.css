@@ -527,6 +527,18 @@ button {
   --contrast-color: #dd8d3a;
 }
 
+.laser {
+  --primary-color: #FFE4BD;
+  --primary-color--dark: #9394A6;
+  --primary-color--light: #D5D5DF;
+  --secondary-color: #FE007C ;
+  --secondary-color--dark: #6f003d;
+  --secondary-color--light: #ff5b8b;
+  --primary-color-text: #1E1010;
+  --secondary-color-text: #FFFFFF;
+  --contrast-color: #dd8d3a;
+}
+
 .lavandula {
   --primary-color: #6900FF;
   --primary-color--dark: #4E409E;
@@ -4493,12 +4505,6 @@ body {
   height: 100%;
   width: 80vw;
   scroll-snap-align: start;
-  will-transform: border;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-.og-slider--movie__slide.is-active {
-  border-right: 4px solid var(--primary-color);
 }
 
 @media only screen and (max-width: 768px) {
@@ -4506,13 +4512,7 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .og-slider--movie__content {
-    width: 100vw;
-  }
-  .og-slider--movie__nav {
-    width: 100vw;
-  }
-  .og-slider--movie__slide {
+  .og-slider--movie__content, .og-slider--movie__nav, .og-slider--movie__slide {
     width: 100vw;
   }
   .og-slider--movie .ml-arrow--right {
