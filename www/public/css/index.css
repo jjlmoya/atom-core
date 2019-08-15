@@ -515,6 +515,18 @@ button {
   --contrast-color: #FFED82;
 }
 
+.holy {
+  --primary-color: #49C0DC;
+  --primary-color--dark: #41a8c1;
+  --primary-color--light: #F6F5DF;
+  --secondary-color: #B4E55C;
+  --secondary-color--dark: #99D815⁣;
+  --secondary-color--light: #c1f25c;
+  --primary-color-text: #000000;
+  --secondary-color-text: #f3f3f3;
+  --contrast-color: #FFED82;
+}
+
 .kino {
   --primary-color: #a7d9cd;
   --primary-color--dark: #83cab9;
