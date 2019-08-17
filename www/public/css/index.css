@@ -418,6 +418,18 @@ button {
   --contrast-color: #FFED82;
 }
 
+.bulldog {
+  --primary-color: #4B2637;
+  --primary-color--dark: #3b1d29;
+  --primary-color--light: #7D2941;
+  --secondary-color: #b3a2a2;
+  --secondary-color--dark: #958585;
+  --secondary-color--light: #E9E3E3;
+  --primary-color-text: #000000;
+  --secondary-color-text: #ffffff;
+  --contrast-color: #FFED82;
+}
+
 .cake {
   --primary-color: #EFADB2;
   --primary-color--dark: #A2DCEF;
