@@ -710,6 +710,18 @@ button {
   --contrast-color: #FFED82;
 }
 
+.tosca {
+  --primary-color: #8A4C55;
+  --primary-color--dark: #69343d;
+  --primary-color--light: #D97A7A;
+  --secondary-color: #FFAC1D ;
+  --secondary-color--dark: #926015;
+  --secondary-color--light: #F9F0EB;
+  --primary-color-text: #212121;
+  --secondary-color-text: #FFFFFF;
+  --contrast-color: #FFED82;
+}
+
 .wood {
   --primary-color: #e0a954;
   --primary-color--dark: #db9d39;
