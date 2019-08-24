@@ -527,6 +527,18 @@ button {
   --contrast-color: #FFED82;
 }
 
+.haze {
+  --primary-color: #8E9DCC;
+  --primary-color--dark: #7D84B2;
+  --primary-color--light: #D9DBF1;
+  --secondary-color: #bace96;
+  --secondary-color--dark: #839269;
+  --secondary-color--light: #F9F9ED ;
+  --primary-color-text: #20165d;
+  --secondary-color-text: #FFFFFF;
+  --contrast-color: #dd8d3a;
+}
+
 .holy {
   --primary-color: #49C0DC;
   --primary-color--dark: #41a8c1;
