@@ -503,6 +503,18 @@ button {
   --contrast-color: #dd8d3a;
 }
 
+.flowers {
+  --primary-color: #F45744;
+  --primary-color--dark: #913728;
+  --primary-color--light: #F7F0D6;
+  --secondary-color: #767000;
+  --secondary-color--dark: #554F0E;
+  --secondary-color--light: #8f8900;
+  --primary-color-text: black;
+  --secondary-color-text: white;
+  --contrast-color: #dd8d3a;
+}
+
 .forest {
   --primary-color: #4CAF50;
   --primary-color--dark: #3d8b40;
