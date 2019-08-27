@@ -4,8 +4,7 @@ module.exports = {
     entry:
         {
             components: path.join(__dirname, "/atom-script/apps.js"),
-            custom: path.join(__dirname, "/atom-script/custom.js"),
-            flow: path.join(__dirname, "/atom-script/flow.js")
+            custom: path.join(__dirname, "/atom-script/custom.js")
         },
     output: {
         path: __dirname + '/www/public/js/',
