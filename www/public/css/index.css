@@ -3742,6 +3742,63 @@ body {
   max-width: 100%;
 }
 
+.p-wheel-of-time {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--mono-color-9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.p-wheel-of-time .image {
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-wheel-of-time .timer {
+  text-align: center;
+  width: 300px;
+  color: white;
+  margin: 0 auto;
+}
+.p-wheel-of-time .days,
+.p-wheel-of-time .hours,
+.p-wheel-of-time .mins,
+.p-wheel-of-time .sec {
+  margin: 10px 0;
+  width: 24%;
+  float: left;
+  font-size: 35px;
+  font-weight: lighter;
+  text-align: center;
+}
+.p-wheel-of-time .days,
+.p-wheel-of-time .hours,
+.p-wheel-of-time .mins {
+  border-right: 2px solid white;
+}
+@media all and (max-width: 650px) {
+  .p-wheel-of-time h1 {
+    font-size: 50px;
+  }
+  .p-wheel-of-time .days,
+  .p-wheel-of-time .hours,
+  .p-wheel-of-time .mins,
+  .p-wheel-of-time .sec {
+    font-size: 40px;
+  }
+}
+
 /** MOLECULES  **/
 .ml-article-rainbow {
   width: 250px;
