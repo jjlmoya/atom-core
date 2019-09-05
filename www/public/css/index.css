@@ -490,6 +490,18 @@ button {
   --contrast-color: #ed1c24;
 }
 
+.dopely {
+  --primary-color: #C17692;
+  --primary-color--dark: #7C0151;
+  --primary-color--light: #C8B2C5;
+  --secondary-color: #C3B7E9;
+  --secondary-color--dark: #aa9fcb;
+  --secondary-color--light: #CED8F3;
+  --primary-color-text: #231f20;
+  --secondary-color-text: #FFFFFF;
+  --contrast-color: #ed1c24;
+}
+
 .eevee {
   --primary-color: #96C11D;
   --primay-color-rgb: 150, 193, 29;
@@ -659,6 +671,18 @@ button {
   --contrast-color: #FFED82;
 }
 
+.naisu {
+  --primary-color: #3b4e54;
+  --primary-color--dark: #263137;
+  --primary-color--light: #3C494F;
+  --secondary-color: #00A9B9;
+  --secondary-color--dark: #006f7f;
+  --secondary-color--light: #D7E6E6;
+  --primary-color-text: #ddfbf8;
+  --secondary-color-text: #131313;
+  --contrast-color: #FFED82;
+}
+
 .paradise-orange {
   --primary-color: #f5a631;
   --primary-color--dark: #e88f0b;
@@ -686,6 +710,21 @@ button {
   --error-color: #cc1717;
 }
 
+.phalawon {
+  --primary-color: #93EEE4;
+  --primary-color--dark: #4EBDC2;
+  --primary-color--light: #52E2D9;
+  --secondary-color: #F74F8C ;
+  --secondary-color--dark: #D53D70;
+  --secondary-color--light: #ff5093;
+  --primary-color-text: #000000;
+  --secondary-color-text: #FFFFFF;
+  --contrast-color: #FFED82;
+  --success-color: #cddc39;
+  --warning-color: #ffc107;
+  --error-color: #cc1717;
+}
+
 .reverse-sky {
   --primary-color: #03A9F4;
   --primary-color--dark: #0286c2;
@@ -695,6 +734,18 @@ button {
   --secondary-color--light: #08e3ff;
   --primary-color-text: #052036;
   --secondary-color-text: #e7f5f5;
+  --contrast-color: #FFED82;
+}
+
+.shadz {
+  --primary-color: #E78781;
+  --primary-color--dark: #AE3251;
+  --primary-color--light: #DDB2BE;
+  --secondary-color: #A8A3AA;
+  --secondary-color--dark: #757077;
+  --secondary-color--light: #D2D1CD;
+  --primary-color-text: #212121;
+  --secondary-color-text: #FFFFFF;
   --contrast-color: #FFED82;
 }
 
